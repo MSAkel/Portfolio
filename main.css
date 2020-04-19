@@ -1,0 +1,132 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "effra", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #262d38;
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(90deg, #eee 1%, transparent 1%) 1px 0, rgb(248, 246, 246);
+  background-size: 245px 1px;
+}
+
+.st0{
+  fill:#FFCCCC;
+
+}
+
+.background-svg{
+  position: absolute;
+  right: 0;
+  width: 600px;
+}
+
+
+.container{
+  /* max-width: 1750px; */
+  padding: 0 8rem;
+  position: relative;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+#hero-title{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#hero-title h1 {
+  font-size: 42px;
+}
+
+#hero-title button{
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border: 3px solid #eee;
+  background-color: #fff;
+  border-radius: 16px;
+  transition-duration: 0.4s;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#hero-title button:hover {
+  cursor: pointer;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
+}
+
+.background-text{
+  position: absolute;
+  top: 32%;
+  transform: translateY(-50%);
+  opacity: 0.05;
+  /* font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 2rem; */
+  display: none;
+}
+
+/****************** PROJECTS ********************/
+.projects .background-text{
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  opacity: 0.05;
+}
+
+.project-description {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .background-text{
+    display: block;
+    font-size: 170px;
+    font-weight: 900;
+    letter-spacing: 5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  
+}
+
+@media (min-width: 1500px) {
+  #hero-title h1 {
+    font-size: 72px;
+  }
+
+  .background-text{
+    font-size: 250px;
+    font-weight: 900;
+    letter-spacing: 5rem;
+  }
+
+  .projects .background-text{
+    top: 20%;
+    transform: translateY(-50%);
+    letter-spacing: 0;
+  }
+
+  .project-description h1{
+    font-size: 72px;
+    margin-top: -17rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .project-description p {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+  }
+}
