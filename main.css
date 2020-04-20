@@ -21,10 +21,22 @@ body {
   fill:#FFCCCC;
 }
 
+.st1{
+  fill: rgb(231, 231, 231);
+  opacity: 0.5;
+}
+
 .background-svg{
   position: absolute;
   right: 0;
   width: 600px;
+  z-index: -10;
+}
+
+.project-background-svg {
+  position: absolute;
+  left: 0;
+  width: 100%;
   z-index: -10;
 }
 
