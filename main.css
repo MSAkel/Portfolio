@@ -1,3 +1,8 @@
+:root{
+  --primary-colour: #6DA89F;
+  --secondary-colour: #ABF5EA;
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -5,7 +10,7 @@
 }
 
 html {
-  font-family: "effra", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #262d38;
   font-size: 16px;
@@ -33,13 +38,6 @@ body {
   z-index: -10;
 }
 
-.project-background-svg {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: -10;
-}
-
 .container{
   /* max-width: 1750px; */
   padding: 0 1.5rem;
@@ -58,20 +56,25 @@ body {
   font-size: 42px;
 }
 
+#name{
+  color: var(--primary-colour);
+}
+
 button{
   margin-top: 2rem;
   padding: 1rem 2rem;
-  border: 3px solid #eee;
-  background-color: #fff;
+  border: 3px solid var(--primary-colour);
+  background-color: transparent;
   border-radius: 16px;
   transition-duration: 0.4s;
   font-weight: 600;
   font-size: 16px;
+  color: var(--primary-colour);
 }
 
 button:hover {
   cursor: pointer;
-  background-color: rgb(53, 53, 53);
+  background-color: var(--primary-colour);
   color: white;
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
 }
@@ -91,15 +94,17 @@ button:hover {
 
 .project h1{
   margin-bottom: 1rem;
+  color: var(--primary-colour);
 }
 
 .project .background-text{
   position: absolute;
   top: 20%;
   transform: translateY(-50%);
-  opacity: 0.05;
+  opacity: 0.2;
   display: block;
   font-size: 104px;
+  color: var(--secondary-colour);
 }
 
 .project-description {
@@ -107,6 +112,14 @@ button:hover {
   top: 50%;
   transform: translateY(-50%);
   line-height: 1.6rem;
+}
+
+.project-background-svg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+  top: 550px;
 }
 
 /****************** CONTACT ********************/
@@ -163,10 +176,15 @@ input, select, textarea {
     letter-spacing: 2.5rem;
   }
 
+  #contact-me{
+    display: flex;
+    justify-content: center;
+  }
   .content-container{
     /* margin-top: 5rem; */
-    width: calc(100% - 75px);
-    height: calc(100% - 350px);
+    width: calc(100% - 100px);
+    height: calc(100% - 50px);
+    
   }
 
   #contact-me h1 {
@@ -179,17 +197,40 @@ input, select, textarea {
     padding: 0 8rem;
   }
 
+
+  .project{
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .project .left-section{
+    max-width: 50%;
+  }
+
   .project .right-section{
     display: block;
+    margin-right: -10rem;
+  }
+
+  .project .right-section img{
+    height: 500px;
   }
 
   .project .background-text{
-    font-size: 250px;
+    font-size: 150px;
+    letter-spacing: normal;
   }
 
   .project h1 {
     margin-bottom: 3rem;
   }
+
+  .project-background-svg {
+    top: 0;
+  }
+  
 }
 
 @media (min-width: 1500px) {
@@ -199,7 +240,7 @@ input, select, textarea {
   }
 
   #hero-title h1 {
-    font-size: 72px;
+    font-size: 42px;
   }
 
   .background-text{
@@ -208,15 +249,10 @@ input, select, textarea {
     letter-spacing: 5rem;
   }
 
-  .project{
-    padding-top: 10rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+ 
 
   .project .background-text{
-    top: 20%;
+    top: 23%;
     transform: translateY(-50%);
     letter-spacing: 0;
   }
@@ -232,12 +268,8 @@ input, select, textarea {
     margin-bottom: 0.5rem;
   }
 
-  .project .right-section{
-    margin-right: -10rem;
-  }
-
   #contact-me h1 {
-    font-size: 72px;
+    font-size: 64px;
   }
 
   .content-container{
