@@ -1,6 +1,6 @@
 :root{
-  --primary-colour: #6DA89F;
-  --secondary-colour: #ABF5EA;
+  --primary-colour: #55BCC9;
+  --secondary-colour: #FC4445;
 }
 
 *{
@@ -22,14 +22,44 @@ body {
   overflow-x: hidden;
 }
 
+.hidden{
+  display: none;
+}
+
+nav {
+  padding: 2rem 5rem;
+  font-weight: 500;
+  text-align: right;
+  position: fixed;
+  display: flex;
+  justify-content: right;
+  right: 0;
+  z-index: 100;
+}
+.st4{
+  fill:none;
+  stroke:#444;
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-miterlimit:10;
+}
+nav p{
+  margin-right: 1rem;
+  cursor: pointer;
+}
+#menu{
+  cursor: pointer;
+}
+
 .st0{
   fill:#FFCCCC;
   opacity: 0.7;
 }
 
 .st1{
-  fill: rgb(231, 231, 231);
-  opacity: 0.5;
+  /* fill: rgb(231, 231, 231); */
+  fill:#FFCCCC;
+  opacity: 0.3;
 }
 
 .background-svg{
@@ -94,10 +124,10 @@ button:hover {
   display: none;
 }
 
-.project h1{
+/* .project h1{
 
   color: var(--primary-colour);
-}
+} */
 
 /* .project .background-text{
   position: absolute;
@@ -109,11 +139,17 @@ button:hover {
   color: var(--secondary-colour);
 } */
 
+
+.project-background-text{
+  display: none;
+}
+
 .project-number{
   font-size: 140px;
   font-weight: 900;
   opacity: 0.4;
   letter-spacing: 1rem;
+  color: var(--secondary-colour);
 }
 
 .project-description {
@@ -130,8 +166,9 @@ button:hover {
 
 .project-description h1 {
   font-size: 42px;
-  margin-top: -1.5rem;
+  margin-top: -2.5rem;
   margin-bottom: 1.5rem;
+  color: var(--primary-colour);
 }
 
 .project-background-svg {
@@ -236,6 +273,10 @@ input, select, textarea {
   #contact-me h1 {
     font-size: 32px;
   }
+
+  #contact-me button:hover {
+    box-shadow: none;
+  }
 }
 
 @media (min-width: 900px) {
@@ -246,10 +287,10 @@ input, select, textarea {
     padding: 0 10rem;
   }
 
-  .project .background-text{
+  /* .project .background-text{
     font-size: 150px;
     letter-spacing: normal;
-  }
+  } */
 
   .project h1 {
     margin-bottom: 3rem;
@@ -277,10 +318,25 @@ input, select, textarea {
     letter-spacing: 5rem;
   }
 
-  .project .background-text{
+  /* .project .background-text{
     top: 23%;
     transform: translateY(-50%);
     letter-spacing: 0;
+  } */
+
+  .project-background-text{
+    display: block;
+    font-size: 120px;
+    opacity: 0.05;
+    color: black;
+    letter-spacing: 0;
+    margin-left: 20rem;
+    position: absolute;
+    top: 0;
+  }
+
+  .project-background-text h1{
+    margin: 0;
   }
 
   .project-description h1{
