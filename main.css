@@ -1,9 +1,15 @@
 :root{
-  --primary-colour: hsl(187, 58%, 75%);
-  --p1: hsl(187, 58%, 50%);
-  --p2: hsl(187, 58%, 75%);
-  --p1: hsl(187, 58%, 95%);
-  --secondary-colour: #FC4445;
+  --p1: hsl(241, 58%, 40%);
+  --p2: hsl(241, 58%, 65%);
+  --p1: hsl(241, 58%, 90%);
+
+  --s1: hsl(274, 64%, 15%);
+  --s2: hsl(274, 64%, 40%);
+  --s3: hsl(274, 64%, 65%);
+
+  --t1: hsl(38, 68%, 49%);
+  --t2: hsl(38, 68%, 74%);
+  --t3: hsl(38, 68%, 90%);
 }
 
 *{
@@ -54,7 +60,7 @@ nav, #close{
 }
 .menu-display{
   height: 100vh;
-  background-color: hsl(187, 58%, 75%);
+  background-color: var(--p2);
   position: fixed;
   z-index: 100;
   width: 100vw;
@@ -76,12 +82,12 @@ nav, #close{
 }
 
 .st0{
-  fill:#FFCCCC;
+  fill: var(--t2);
   opacity: 0.7;
 }
 
 .st1{
-  fill:#FFCCCC;
+  fill: var(--s1);
   opacity: 0.3;
 }
 
@@ -89,28 +95,24 @@ nav, #close{
   width: 200px;
   height: 600px;
   position: absolute;
+  box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%);
+  animation: float 3s ease-in-out infinite;
+}
+.r1{
   right: 15%;
   top: -13%;
-  box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%);
-  animation: float 3s ease-in-out infinite;
 }
-.rect-shape{
-  fill:#55BCC9;
-  opacity: 0.3;
-}
-
-.rect-svg-2{
-  width: 200px;
-  height: 600px;
-  position: absolute;
+.r2{
   left: 15%;
   bottom: -10%;
-  box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%);
-  animation: float 3s ease-in-out infinite;
+}
+.rect-shape{
+  fill: var(--s2);
+  opacity: 0.3;
 }
 .rect-shape-2{
-  fill:#FC4445;
-  opacity: 0.3;
+  fill: var(--t2);
+  opacity: 0.6;
 }
 
 @keyframes float {
@@ -151,24 +153,24 @@ nav, #close{
 }
 
 #name{
-  color: var(--primary-colour);
+  color: var(--p2);
 }
 
 button{
   margin-top: 2rem;
   padding: 1rem 2rem;
-  border: 3px solid var(--primary-colour);
+  border: 3px solid var(--p2);
   background-color: transparent;
   border-radius: 16px;
   transition-duration: 0.4s;
   font-weight: 600;
   font-size: 16px;
-  color: var(--primary-colour);
+  color: var(--p2);
 }
 
 button:hover {
   cursor: pointer;
-  background-color: var(--primary-colour);
+  background-color: var(--p2);
   color: white;
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
 }
@@ -207,7 +209,7 @@ button:hover {
   font-weight: 900;
   opacity: 0.4;
   letter-spacing: 1rem;
-  color: var(--secondary-colour);
+  color: var(--s2);
 }
 
 .project-description {
@@ -222,7 +224,7 @@ button:hover {
   font-size: 42px;
   margin-top: -2.5rem;
   margin-bottom: 1.5rem;
-  color: var(--primary-colour);
+  color: var(--p2);
 }
 
 .project-background-svg {
@@ -233,7 +235,7 @@ button:hover {
   top: 550px;
 }
 
-.st3{fill:#6DA89F;}
+/* .st3{fill:#6DA89F;} */
 
 .poly{
   position: absolute;
@@ -258,12 +260,36 @@ button:hover {
   width: 300px;
   height: 300px;
 }
-/* .poly{
-  fill: var(--p2);
-} */
 .poly-text{
-  font-size: 2rem;
-  fill: hsl(220, 0%, 95%)
+  font-size: 2.25rem;
+  font-weight: 600;
+  fill: hsl(220, 0%, 10%)
+}
+.skills .rect-svg{
+  width: 300px;
+  height: 700px;
+  animation: none;
+  /* box-shadow: 12px 12px 24px 0 hsl(220, 15%, 70%), 5px 6px 9px 0 hsl(220, 15%, 90%); */
+}
+.skills .rect-shape{
+  opacity: 0.6;
+}
+.r3{
+  top: -10%;
+}
+.r4{
+  bottom: 0%;
+  right: 42%;
+}
+.skill-2 .rect-shape{
+  fill: var(--s2);
+}
+.r5{
+  top: -10%;
+  right: 14%;
+}
+.skill-3 .rect-shape{
+  fill: var(--s3);
 }
 /****************** CONTACT ********************/
 .content-container{
@@ -273,7 +299,7 @@ button:hover {
   width: 100%;
   height: 100%;
   padding: 2rem;
-  background-color: #262d38;
+  background-color: var(--s1);
   color: #fff;
   box-shadow: 0 12px 24px 0 #262d38, 0 3px 9px 0 #262d38;
 }
@@ -294,6 +320,7 @@ input, select, textarea {
   padding: 1.25rem 5rem 1.25rem 1rem;
   width: 100%;
   border: none;
+  border-radius: 6px;
   outline: none;
   color: #fff;
   background: rgba(211, 216, 221, 0.1);
