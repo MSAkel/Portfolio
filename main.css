@@ -243,6 +243,28 @@ button:hover {
   top: 55%;
 }
 
+/****************** SKILLS ********************/
+.skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.skill-1, .skill-3{
+  margin-top: -15rem;
+}
+.poly-svg{
+  width: 300px;
+  height: 300px;
+}
+/* .poly{
+  fill: var(--p2);
+} */
+.poly-text{
+  font-size: 2rem;
+  fill: hsl(220, 0%, 95%)
+}
 /****************** CONTACT ********************/
 .content-container{
   position: absolute;
@@ -365,7 +387,7 @@ input, select, textarea {
 
   .project-background-text{
     display: block;
-    font-size: 120px;
+    font-size: 150px;
     opacity: 0.05;
     color: black;
     letter-spacing: 0;
