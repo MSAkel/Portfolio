@@ -81,9 +81,48 @@ nav, #close{
 }
 
 .st1{
-  /* fill: rgb(231, 231, 231); */
   fill:#FFCCCC;
   opacity: 0.3;
+}
+
+.rect-svg{
+  width: 200px;
+  height: 600px;
+  position: absolute;
+  right: 15%;
+  top: -13%;
+  box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%);
+  animation: float 3s ease-in-out infinite;
+}
+.rect-shape{
+  fill:#55BCC9;
+  opacity: 0.3;
+}
+
+.rect-svg-2{
+  width: 200px;
+  height: 600px;
+  position: absolute;
+  left: 15%;
+  bottom: -10%;
+  box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%);
+  animation: float 3s ease-in-out infinite;
+}
+.rect-shape-2{
+  fill:#FC4445;
+  opacity: 0.3;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-7px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
 .background-svg{
@@ -143,26 +182,21 @@ button:hover {
   
 }
 
+/****************** ABOUT ********************/
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  font-size: 20px;
+  transform: translateY(-20%);
+}
+
 /****************** PROJECTS ********************/
 .project .right-section{
   display: none;
 }
-
-/* .project h1{
-
-  color: var(--primary-colour);
-} */
-
-/* .project .background-text{
-  position: absolute;
-  top: 20%;
-  transform: translateY(-50%);
-  opacity: 0.2;
-  display: block;
-  font-size: 104px;
-  color: var(--secondary-colour);
-} */
-
 
 .project-background-text{
   display: none;
@@ -177,14 +211,10 @@ button:hover {
 }
 
 .project-description {
-  /* position: absolute;
-  top: 50%;
-  transform: translateY(-50%); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* height: 100%; */
   line-height: 1.6rem;
 }
 
@@ -215,7 +245,6 @@ button:hover {
 
 /****************** CONTACT ********************/
 .content-container{
-  /* margin-top: 10rem; */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -304,17 +333,9 @@ input, select, textarea {
 }
 
 @media (min-width: 900px) {
-  /* .project-description {
-    margin-top: 4rem;
-  }  */
   .container{
     padding: 0 10rem;
   }
-
-  /* .project .background-text{
-    font-size: 150px;
-    letter-spacing: normal;
-  } */
 
   .project h1 {
     margin-bottom: 3rem;
@@ -341,12 +362,6 @@ input, select, textarea {
     font-weight: 900;
     letter-spacing: 5rem;
   }
-
-  /* .project .background-text{
-    top: 23%;
-    transform: translateY(-50%);
-    letter-spacing: 0;
-  } */
 
   .project-background-text{
     display: block;
