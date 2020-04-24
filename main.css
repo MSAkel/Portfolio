@@ -1,5 +1,8 @@
 :root{
-  --primary-colour: #55BCC9;
+  --primary-colour: hsl(187, 58%, 75%);
+  --p1: hsl(187, 58%, 50%);
+  --p2: hsl(187, 58%, 75%);
+  --p1: hsl(187, 58%, 95%);
   --secondary-colour: #FC4445;
 }
 
@@ -22,17 +25,15 @@ body {
   overflow-x: hidden;
 }
 
-.hidden{
-  display: none;
+.overflow-y{
+  overflow-y: hidden;
 }
 
-nav {
-  padding: 2rem 5rem;
+nav, #close{
+  margin: 2rem 5rem;
   font-weight: 500;
   text-align: right;
   position: fixed;
-  display: flex;
-  justify-content: right;
   right: 0;
   z-index: 100;
 }
@@ -43,11 +44,34 @@ nav {
   stroke-linecap:round;
   stroke-miterlimit:10;
 }
-nav p{
-  margin-right: 1rem;
+#menu, #close{
+  display: flex;
+  justify-content: right;
   cursor: pointer;
 }
-#menu{
+#menu p, #close p{
+  margin-right: 1rem;
+}
+.menu-display{
+  height: 100vh;
+  background-color: hsl(187, 58%, 75%);
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+}
+.hidden{
+  display: none;
+}
+.menu-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.menu-display h1{
+  font-size: 3rem;
+  margin: 2rem;
   cursor: pointer;
 }
 
