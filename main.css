@@ -218,6 +218,7 @@ button:hover {
   justify-content: center;
   align-items: flex-start;
   line-height: 1.6rem;
+  max-width: 660px;
 }
 
 .project-description h1 {
@@ -226,23 +227,21 @@ button:hover {
   margin-bottom: 1.5rem;
   color: var(--p2);
 }
+.project-nav{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
 
-.project-background-svg {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: -10;
-  top: 550px;
 }
-
-/* .st3{fill:#6DA89F;} */
-
-.poly{
-  position: absolute;
-  left: 55%;
-  width: 256px;
-  z-index: -10;
-  top: 55%;
+.project-nav h2 {
+  color: var(--p2);
+  font-size: 2rem;
+}
+.triangle{
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  fill:var(--s3);
+  cursor: pointer;
 }
 
 /****************** SKILLS ********************/
