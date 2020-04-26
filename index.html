@@ -46,8 +46,7 @@
   </section>
 
   <!-- HOME -->
-  <section>
-    <div class="container">
+  <section id="home-section" class="container">
       <div class="background-svg">
         <svg x="0px" y="0px" viewBox="0 0 696 1080" style="enable-background:new 0 0 696 1080;" xml:space="preserve">
           <path id="p1" class="st0" d="M410.5,0.5C152,92-22.2,330.9,2.5,489.5c19.4,124.7,84.5,229.5,196,281c199.3,92.1,434.7,108.9,497,247
@@ -79,11 +78,10 @@
           <button>LEARN MORE</button>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="container">
+  <section id="about-section" class="container">
     <svg class="rect-svg r1" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
       <rect class="rect-shape" width="200" height="600"/>
     </svg>
@@ -109,11 +107,11 @@
   </section>
 
   <!-- PROJECTS -->
-  <section class="container">
-    <div class="project">
-      <div class="project-background-text">
-        <h1>WORK</h1>
-      </div>
+  <section id="project-section" class="container">
+    <div class="project-background-text">
+      <h1>WORK</h1>
+    </div>
+    <div class="project-content">
       <div class="left-section">
         <div class="project-number">
           <h1 id="project-number">01</h1>
@@ -130,70 +128,66 @@
         <img src="imgs/phone-electro.png" id="project-image" alt="Electromanager app image">
       </div>
     </div>
-    <div class="project-nav">
-      <svg width="64px">
-        <g id="prev-proj" class="arrow-group">
-          <circle class="circle" cx="29" cy="25" r="24"/>
-          <polyline class="triangle" points="36,37.6 18,24.4 36,12.4 "/>
-        </g>
-      </svg>
-      <h2><span id="project-pagination">01</span> / 02</h2>
-      <svg width="64px">
-        <g id="next-proj" class="arrow-group">
-          <circle class="circle" cx="29" cy="25" r="24"/>
-          <polyline class="triangle" points="22,12.4 40,25.6 22,37.6 " />
-        </g>
-      </svg>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="container">
-    <div class="project-background-text">
-      <h1>SKILLS</h1>
-    </div>
-    <!-- <div class="skills">
-      <div class="skill-1">
-        <svg class="rect-svg r3" xml:space="preserve">
-          <rect class="rect-shape" width="400" height="700"/>
-          <text x="115" y="415" class="poly-text">Web</text>
-          <text x="40" y="455" class="poly-text">Development</text>
-        </svg>
-      </div>
-      <div class="skill-2">
-        <svg class="rect-svg r4" xml:space="preserve">
-          <rect class="rect-shape" width="400" height="700"/>
-          <text x="115" y="215" class="poly-text">App</text>
-            <text x="40" y="255" class="poly-text">Development</text>
-        </svg>
-      </div>
-      <div class="skill-3">
-        <svg class="rect-svg r5" xml:space="preserve">
-          <rect class="rect-shape" width="400" height="700"/>
-          <text x="100" y="415" class="poly-text">UI/UX</text>
-        </svg>
-      </div>
-    </div> -->
+  </div>
+  <div class="project-nav">
+    <svg width="64px">
+      <g id="prev-proj" class="arrow-group">
+        <circle class="circle" cx="29" cy="25" r="24"/>
+        <polyline class="triangle" points="36,37.6 18,24.4 36,12.4 "/>
+      </g>
+    </svg>
+    <h2><span id="project-pagination">01</span> / 02</h2>
+    <svg width="64px">
+      <g id="next-proj" class="arrow-group">
+        <circle class="circle" cx="29" cy="25" r="24"/>
+        <polyline class="triangle" points="22,12.4 40,25.6 22,37.6 " />
+      </g>
+    </svg>
   </section>
 
   <!-- CONTACT -->
-  <section class="container full-width">
-    <div id="contact-me">
-      <div class="content-container">
-        <h1>Get In Touch</h1>
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" placeholder="Name">
+  <section id="contact-section" class="container">
+    <div class="background-svg">
+      <svg viewBox="0 0 101.4 119" style="enable-background:new 0 0 101.4 119;" xml:space="preserve">
+        <filter id="dropshadow" height="130%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+          <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
+          <feComponentTransfer>
+            <feFuncA type="linear" slope="0.5"/> <!-- slope is the opacity of the shadow -->
+          </feComponentTransfer>
+          <feMerge> 
+            <feMergeNode/> <!-- this contains the offset blurred image -->
+            <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+          </feMerge>
+        </filter>
+        <polygon id="contact-shape-large" points="25.4,44.5 101.6,88.5 101.6,0.5 "/>
+        <polygon id="contact-shape-small" points="42.8,78.6 101.9,112.8 101.9,44.5 "/>
+      </svg>
+    </div>
+    <div class="project-background-text">
+      <h1>GET IN</h1>
+      <h1>TOUCH</h1>
+    </div>
+    <div class="contact-content">
+      <div class="contact-details">
+        <h3>Email: akel.ms93@gmail.com</h3>
+        <h3>Phone: (873) 288-1962</h3>
+      </div>
+      <div class="social">
+        <h3>Let's Connect</h3>
+        <div>
+          <ul class="social-links">
+            <li>
+              <a href="https://www.linkedin.com/in/mohamad-akel-348259124/">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/aklitoo/">Instagram</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/M_Akel93">Twitter</a>
+            </li>
+          </ul>
         </div>
-        <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="email" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea name="" id=""  rows="10" placeholder="Your message"></textarea>
-        </div>
-        <button>SEND</button>
       </div>
     </div>
   </section>
