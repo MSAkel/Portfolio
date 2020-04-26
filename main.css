@@ -10,8 +10,14 @@
   --t1: hsl(38, 68%, 49%);
   --t2: hsl(38, 68%, 74%);
   --t3: hsl(38, 68%, 90%);
+
+  --gray-1: hsl(0, 0%, 15%);
+  --gray-2: hsl(0, 0%, 35%);
+  --gray-3: hsl(0, 0%, 55%);
+  --gray-4: hsl(0, 0%, 80%);
 }
 
+/****************** GLOBAL ********************/
 *{
   padding: 0;
   margin: 0;
@@ -34,7 +40,7 @@ body {
 .overflow-y{
   overflow-y: hidden;
 }
-
+/****************** NAV ********************/
 nav, #close{
   margin: 2rem 5rem;
   font-weight: 500;
@@ -80,12 +86,10 @@ nav, #close{
   margin: 2rem;
   cursor: pointer;
 }
-
 .st0{
   fill: var(--t2);
   opacity: 0.7;
 }
-
 .st1{
   fill: var(--s1);
   opacity: 0.3;
@@ -96,15 +100,16 @@ nav, #close{
   height: 600px;
   position: absolute;
   box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%);
-  animation: float 3s ease-in-out infinite;
+  /* animation: float 3s ease-in-out infinite; */
 }
 .r1{
   right: 15%;
   top: -13%;
 }
 .r2{
-  left: 15%;
+  left: 10%;
   bottom: -10%;
+  z-index: -100;
 }
 .rect-shape{
   fill: var(--s2);
@@ -115,7 +120,7 @@ nav, #close{
   opacity: 0.6;
 }
 
-@keyframes float {
+/* @keyframes float {
 	0% {
 		transform: translatey(0px);
 	}
@@ -125,7 +130,7 @@ nav, #close{
 	100% {
 		transform: translatey(0px);
 	}
-}
+} */
 
 .background-svg{
   position: absolute;
@@ -141,7 +146,7 @@ nav, #close{
   margin: 0 auto;
   height: 80vh;
 }
-
+/****************** HOME ********************/
 #hero-title{
   position: absolute;
   top: 50%;
@@ -187,12 +192,13 @@ button:hover {
 /****************** ABOUT ********************/
 .about{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 50%;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* height: 100%;
+  width: 50%; */
   font-size: 20px;
-  transform: translateY(-20%);
+  /* transform: translateY(-20%); */
 }
 
 /****************** PROJECTS ********************/
@@ -237,11 +243,30 @@ button:hover {
   color: var(--p2);
   font-size: 2rem;
 }
+
+.arrow-group{
+  cursor: pointer;
+}
 .triangle{
   fill-rule:evenodd;
   clip-rule:evenodd;
-  fill:var(--s3);
-  cursor: pointer;
+  fill:none;
+  stroke: var(--s1);
+  stroke-width: 2px;
+  stroke-miterlimit:10;
+}
+.circle{
+  fill: transparent;
+  stroke: var(--s1);
+  stroke-width: 2px;
+  stroke-miterlimit:10;
+}
+
+.arrow-group:hover  .circle{
+  transition-duration: 500ms;
+  /* filter: url(#dropshadow); */
+  fill: #EEE;
+  filter: drop-shadow( 2px 4px 6px rgba(0, 0, 0, .4));
 }
 
 /****************** SKILLS ********************/
@@ -298,7 +323,7 @@ button:hover {
   width: 100%;
   height: 100%;
   padding: 2rem;
-  background-color: var(--s1);
+  background-color: var(--gray-1);
   color: #fff;
   box-shadow: 0 12px 24px 0 #262d38, 0 3px 9px 0 #262d38;
 }
@@ -325,13 +350,13 @@ input, select, textarea {
   background: rgba(211, 216, 221, 0.1);
   margin-top: 0.5rem;
 }
-
+/****************** MEDIA 450px ********************/
 @media (min-width: 450px) {
   .container{
     padding: 0 5rem;
   }
 }
-
+/****************** MEDIA 768px ********************/
 @media (min-width: 768px) {
   .container{
     height: 80vh;
@@ -365,7 +390,6 @@ input, select, textarea {
     justify-content: center;
   }
   .content-container{
-    /* margin-top: 5rem; */
     width: calc(100% - 100px);
     height: calc(100% - 50px);
     
@@ -379,12 +403,12 @@ input, select, textarea {
     box-shadow: none;
   }
 }
-
+/****************** MEDIA 900PX ********************/
 @media (min-width: 900px) {
   .container{
     padding: 0 10rem;
   }
-
+  
   .project h1 {
     margin-bottom: 3rem;
   }
@@ -394,8 +418,8 @@ input, select, textarea {
   }
   
 }
-
-@media (min-width: 1500px) {
+/****************** MEDIA 1500px ********************/
+@media (min-width: 1250px) {
   .container{
     height: 100vh;
     padding: 0 12rem;
@@ -411,25 +435,45 @@ input, select, textarea {
     letter-spacing: 5rem;
   }
 
+  .about{
+    width: 75%;
+    position: relative;
+    transform: translateY(50%);
+  }
+
+  .about-text{
+    margin-top: 3rem;
+  }
+
+  .about img {
+    height: 500px;
+    width: 450px;
+    margin-right: 5rem;
+    /* filter: grayscale(100); */
+  }
+
+  .about img:hover {
+    transition-duration: 1000ms;
+    box-shadow: 2px 6px 24px;
+    filter: grayscale(100);
+  }
+
+  /****************** PROJECTS ********************/
   .project-background-text{
     display: block;
     font-size: 150px;
-    opacity: 0.05;
-    color: black;
+    opacity: 0.2;
+    color: var(--gray-4);
     letter-spacing: 0;
     margin-left: 20rem;
     position: absolute;
     top: 0;
-  }
-
-  .project-background-text h1{
-    margin: 0;
+    text-shadow: -1px 1px 0px var(--gray-2);
   }
 
   .project-description h1{
     font-size: 64px;
-    /* margin-top: -13.5rem; */
-    margin-bottom: 3.5rem;
+    margin: -4.5rem 0 3.5rem 0;
   }
 
   .project-description p {
@@ -437,6 +481,29 @@ input, select, textarea {
     margin-bottom: 0.5rem;
   }
 
+  .switch-left-out{
+    transition-duration: 400ms;
+    transform: translateX(-500%);
+  }
+  .switch-left-in{
+    transition-duration: 400ms;
+    transform: translateX(0%);
+  }
+
+  .switch-right-out{
+    transition-duration: 400ms;
+    transform: translateX(500%);
+  }
+  .switch-right-in{
+    transition-duration: 400ms;
+    transform: translateX(0%);
+  }
+
+  .project-nav h2{
+    margin: 0.25rem 1rem 0;
+  }
+
+  /****************** CONTACT ********************/
   #contact-me h1 {
     font-size: 64px;
   }

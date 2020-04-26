@@ -7,6 +7,7 @@
   <title>Mohamad Akel</title>
 </head>
 <body id="body">
+  <!-- NAV -->
   <nav>
     <div id="menu">
       <p>MENU</p>
@@ -23,7 +24,7 @@
       </svg>
     </div>
   </nav>
-
+  <!-- NAV OPEN -->
   <section id="" class="menu-display hidden">
     <div id="close">
       <p>CLOSE</p>
@@ -44,6 +45,7 @@
     </div>
   </section>
 
+  <!-- HOME -->
   <section>
     <div class="container">
       <div class="background-svg">
@@ -80,25 +82,33 @@
     </div>
   </section>
 
-
+  <!-- ABOUT -->
   <section class="container">
     <svg class="rect-svg r1" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
       <rect class="rect-shape" width="200" height="600"/>
     </svg>
-
     <div class="project-background-text">
       <h1>ABOUT</h1>
     </div>
     <div class="about">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati minus voluptate tempora magni
-      aperiam veniam sunt, aliquid totam laborum excepturi animi neque doloremque maiores nostrum facere
-      eveniet nam provident voluptas.</p>
+      <img src="imgs/me.jpg" alt="Myself">
+      <div class="about-text">
+        <p>
+          Currently a "Mobile Application Design & Development" student at Algonquin College, I am building upon the skills I gained from my Bachelor’s degree in Software Engineering. Both programs have prepared me to design and develop device specific native and cross-platform mobile and web applications.
+        </p>
+        <br>
+        <p>
+          Through multiple collaborative projects I have demonstrated the ability to work with a variety of different programming languages, frameworks and software, including HTML/CSS, Javascript, Kotlin, Swift, C#, Node.js, express, React, React Native, Angular, Ionic, Xamarin, MongoDB, Android Studio, Xcode, Adobe Illustrator.
+          Able to apply different processes to achieve client and user satisfaction including Design Thinking and SDLC.
+        </p>
+      </div>
     </div>
     <svg class="rect-svg r2" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
       <rect class="rect-shape-2" width="200" height="600"/>
     </svg>
   </section>
 
+  <!-- PROJECTS -->
   <section class="container">
     <div class="project">
       <div class="project-background-text">
@@ -121,16 +131,23 @@
       </div>
     </div>
     <div class="project-nav">
-      <svg width="54px">
-        <polygon id="prev-proj" class="triangle" points="5.2,19 36.4,37 36.4,1"/>
+      <svg width="64px">
+        <g id="prev-proj" class="arrow-group">
+          <circle class="circle" cx="29" cy="25" r="24"/>
+          <polyline class="triangle" points="36,37.6 18,24.4 36,12.4 "/>
+        </g>
       </svg>
       <h2><span id="project-pagination">01</span> / 02</h2>
-      <svg width="54px">
-        <polygon id="next-proj" class="triangle" points="46.8,19 15.6,1 15.6,37 "/>
+      <svg width="64px">
+        <g id="next-proj" class="arrow-group">
+          <circle class="circle" cx="29" cy="25" r="24"/>
+          <polyline class="triangle" points="22,12.4 40,25.6 22,37.6 " />
+        </g>
       </svg>
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section class="container">
     <div class="project-background-text">
       <h1>SKILLS</h1>
@@ -159,6 +176,7 @@
     </div> -->
   </section>
 
+  <!-- CONTACT -->
   <section class="container full-width">
     <div id="contact-me">
       <div class="content-container">

@@ -41,6 +41,16 @@ function onClickClose(){
 }
 
 function nextProj(){
+  leftSection = document.querySelector(".left-section")
+  rightSection = document.querySelector(".right-section")
+
+  leftSection.classList.remove("switch-left-in")
+  leftSection.classList.add("switch-left-out")
+
+  rightSection.classList.remove("switch-right-in")
+  rightSection.classList.add("switch-right-out")
+
+
   projNumber = document.getElementById("project-number")
   projTitle = document.getElementById("project-title")
   projDetails = document.getElementById("project-details")
@@ -55,14 +65,32 @@ function nextProj(){
     currentProj = minProject
   }
 
-  projNumber.textContent = projects[currentProj].number
-  projTitle.textContent = projects[currentProj].title
-  projDetails.textContent = projects[currentProj].details
-  projImage.src = projects[currentProj].image
-  pagination.textContent = projects[currentProj].number
+  setTimeout(() =>{
+    projNumber.textContent = projects[currentProj].number
+    projTitle.textContent = projects[currentProj].title
+    projDetails.textContent = projects[currentProj].details
+    projImage.src = projects[currentProj].image
+    pagination.textContent = projects[currentProj].number
+  
+    leftSection.classList.remove("switch-left-out")
+    leftSection.classList.add("switch-left-in")
+
+    rightSection.classList.remove("switch-right-out")
+    rightSection.classList.add("switch-right-in")
+  }, 400)
+
 }
 
 function prevProj(){
+  leftSection = document.querySelector(".left-section")
+  rightSection = document.querySelector(".right-section")
+
+  leftSection.classList.remove("switch-left-in")
+  leftSection.classList.add("switch-left-out")
+
+  rightSection.classList.remove("switch-right-in")
+  rightSection.classList.add("switch-right-out")
+
   projNumber = document.getElementById("project-number")
   projTitle = document.getElementById("project-title")
   projDetails = document.getElementById("project-details")
@@ -77,9 +105,17 @@ function prevProj(){
   }
 
 
-  projNumber.textContent = projects[currentProj].number
-  projTitle.textContent = projects[currentProj].title
-  projDetails.textContent = projects[currentProj].details
-  projImage.src = projects[currentProj].image
-  pagination.textContent = projects[currentProj].number
+   setTimeout(() =>{
+    projNumber.textContent = projects[currentProj].number
+    projTitle.textContent = projects[currentProj].title
+    projDetails.textContent = projects[currentProj].details
+    projImage.src = projects[currentProj].image
+    pagination.textContent = projects[currentProj].number
+  
+    leftSection.classList.remove("switch-left-out")
+    leftSection.classList.add("switch-left-in")
+
+    rightSection.classList.remove("switch-right-out")
+    rightSection.classList.add("switch-right-in")
+  }, 400)
 }
