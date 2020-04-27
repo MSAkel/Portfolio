@@ -21,6 +21,14 @@ let projects = [
 
 function init() {
   eventListeners()
+
+  let lines = document.querySelectorAll(".line")
+  let time = 0
+  lines.forEach(line => {
+    setTimeout(() => {
+      line.classList.add("show-line")
+    }, time += 250)
+  })
 }
 
 function eventListeners() {
@@ -78,7 +86,6 @@ function nextProj(){
     rightSection.classList.remove("switch-right-out")
     rightSection.classList.add("switch-right-in")
   }, 400)
-
 }
 
 function prevProj(){

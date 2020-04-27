@@ -16,7 +16,7 @@
   --gray-2: hsl(0, 0%, 35%);
   --gray-3: hsl(0, 0%, 55%);
   --gray-4: hsl(0, 0%, 67%);
-  --gray-5: hsl(0, 0%, 80%);
+  --gray-5: hsl(0, 0%, 90%);
 }
 
 /****************** GLOBAL ********************/
@@ -60,8 +60,8 @@ html {
 }
 
 body {
-  background: linear-gradient(90deg, #eee 1%, transparent 1%) 1px 0, rgb(248, 246, 246);
-  background-size: 245px 1px;
+  /* background: linear-gradient(90deg, #eee 1%, transparent 1%) 1px 0, rgb(248, 246, 246);
+  background-size: 245px 1px; */
   overflow-x: hidden;
 }
 
@@ -75,6 +75,51 @@ body {
   margin: 0 auto;
   /* height: 100vh; */
 }
+
+.vertical-lines{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+.show-line{
+  height: 100%;
+  width: calc(12% + 1px);
+  display: none;
+  position: relative;
+  /* background-color: var(--p1); */
+}
+.vertical-lines .show-line::before{
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1.5px;
+  background: var(--gray-5);
+  animation: line-in 1s ease-in-out;
+}
+
+
+
+@keyframes line-in {
+	0% {
+    height: 0;
+	}
+	100% {
+    height: 100%;
+	}
+}
+/* .vertical-lines .line::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0px;
+  background: var(--gray-5);
+  transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+} */
 
 /****************** NAV ********************/
 nav, #close{
@@ -146,7 +191,7 @@ nav, #close{
 .r2{
   left: 10%;
   bottom: -10%;
-  z-index: -100;
+  z-index: 0;
 }
 .rect-shape{
   fill: var(--s1);
@@ -236,6 +281,7 @@ button:hover {
   margin-bottom: 2rem;
   box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%);
   filter: grayscale(100);
+  z-index: 10;
 }
 
 .about img:hover {
@@ -314,7 +360,9 @@ button:hover {
 
 .switch-left-out{
   transition-duration: 400ms;
-  transform: translateX(-500%);
+  /* transform: translateX(-500%); */
+  opacity: 0;
+  transform: translateX(-20%);
 }
 .switch-left-in{
   transition-duration: 400ms;
@@ -323,7 +371,8 @@ button:hover {
 
 .switch-right-out{
   transition-duration: 400ms;
-  transform: translateX(500%);
+  opacity: 0;
+  transform: translateX(30%);
 }
 .switch-right-in{
   transition-duration: 400ms;
@@ -356,7 +405,7 @@ button:hover {
   right: 0;
   top:10%;
   width: 600px;
-  z-index: -10;
+  /* z-index: -10; */
   display: none;
 }
 #contact-shape-large{
@@ -527,6 +576,11 @@ button:hover {
 
 /****************** MEDIA 1250px ********************/
 @media (min-width: 1250px) {
+  .line{
+    /* width: calc(12% + 1px); */
+    display: inline-block;
+  }
+
   .container{
     height: 100vh;
     padding: 0 6.5rem;
