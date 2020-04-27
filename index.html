@@ -53,14 +53,7 @@
     </div>
   </section>
   <div class="vertical-lines">
-    <i class="line line-0"></i>
-    <i class="line line-1"></i>
-    <i class="line line-2"></i>
-    <i class="line line-3"></i>
-    <i class="line line-4"></i>
-    <i class="line line-5"></i>
-    <i class="line line-6"></i>
-    <i class="line line-7"></i>
+    <i class="line line-0"></i><i class="line line-1"></i><i class="line line-2"></i><i class="line line-3"></i><i class="line line-4"></i><i class="line line-5"></i><i class="line line-6"></i><i class="line line-7"></i>
   </div>
   <!-- HOME -->
   <section id="home-section" class="container">
@@ -99,15 +92,9 @@
 
   <!-- ABOUT -->
   <section id="about-section" class="container">
-    <!-- <div class="rect-top-reveal">
-      <svg class="rect-svg r1" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
-        <rect class="rect-shape" width="200" height="600"/>
-      </svg>
-    </div> -->
-
     <div class="background-svg">
       <svg  id="about-svg" x="0px" y="0px" viewBox="0 0 298 258" style="enable-background:new 0 0 298 258;" xml:space="preserve">
-        <g id="about-svg-group">
+        <g>
           <path id="about-svg-shape"/>
         </g>
         <animate xlink:href="#about-svg-shape"
@@ -156,9 +143,6 @@
         </p>
       </div>
     </div>
-    <!-- <svg class="rect-svg r2" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
-      <rect class="rect-shape-2" width="200" height="600"/>
-    </svg> -->
   </section>
 
   <!-- PROJECTS -->
@@ -167,6 +151,12 @@
       <h1>WORK</h1>
     </div>
     <div class="project-content">
+      <svg class="nav-svg" width="64px">
+        <g id="prev-proj" class="arrow-group">
+          <circle class="circle" cx="29" cy="25" r="24"/>
+          <polyline class="triangle" points="36,37.6 18,24.4 36,12.4 "/>
+        </g>
+      </svg>
       <div class="left-section">
         <div class="project-number">
           <h1 id="project-number">01</h1>
@@ -182,22 +172,18 @@
       <div class="right-section">
         <img src="imgs/phone-electro.png" id="project-image" alt="Electromanager app image">
       </div>
+      <svg class="nav-svg" width="64px">
+        <g id="next-proj" class="arrow-group">
+          <circle class="circle" cx="29" cy="25" r="24"/>
+          <polyline class="triangle" points="22,12.4 40,25.6 22,37.6 " />
+        </g>
+      </svg>
     </div>
   </div>
-  <div class="project-nav">
-    <svg width="64px">
-      <g id="prev-proj" class="arrow-group">
-        <circle class="circle" cx="29" cy="25" r="24"/>
-        <polyline class="triangle" points="36,37.6 18,24.4 36,12.4 "/>
-      </g>
-    </svg>
-    <h2><span id="project-pagination">01</span> / 02</h2>
-    <svg width="64px">
-      <g id="next-proj" class="arrow-group">
-        <circle class="circle" cx="29" cy="25" r="24"/>
-        <polyline class="triangle" points="22,12.4 40,25.6 22,37.6 " />
-      </g>
-    </svg>
+  <!-- <div class="project-nav"> -->
+   
+    <!-- <h2><span id="project-pagination">01</span> / 02</h2> -->
+   
   </section>
 
   <!-- CONTACT -->
