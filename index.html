@@ -11,37 +11,45 @@
   <nav>
     <div id="menu">
       <p>MENU</p>
-      <svg x="0px" y="0px" width="34px" viewBox="0 0 57 27" style="enable-background:new 0 0 57 27;" xml:space="preserve">
+      <svg id="hamburger-menu" x="0px" y="0px" width="34px" viewBox="0 0 57 27" style="enable-background:new 0 0 57 27;" xml:space="preserve">
         <g>
-          <line class="st4" x1="5.5" y1="3.5" x2="52.5" y2="3.5"/>
+          <line id="hamburger-line-0" class="st4" x1="5.5" y1="3.5" x2="52.5" y2="3.5"/>
         </g>
         <g>
-          <line class="st4" x1="5.5" y1="14.5" x2="52.5" y2="14.5"/>
+          <line id="hamburger-line-1" class="st4" x1="5.5" y1="14.5" x2="52.5" y2="14.5"/>
         </g>
         <g>
-          <line class="st4" x1="5.5" y1="25.5" x2="52.5" y2="25.5"/>
+          <line id="hamburger-line-2" class="st4" x1="5.5" y1="25.5" x2="52.5" y2="25.5"/>
         </g>
       </svg>
     </div>
   </nav>
   <!-- NAV OPEN -->
-  <section id="" class="menu-display hidden">
+  <section id="" class="menu-display">
     <div id="close">
       <p>CLOSE</p>
       <svg x="0px" y="0px" width="34px" viewBox="0 0 57 37" style="enable-background:new 0 0 57 37;" xml:space="preserve">
         <g>
-          <line class="st4" x1="12.4" y1="1.9" x2="45.6" y2="35.1"/>
+          <line class="close-icon" x1="12.4" y1="1.9" x2="45.6" y2="35.1"/>
         </g>
         <g>
-          <line class="st4" x1="10.4" y1="35.1" x2="43.6" y2="1.9"/>
+          <line class="close-icon" x1="10.4" y1="35.1" x2="43.6" y2="1.9"/>
         </g>
       </svg>
     </div>
     <div class="menu-list">
-      <h1>HOME</h1>
-      <h1>ABOUT</h1>
-      <h1>SKILLS</h1>
-      <h1>PROJECTS</h1>
+      <h1>
+        <a href="#home-section">HOME</a>
+      </h1>
+      <h1>
+        <a href="#about-section">ABOUT</a>
+      </h1>
+      <h1>
+        <a href="#project-section">WORK</a>
+      </h1>
+      <h1>
+        <a href="#contact-section">CONTACT</a>
+      </h1>
     </div>
   </section>
   <div class="vertical-lines">
@@ -56,7 +64,6 @@
   </div>
   <!-- HOME -->
   <section id="home-section" class="container">
-    
       <div class="background-svg">
         <svg x="0px" y="0px" viewBox="0 0 696 1080" style="enable-background:new 0 0 696 1080;" xml:space="preserve">
           <path id="p1" class="st0" d="M410.5,0.5C152,92-22.2,330.9,2.5,489.5c19.4,124.7,84.5,229.5,196,281c199.3,92.1,434.7,108.9,497,247
@@ -85,16 +92,19 @@
         <div id="hero-title">
           <h1>I'm <span id="name">Mohamad Akel</span></h1>
           <h1>Web and mobile designer and developer.</h1>
-          <button>LEARN MORE</button>
+            <a class="cta" href="#about-section">LEARN MORE</a>
         </div>
       </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about-section" class="container">
-    <svg class="rect-svg r1" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
-      <rect class="rect-shape" width="200" height="600"/>
-    </svg>
+    <div class="rect-top-reveal">
+      <svg class="rect-svg r1" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
+        <rect class="rect-shape" width="200" height="600"/>
+      </svg>
+    </div>
+    
     <div class="project-background-text">
       <h1>ABOUT</h1>
     </div>
@@ -131,7 +141,7 @@
           <p id="project-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati minus voluptate tempora magni
           aperiam veniam sunt, aliquid totam laborum excepturi animi neque doloremque maiores nostrum facere
           eveniet nam provident voluptas.</p>
-          <button id="view-project-btn">VIEW PROJECT</button>
+          <a id="view-project-btn" class="cta" href="#">VIEW PROJECT</a>
         </div>
       </div>
       <div class="right-section">
@@ -201,6 +211,8 @@
       </div>
     </div>
   </section>
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script> -->
 <script src="main.js"></script>
 </body>
 </html>

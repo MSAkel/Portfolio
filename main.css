@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@700&family=Heebo:wght@500&display=swap');
+
 :root{
   --p1: hsl(178, 55%, 25%);
   --p2: hsl(178, 55%, 25%);
@@ -53,10 +54,11 @@ li {
   list-style-type: none;
 }
 html {
-  font-family: 'Heebo', Helvetica, Arial, sans-serif;
+  font-family: 'Muli', 'Heebo', Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #262d38;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -65,9 +67,9 @@ body {
   overflow-x: hidden;
 }
 
-.overflow-y{
+/* .overflow-y{
   overflow-y: hidden;
-}
+} */
 
 .container{
   padding: 0 2.5rem;
@@ -124,7 +126,6 @@ body {
 /****************** NAV ********************/
 nav, #close{
   margin: 2rem 2rem;
-  font-weight: 600;
   text-align: right;
   position: fixed;
   right: 0;
@@ -137,10 +138,18 @@ nav, #close{
   stroke-linecap:round;
   stroke-miterlimit:10;
 }
+.close-icon{
+  stroke: var(--gray-5);
+  stroke-width: 4;
+}
+#close{
+  color: var(--gray-5);
+}
 #menu, #close{
   display: flex;
   justify-content: right;
   cursor: pointer;
+  letter-spacing: 0.35rem;
 }
 #menu p, #close p{
   margin-right: 1rem;
@@ -150,10 +159,23 @@ nav, #close{
   background-color: var(--p1);
   position: fixed;
   z-index: 100;
-  width: 100vw;
+  width: 20vw;
+  right: 0;
+  box-shadow: 6px 6px 24px;
+  transition: all 1000ms;
+  transform: translateX(200%);
 }
-.hidden{
-  display: none;
+#hamburger-line-1{
+  transition: all 1s;
+  transform: translateX(0%);
+}
+#hamburger-line-1.menu-hover{
+  transform: translateX(30%);
+
+}
+.menu-display.show{
+  /* display: none; */
+  transform: translateX(0%);
 }
 .menu-list{
   display: flex;
@@ -161,11 +183,16 @@ nav, #close{
   justify-content: center;
   align-items: center;
   height: 100%;
+  transition: all 500ms;
+ 
 }
 .menu-display h1{
   font-size: 3rem;
   margin: 2rem;
   cursor: pointer;
+}
+.menu-display a{
+  color: var(--gray-5);
 }
 .st0{
   fill: var(--t1);
@@ -229,7 +256,7 @@ nav, #close{
   color: var(--p1);
 }
 
-button{
+.cta{
   margin-top: 2rem;
   padding: 1rem 2rem;
   border: 3px solid var(--p1);
@@ -241,13 +268,15 @@ button{
   color: var(--p1);
 }
 
-button:hover {
+.cta:hover {
   cursor: pointer;
   background-color: var(--p1);
   color: white;
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
 }
-
+.cta::after{
+  display: none;
+}
 .background-text{
   position: absolute;
   top: 32%;
