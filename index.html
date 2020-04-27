@@ -99,9 +99,44 @@
 
   <!-- ABOUT -->
   <section id="about-section" class="container">
-    <div class="rect-top-reveal">
+    <!-- <div class="rect-top-reveal">
       <svg class="rect-svg r1" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
         <rect class="rect-shape" width="200" height="600"/>
+      </svg>
+    </div> -->
+
+    <div class="background-svg">
+      <svg  id="about-svg" x="0px" y="0px" viewBox="0 0 298 258" style="enable-background:new 0 0 298 258;" xml:space="preserve">
+        <g id="about-svg-group">
+          <path id="about-svg-shape"/>
+        </g>
+        <animate xlink:href="#about-svg-shape"
+        attributeName="d"
+        attributeType="XML"
+        keyTimes="0;0.5;1"
+        values="
+        M212.7,0H84.3c-6.2,0-11.9,3.3-15,8.7L5.1,119.8c-3.1,5.4-3.1,12,0,17.3l64.2,111.2c3.1,5.4,8.8,8.7,15,8.7
+            h128.4c6.2,0,11.9-3.3,15-8.7l64.2-111.2c3.1-5.4,3.1-12,0-17.3L227.7,8.7C224.6,3.3,218.9,0,212.7,0z;
+        M150.2,0h-3.5C101.9,0,60.5,23.9,38.1,62.7l-1.7,3c-22.4,38.8-22.4,86.7,0,125.5l1.7,3
+          c22.4,38.8,63.8,62.7,108.7,62.7h3.5c44.8,0,86.2-23.9,108.7-62.7l1.7-3c22.4-38.8,22.4-86.7,0-125.5l-1.7-3
+          C236.5,23.9,195.1,0,150.2,0z;
+        M212.7,0H84.3c-6.2,0-11.9,3.3-15,8.7L5.1,119.8c-3.1,5.4-3.1,12,0,17.3l64.2,111.2c3.1,5.4,8.8,8.7,15,8.7
+          h128.4c6.2,0,11.9-3.3,15-8.7l64.2-111.2c3.1-5.4,3.1-12,0-17.3L227.7,8.7C224.6,3.3,218.9,0,212.7,0z"
+        dur="6s"
+        repeatCount="indefinite"
+        fill="freeze" 
+        />
+        <filter id="drop-shadow" height="130%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+          <feOffset dx="2" dy="4" result="offsetblur"/> <!-- how much to offset -->
+          <feComponentTransfer>
+            <feFuncA type="linear" slope="0.4"/> <!-- slope is the opacity of the shadow -->
+          </feComponentTransfer>
+          <feMerge> 
+            <feMergeNode/> <!-- this contains the offset blurred image -->
+            <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+          </feMerge>
+        </filter>
       </svg>
     </div>
     
@@ -121,9 +156,9 @@
         </p>
       </div>
     </div>
-    <svg class="rect-svg r2" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
+    <!-- <svg class="rect-svg r2" x="0px" y="0px" viewBox="0 0 200 600" style="enable-background:new 0 0 200 600;" xml:space="preserve">
       <rect class="rect-shape-2" width="200" height="600"/>
-    </svg>
+    </svg> -->
   </section>
 
   <!-- PROJECTS -->

@@ -41,6 +41,14 @@ function eventListeners() {
 
   document.getElementById("menu").addEventListener('mouseover', onHoverMenu)
   document.getElementById("menu").addEventListener('mouseout', onLeaveMenu)
+
+  document.getElementById("about-svg-group").addEventListener('click', (ev) => {
+    let shape = ev.currentTarget
+    console.log(shape.innerHTML)
+    shape.innerHTML = `<path id="about-svg-shape" d="M212.7,0H84.3c-6.2,0-11.9,3.3-15,8.7L5.1,119.8c-3.1,5.4-3.1,12,0,17.3l64.2,111.2c3.1,5.4,8.8,8.7,15,8.7
+    h128.4c6.2,0,11.9-3.3,15-8.7l64.2-111.2c3.1-5.4,3.1-12,0-17.3L227.7,8.7C224.6,3.3,218.9,0,212.7,0z"/>`
+    console.log(shape.innerHTML)
+  })
 }
 
 function onHoverMenu(){

@@ -88,7 +88,7 @@ body {
 }
 .show-line{
   height: 100%;
-  width: calc(12% + 1px);
+  width: calc(12% + 5px);
   display: none;
   position: relative;
   /* background-color: var(--p1); */
@@ -118,7 +118,7 @@ body {
   right: 0;
   top: 0;
   height: 100%;
-  width: 0px;
+  width: 100%;
   background: var(--gray-5);
   transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1)
 } */
@@ -184,7 +184,6 @@ nav, #close{
   align-items: center;
   height: 100%;
   transition: all 500ms;
- 
 }
 .menu-display h1{
   font-size: 3rem;
@@ -203,12 +202,10 @@ nav, #close{
   opacity: 0.3;
 }
 
-.rect-svg{
+/* .rect-svg{
   width: 200px;
   height: 600px;
   position: absolute;
-  /* box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%); */
-  /* animation: float 3s ease-in-out infinite; */
   display: none;
 }
 .r1{
@@ -227,7 +224,7 @@ nav, #close{
 .rect-shape-2{
   fill: var(--t1);
   opacity: 0.6;
-}
+} */
 
 /* @keyframes float {
 	0% {
@@ -317,6 +314,36 @@ nav, #close{
   transition-duration: 1000ms;
   box-shadow: 2px 6px 24px;
   /* filter: grayscale(100); */
+}
+
+#about-svg{
+  fill: var(--t1);
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 20%;
+  right: 10%;
+  opacity: 0.8;
+  animation: about-shape 4s ease-in-out infinite;
+  filter: url("#drop-shadow");
+  transition: all 500ms;
+}
+
+@keyframes about-shape{
+  0% {
+		transform: translate(0px, 0px) rotate(0deg)  ;
+	}
+	50% {
+		transform: translate(4px, -7px) rotate(15deg) ;
+	}
+	100% {
+		transform: translate(0px, 0px) rotate(0deg) ;
+	}
+}
+
+#about-svg:hover{
+  fill: var(--p2)
 }
 
 /****************** PROJECTS ********************/
