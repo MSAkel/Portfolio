@@ -119,6 +119,12 @@ body {
 } */
 
 /****************** NAV ********************/
+#logo{
+  width: 80px;
+  position: fixed;
+  left: 10%;
+  margin-top: 1rem;
+}
 nav, #close{
   margin: 2rem 2rem;
   text-align: right;
@@ -126,6 +132,7 @@ nav, #close{
   right: 0;
   z-index: 100;
 }
+
 .st4{
   fill:none;
   stroke:#444;
@@ -143,6 +150,7 @@ nav, #close{
 #menu, #close{
   display: flex;
   justify-content: right;
+  /* align-items: flex-start; */
   cursor: pointer;
   letter-spacing: 0.35rem;
 }
@@ -160,6 +168,7 @@ nav, #close{
   transition: all 1000ms;
   transform: translateX(200%);
 }
+
 #hamburger-line-1{
   transition: all 1s;
   transform: translateX(0%);
