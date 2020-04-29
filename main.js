@@ -41,6 +41,11 @@ function eventListeners() {
 
   document.getElementById("menu").addEventListener('mouseover', onHoverMenu)
   document.getElementById("menu").addEventListener('mouseout', onLeaveMenu)
+
+  let menuItems = document.querySelectorAll(".menu-item")
+  menuItems.forEach(item => {
+    item.addEventListener('click', onClickClose)
+  })
 }
 
 function onHoverMenu(){

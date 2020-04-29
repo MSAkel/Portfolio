@@ -96,9 +96,6 @@ body {
   background: var(--gray-5);
   animation: line-in 1s ease-in-out;
 }
-
-
-
 @keyframes line-in {
 	0% {
     height: 0;
@@ -124,6 +121,7 @@ body {
   position: fixed;
   left: 10%;
   margin-top: 1rem;
+  z-index: 2000;
 }
 nav, #close{
   margin: 2rem 2rem;
@@ -161,8 +159,9 @@ nav, #close{
   height: 100vh;
   background-color: var(--p1);
   position: fixed;
-  z-index: 100;
-  width: 20vw;
+  z-index: 10000;
+  /* width: 20vw; */
+  width: 100vw;
   right: 0;
   box-shadow: 6px 6px 24px;
   transition: all 1000ms;
@@ -208,21 +207,28 @@ nav, #close{
 /****************** HOME ********************/
 #home-section{
   margin-bottom: 5rem;
+  height: 100vh;
 }
 #hero-title h1 {
   font-size: 42px;
 }
 
 #home-section .content{
-  padding: 4rem 0;
+  padding: 6rem 0 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #name{
   color: var(--p1);
 }
+#hero-title div{
+  margin-top: 5rem;
+}
 
-.cta{
-  margin-top: 2rem;
+#cta, #view-project-btn{
   padding: 1rem 2rem;
   border: 3px solid var(--p1);
   background-color: transparent;
@@ -233,13 +239,13 @@ nav, #close{
   color: var(--p1);
 }
 
-.cta:hover {
+#cta:hover, #view-project-btn:hover {
   cursor: pointer;
   background-color: var(--p1);
   color: white;
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
 }
-.cta::after{
+#cta::after, #view-project-btn::after{
   display: none;
 }
 .background-text{
@@ -256,6 +262,7 @@ nav, #close{
   right: 0;
   width: 350px;
   z-index: -10;
+  opacity: 0.3;
 }
 
 /****************** ABOUT ********************/
@@ -286,18 +293,17 @@ nav, #close{
 
 #about-svg{
   fill: var(--t1);
-  width: 300px;
-  height: 300px;
+  width: 210px;
+  height: 210px;
   position: absolute;
-  /* transform: translateY(100%); */
   top: 20%;
   right: 10%;
   opacity: 0.8;
   animation: about-shape 4s ease-in-out infinite;
   filter: url("#drop-shadow");
   transition: all 500ms;
+  display: none;
 }
-
 @keyframes about-shape{
   0% {
 		transform: translate(0px, 0px) rotate(0deg)  ;
@@ -309,15 +315,29 @@ nav, #close{
 		transform: translate(0px, 0px) rotate(0deg) ;
 	}
 }
-
 #about-svg:hover{
   fill: var(--p2)
 }
 
 /****************** PROJECTS ********************/
-#project-section .right-section,
-.project-background-text{
+#project-section .right-section
+/* .project-background-text */
+{
   display: none;
+}
+
+.project-background-text{
+  font-size: 64px;
+  opacity: 0.35;
+  color: var(--gray-4);
+  letter-spacing: 0;
+  line-height: 0.9;
+  margin: 2rem 0;
+}
+
+.project-content{
+  display: flex;
+  align-items: center;
 }
 
 .project-number{
@@ -344,6 +364,16 @@ nav, #close{
   color: var(--p1);
 }
 
+#prev-proj,
+#next-proj{
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 1s;
+}
+#prev-proj:hover,
+#next-proj:hover{
+  color: var(--p1);
+}
 /*Projects Navigation*/
 /* .project-nav{
   display: flex;
@@ -356,7 +386,7 @@ nav, #close{
   font-size: 2rem;
   margin: 0.25rem 2rem 0;
 } */
-.arrow-group{
+/* .arrow-group{
   cursor: pointer;
 }
 .triangle{
@@ -375,7 +405,6 @@ nav, #close{
 }
 .arrow-group:hover  .circle{
   transition-duration: 500ms;
-  /* filter: url(#dropshadow); */
   fill: #EEE;
   filter: drop-shadow( 2px 4px 6px rgba(0, 0, 0, .4));
 }
@@ -383,14 +412,14 @@ nav, #close{
 .nav-svg{
   transform: translateY(50%);
   margin: 0.35rem;
-}
+} */
 /*Projects Navigation Ends*/
 
 .switch-left-out{
   transition-duration: 400ms;
   /* transform: translateX(-500%); */
   opacity: 0;
-  transform: translateX(-20%);
+  transform: translateX(-2%);
 }
 .switch-left-in{
   transition-duration: 400ms;
@@ -400,7 +429,7 @@ nav, #close{
 .switch-right-out{
   transition-duration: 400ms;
   opacity: 0;
-  transform: translateX(30%);
+  transform: translateX(3%);
 }
 .switch-right-in{
   transition-duration: 400ms;
@@ -408,21 +437,27 @@ nav, #close{
 }
 
 /****************** CONTACT ********************/
+#contact-section{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 .contact-content{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.project-background-text{
-  line-height: 0.9;
-  margin: 5rem 0;
-}
 
 .social{
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
+  margin-top: 4rem;
 }
 .social-links{
   margin-bottom: 2rem;
+}
+.social-links li{
+  margin-bottom: 1rem;
 }
 .social h3{
   margin-bottom: 1rem;
@@ -435,8 +470,8 @@ nav, #close{
 #contact-section .background-svg{
   position: absolute;
   right: 0;
-  top:10%;
-  width: 600px;
+  top: 40%;
+  width: 400px;
   /* z-index: -10; */
   display: none;
 }
@@ -445,7 +480,6 @@ nav, #close{
   opacity: 0.5;
   filter:url(#dropshadow);
 }
-
 #contact-shape-small{
   fill: var(--s3);
   opacity: 0.7;
@@ -453,8 +487,10 @@ nav, #close{
 }
 
 .contact-content h3{
-  margin-bottom: 2rem;
-  font-size: 32px;
+  /* margin-bottom: 2rem; */
+  margin-bottom: 1rem;
+  /* font-size: 32px; */
+  font-size: 21px;
 }
 
 /****************** MEDIA 450px ********************/
@@ -481,9 +517,9 @@ nav, #close{
     padding: 0 7rem;
     position: relative; 
   }
-  .rect-svg{
+  /* .rect-svg{
     display: block;
-  }
+  } */
 
   /****************** HOME ********************/
   #home-section{
@@ -508,9 +544,12 @@ nav, #close{
   }
   #home-section .background-text{
     display: block;
-    font-size: 90px;
+    /* font-size: 90px; */
+    font-size: 100px;
     font-weight: 900;
-    letter-spacing: 2.5rem;
+    /* letter-spacing: 2.5rem; */
+    letter-spacing: 2rem;
+    margin-top: 8rem;
   }
 
   /****************** ABOUT ********************/
@@ -522,8 +561,8 @@ nav, #close{
     margin-bottom: 6rem;
   }
   .about img {
-    height: 550px;
-    width: 450px;
+    height: 450px;
+    width: 350px;
     box-shadow: none;
   }
   .about-text{
@@ -547,11 +586,13 @@ nav, #close{
     height: 500px;
   }
   .project-background-text{
-    display: block;
-    font-size: 120px;
-    opacity: 0.35;
+    /* display: block; */
+
+    /* font-size: 120px; */
+    font-size: 100px;
+    /* opacity: 0.35;
     color: var(--gray-4);
-    letter-spacing: 0;
+    letter-spacing: 0; */
     /* text-shadow: -1px 1px 0px var(--gray-2); */
   }
 
@@ -561,8 +602,12 @@ nav, #close{
     }
 }
 
-/****************** MEDIA 900PX ********************/
+/****************** MEDIA 900px ********************/
 @media (min-width: 900px) {
+  .menu-display{
+    width: 40vw;
+  }
+
   .container{
     padding: 0 5rem;
   }
@@ -587,6 +632,7 @@ nav, #close{
   }
 }
 
+/****************** MEDIA 995px ********************/
 @media (min-width: 995px) {
   .about{
     flex-direction: row;
@@ -598,8 +644,14 @@ nav, #close{
     margin-right: 3rem;
     box-shadow: none;
   }
+
+  #contact-section .background-svg{
+    top: 37%;
+    width: 500px;
+  }
 }
 
+/****************** MEDIA 1140px ********************/
 @media (min-width: 1140px) { 
   .about{
     width: 90%;
@@ -608,6 +660,9 @@ nav, #close{
 
 /****************** MEDIA 1250px ********************/
 @media (min-width: 1250px) {
+  .menu-display{
+    width: 25vw;
+  }
   .line{
     /* width: calc(12% + 1px); */
     display: inline-block;
@@ -637,6 +692,10 @@ nav, #close{
   .about{
     width: 80%;
   }
+
+  #about-svg{
+    display: block;
+  }
  
   /****************** PROJECTS ********************/
   .project-description h1{
@@ -647,16 +706,51 @@ nav, #close{
     font-size: 20px;
     margin-bottom: 0.5rem;
   }
+
+  #contact-section{
+    display: block;
+  }
+  #contact-section .project-background-text{
+    padding-top: 5rem;
+  }
+  .contact-content h3{
+    margin-bottom: 2rem;
+    font-size: 32px;
+  }
+  .contact-details{
+    margin-top:2rem;
+  }
+  .social{
+    margin-top: 5rem;
+  }
+  #contact-section .background-svg{
+    top:10%;
+    width: 600px;
+  }
 }
 
+/****************** MEDIA 1500px ********************/
 @media (min-width: 1500px) {
+  .menu-display{
+    width: 20vw;
+  }
   .container{
     padding: 0 16rem;
   }
   #home-section .background-text{
     font-size: 240px;
+    margin-top: 0;
   }
   .about{
     width: 75%;
   }
+  #about-svg{
+    display: block;
+    width: 300px;
+    height: 300px;
+  }
+
+  /* #project-section.container{
+    padding: 0 2rem;
+  } */
 }
