@@ -36,15 +36,15 @@ function init() {
   lines.forEach(line => {
     setTimeout(() => {
       line.classList.add("show-line")
-    }, time += 250)
+    }, time += 350)
   })
 }
 
 function eventListeners() {
   document.getElementById("menu").addEventListener('click', onClickMenu)
   document.getElementById("close").addEventListener('click', onClickClose)
-  document.getElementById("next-proj").addEventListener('click', nextProj)
-  document.getElementById("prev-proj").addEventListener('click', prevProj)
+  // document.getElementById("next-proj").addEventListener('click', nextProj)
+  // document.getElementById("prev-proj").addEventListener('click', prevProj)
 
   document.getElementById("menu").addEventListener('mouseover', onHoverMenu)
   document.getElementById("menu").addEventListener('mouseout', onLeaveMenu)

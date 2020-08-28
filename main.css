@@ -85,7 +85,7 @@ body {
   content: "";
   display: block;
   height: 100%;
-  width: 1.5px;
+  width: 2px;
   background: var(--gray-5);
   animation: line-in 1s ease-in-out;
 }
@@ -208,11 +208,12 @@ nav, #close{
 }
 /****************** HOME ********************/
 #home-section{
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
   height: 100vh;
 }
 #hero-title h1 {
-  font-size: 42px;
+  /* font-size: 42px; */
+  font-size: 32px;
 }
 
 #home-section .content{
@@ -252,12 +253,14 @@ nav, #close{
 }
 .background-text{
   position: absolute;
+  /* top: 32%; */
   top: 32%;
   transform: translateY(-50%);
   opacity: 0.1;
-  font-size: 64px;
+  font-size: 60px;
   letter-spacing: 0.9rem;
   margin-top: 9rem;
+  /* margin-left: -1.5rem; */
 }
 #home-section .background-svg{
   position: absolute;
@@ -280,15 +283,15 @@ nav, #close{
   height: 350px;
   width: 300px;
   margin-bottom: 2rem;
-  box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%);
-  filter: grayscale(100);
+  /* box-shadow: -12px 12px 24px 0 hsl(220, 15%, 88%), 5px 6px 9px 0 hsl(220, 15%, 94%); */
+  /* filter: grayscale(100); */
   z-index: 10;
 }
-.about img:hover {
+/* .about img:hover {
   transition-duration: 1000ms;
   box-shadow: 2px 6px 24px;
-  /* filter: grayscale(100); */
-}
+  filter: grayscale(100);
+} */
 #about-svg{
   fill: var(--t1);
   width: 210px;
@@ -305,17 +308,25 @@ nav, #close{
 @keyframes about-shape{
   0% {
 		transform: translate(0px, 0px) rotate(0deg)  ;
+  }
+  20% {
+    fill: var(--t1)
 	}
 	50% {
-		transform: translate(4px, -7px) rotate(15deg) ;
+    transform: translate(4px, -7px) rotate(15deg) ;
+    fill: var(--p2)
+  }
+  70% {
+    fill: var(--p2)
 	}
 	100% {
-		transform: translate(0px, 0px) rotate(0deg) ;
+    transform: translate(0px, 0px) rotate(0deg) ;
+    fill: var(--t1);
 	}
 }
-#about-svg:hover{
+/* #about-svg:hover{
   fill: var(--p2)
-}
+} */
 
 /****************** PROJECTS ********************/
 #project-section {
@@ -341,10 +352,10 @@ margin-bottom: 1rem;
   display: none;
 }
 
-#project-section .section-title{
+/* #project-section .section-title{
   padding-top: 2.5rem;
   margin-left: 2rem;
-}
+} */
 .project-content.mobile{
   /* display: flex;
   flex-direction: column; */
@@ -516,9 +527,9 @@ margin-bottom: 1rem;
     padding: 0 5rem;
   }
 
-  #project-section .section-title{
+  /* #project-section .section-title{
     padding: 0 2.5rem;
-  }
+  } */
 
   .project-content.mobile{
     padding: 2rem 5rem;
@@ -613,9 +624,9 @@ margin-bottom: 1rem;
   }
   
   /****************** PROJECTS ********************/
-  #project-section .section-title{
+  /* #project-section .section-title{
     padding: 0 4rem;
-  }
+  } */
   
 
   /****************** CONTACT ********************/
@@ -652,9 +663,9 @@ margin-bottom: 1rem;
     right: 12%;
   }
 
-  #project-section .section-title{
+  /* #project-section .section-title{
     padding: 0 3rem;
-  }
+  } */
   #project-number {
     margin-bottom: 3rem;
   }
@@ -678,7 +689,6 @@ margin-bottom: 1rem;
     margin-top: 0;
   }
 
-  
   .section-title{
     text-align: left;
   }
@@ -698,7 +708,6 @@ margin-bottom: 1rem;
     top: -15px;
     right: 0;
   }
-
 
   #contact-section .background-svg{
     top: 37%;
@@ -732,16 +741,17 @@ margin-bottom: 1rem;
   }
   #home-section .background-text{
     font-size: 190px;
-    margin-top: 5rem;
+    margin-top: 3rem;
+    margin-left: -1.25rem;
   }
   #home-section .background-svg{
     width: 600px;
   }
-  .background-text{
+  /* .background-text{
     font-size: 250px;
     font-weight: 900;
     letter-spacing: 5rem;
-  }
+  } */
 
   /****************** ABOUT ********************/
 
@@ -749,9 +759,9 @@ margin-bottom: 1rem;
   #project-section{
     margin-bottom: 8rem;
   }
-  #project-section .section-title{
+  /* #project-section .section-title{
     padding: 0 7.5rem;
-  }
+  } */
   .project-content.mobile{
     display: none;
   }
@@ -817,12 +827,12 @@ margin-bottom: 1rem;
     margin-bottom: 2rem;
     font-size: 32px;
   }
-  .contact-details{
+  /* .contact-details{
     margin-top:2rem;
-  }
-  .social{
+  } */
+  /* .social{
     margin-top: 5rem;
-  }
+  } */
   #contact-section .background-svg{
     top:10%;
     width: 600px;
@@ -844,7 +854,8 @@ margin-bottom: 1rem;
   }
   #home-section .background-text{
     font-size: 240px;
-    margin-top: 0;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
   }
   .about{
     width: 75%;
@@ -856,14 +867,20 @@ margin-bottom: 1rem;
     right: 10%;
   }
   /****************** PROJECTS ********************/
-  #project-section .section-title{
+  /* #project-section .section-title{
     padding: 0 10rem;
   }
- 
+  */
   #project-section .right-section img{
     width: 700px;
   }
- 
+}
+
+@media (min-width: 1600px) {
+  .container{
+    padding: 0 13rem;
+  }
+
 }
 
 @media (min-width: 1700px) {
@@ -871,9 +888,9 @@ margin-bottom: 1rem;
     padding: 0 14.9rem;
   }
 
-  #project-section .section-title{
+  /* #project-section .section-title{
     padding: 0 12.7rem;
-  }
+  } */
   #project-section .left-section{
     padding-left: 1.7rem;
   }
