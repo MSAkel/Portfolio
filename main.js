@@ -43,8 +43,6 @@ function init() {
 function eventListeners() {
   document.getElementById("menu").addEventListener('click', onClickMenu)
   document.getElementById("close").addEventListener('click', onClickClose)
-  // document.getElementById("next-proj").addEventListener('click', nextProj)
-  // document.getElementById("prev-proj").addEventListener('click', prevProj)
 
   document.getElementById("menu").addEventListener('mouseover', onHoverMenu)
   document.getElementById("menu").addEventListener('mouseout', onLeaveMenu)
@@ -53,8 +51,6 @@ function eventListeners() {
   menuItems.forEach(item => {
     item.addEventListener('click', onClickClose)
   })
-
-  displayProjectsMobile()
 }
 
 function onHoverMenu(){
@@ -66,141 +62,10 @@ function onLeaveMenu(){
 
 function onClickMenu(){
   document.querySelector(".menu-display").classList.add("show")
-  // document.getElementById("body").classList.add("overflow-y")
 }
 
 function onClickClose(){
   document.querySelector(".menu-display").classList.remove("show")
-  // document.getElementById("body").classList.remove("overflow-y")
-}
-
-function onViewProject(){
-
-}
-
-function nextProj(){
-  leftSection = document.querySelector(".left-section")
-  rightSection = document.querySelector(".right-section")
-
-  leftSection.classList.remove("switch-left-in")
-  leftSection.classList.add("switch-left-out")
-
-  rightSection.classList.remove("switch-right-in")
-  rightSection.classList.add("switch-right-out")
-
-
-  projNumber = document.getElementById("project-number")
-  projTitle = document.getElementById("project-title")
-  projDetails = document.getElementById("project-details")
-  projImage = document.getElementById("project-image")
-  projURL = document.getElementById("view-project-btn")
-  // pagination = document.getElementById("project-pagination")
-
-
-  currentProj += 1
-
-  if (currentProj > maxProject){
-    currentProj = minProject
-  }
-
-  setTimeout(() =>{
-    projNumber.textContent = projects[currentProj].number
-    projTitle.textContent = projects[currentProj].title
-    projDetails.textContent = projects[currentProj].details
-    projImage.src = projects[currentProj].image
-    projURL.href = projects[currentProj].url
-    // pagination.textContent = projects[currentProj].number
-  
-    leftSection.classList.remove("switch-left-out")
-    leftSection.classList.add("switch-left-in")
-
-    rightSection.classList.remove("switch-right-out")
-    rightSection.classList.add("switch-right-in")
-  }, 400)
-}
-
-function prevProj(){
-  leftSection = document.querySelector(".left-section")
-  rightSection = document.querySelector(".right-section")
-
-  leftSection.classList.remove("switch-left-in")
-  leftSection.classList.add("switch-left-out")
-
-  rightSection.classList.remove("switch-right-in")
-  rightSection.classList.add("switch-right-out")
-
-  projNumber = document.getElementById("project-number")
-  projTitle = document.getElementById("project-title")
-  projDetails = document.getElementById("project-details")
-  projImage = document.getElementById("project-image")
-  projURL = document.getElementById("view-project-btn")
-  // pagination = document.getElementById("project-pagination")
-
-  currentProj -= 1
-
-  if (currentProj < minProject){
-    currentProj = maxProject
-  }
-
-
-   setTimeout(() =>{
-    projNumber.textContent = projects[currentProj].number
-    projTitle.textContent = projects[currentProj].title
-    projDetails.textContent = projects[currentProj].details
-    projImage.src = projects[currentProj].image
-    projURL.href = projects[currentProj].url
-    // pagination.textContent = projects[currentProj].number
-  
-    leftSection.classList.remove("switch-left-out")
-    leftSection.classList.add("switch-left-in")
-
-    rightSection.classList.remove("switch-right-out")
-    rightSection.classList.add("switch-right-in")
-  }, 400)
-}
-
-function displayProjectsMobile(){
-  let projectsSection = document.querySelector("#project-section .mobile")
-  //let projectContent = document.querySelector(".project-content.mobile")
-
-  projects.forEach(project => {
-    //let projectContainer = document.createElement("div")
-    //let projectContent = document.createElement("div")
-    let imageContainer = document.createElement("div")
-
-    let projNumber = document.createElement("h1")
-    // let projTitle = document.createElement("h1")
-    let projTitle1 = document.createElement("a")
-    // let projType = document.createElement("p")
-    let projImage = document.createElement("img")
-    let projURL = document.createElement("a")
-
-    // projNumber.textContent = project.number
-    // projTitle.textContent = project.title
-    // projTitle.textContent = `${project.number} ${project.title}`
-    projTitle1.textContent = `${project.number} ${project.title}`
-    // projType.textContent = project.details
-    projImage.src = project.image
-    projURL.textContent = "View Project"
-    projURL.href = project.url
-
-    projNumber.classList.add("project-number")
-    projURL.classList.add("cta")
-
-    //projectContent.classList.add("project-description")
-    imageContainer.classList.add("project-image-mobile")
-
-    // projectContent.appendChild(projNumber)
-    // projectContent.appendChild(projTitle)
-    // projectContent.appendChild(projType)
-    imageContainer.appendChild(projImage)
-    imageContainer.appendChild(projTitle1)
-
-    //projectContent.appendChild(imageContainer)
-    //projectContainer.appendChild(projectContent)
-    projectsSection.appendChild(imageContainer)
-  })
-  
 }
 
 
