@@ -39,6 +39,10 @@ function init() {
       line.classList.add("show-line")
     }, time += 350)
   })
+
+  setTimeout(() => {
+    document.querySelector(".vertical-lines").classList.remove("index-me")
+  }, 750)
 }
 
 // Event listeners
@@ -86,8 +90,8 @@ async function onClickProj (){
 
   setTimeout(() => {
     window.location = `./${this.id}.html`;
-    document.querySelector(".vertical-lines").classList.remove("index-me")
-    lines.forEach((line) => line.classList.remove("line-transition"))
+    // document.querySelector(".vertical-lines").classList.remove("index-me")
+    // lines.forEach((line) => line.classList.remove("line-transition"))
   }, 1700)
 
 }
@@ -124,13 +128,13 @@ ScrollReveal().reveal('.about-border-top', { origin:'left', delay: 650, scale: 0
 
 // Projects section animations
 ScrollReveal().reveal('.project-content', { origin:'left', delay: 300,distance:'1%',duration: 900, mobile: false });
-ScrollReveal().reveal('#project-number', { origin:'bottom', delay: 700, opacity: 0,distance:'4%',duration: 900, mobile: false });
-ScrollReveal().reveal('.project-description', { origin:'bottom', delay: 1000, opacity: 0,distance:'4%',duration: 1200, mobile: false });
-ScrollReveal().reveal('.right-section', { origin:'bottom', opacity: 0, delay: 1000, distance:'4%',duration: 1400, mobile: false });
+ScrollReveal().reveal('#project-number', { origin:'bottom', delay: 600, opacity: 0,distance:'4%',duration: 900, mobile: false });
+ScrollReveal().reveal('.project-description', { origin:'bottom', delay: 700, opacity: 0,distance:'4%',duration: 1200, mobile: false });
+ScrollReveal().reveal('.right-section', { origin:'bottom', opacity: 0, delay: 700, distance:'4%',duration: 1400, mobile: false });
 
 // Contact section animations
-ScrollReveal().reveal('.contact-details', { origin:'bottom', delay: 700, opacity: 0,distance:'5%',duration: 1200, mobile: false });
-ScrollReveal().reveal('.social', { origin:'bottom', opacity: 0, delay: 1000, distance:'5%',duration: 1400, mobile: false });
+ScrollReveal().reveal('.contact-details', { origin:'bottom', delay: 650, opacity: 0,distance:'5%',duration: 1200, mobile: false });
+ScrollReveal().reveal('.social', { origin:'bottom', opacity: 0, delay: 800, distance:'5%',duration: 1400, mobile: false });
 
 
 // Scroll reveal projects page

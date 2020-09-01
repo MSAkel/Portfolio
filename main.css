@@ -117,7 +117,8 @@ body {
 	}
 }
 
-.line-transition.line::after{
+.line-transition.line::after,
+.transition-out.line::after{
   content: "";
   position: absolute;
   right: 0;
@@ -127,6 +128,20 @@ body {
   background: var(--p1);
   transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1);
   animation: line-in 1s ease-in-out;
+}
+
+.transition-out.line::after{
+  height: 0%;
+  animation: line-out 1s ease-in-out;
+}
+
+@keyframes line-out {
+	0% {
+    height: 100%;
+	}
+	100% {
+    height: 0%;
+	}
 }
 
 /* .vertical-lines .line::after{
@@ -313,17 +328,15 @@ nav, #close{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   font-size: 1.185rem;
   line-height: 1.65rem;
   font-weight: 500;
 }
 .about img {
-  /* height: 350px;
-  width: 300px; */
   height: auto;
   width: 100%;
   margin-bottom: 2rem;
-  /* margin-left: -1.5rem; */
   z-index: 10;
 }
 
@@ -455,6 +468,7 @@ margin-bottom: 1rem;
 .contact-details a h3{
   text-transform: none;
   position: relative;
+  display:table;
 }
 .contact-details a h3:after {    
   content: "";
@@ -467,7 +481,7 @@ margin-bottom: 1rem;
   width: 0;
 }
 .contact-details a h3:hover:after { 
-  width: 10%; 
+  width: 100%; 
   left: 0; 
 }
 
@@ -560,6 +574,10 @@ margin-bottom: 1rem;
   #about-svg{
     display: block;
   }
+
+  .about img {
+    width: 60%;
+  }
 }
 
 @media (min-width: 753px) {
@@ -613,7 +631,7 @@ margin-bottom: 1rem;
     /* height: 450px;
     width: 350px; */
     /* box-shadow: none; */
-    padding: 2rem;
+    width: 70%;
     margin-left: 0;
   }
   .about-text{
@@ -679,6 +697,10 @@ margin-bottom: 1rem;
     right: 12%;
   }
 
+  .about img {
+    width: 50%;
+  }
+
   /****************** PROJECTS ********************/
   #project-number {
     margin-bottom: 3rem;
@@ -719,6 +741,7 @@ margin-bottom: 1rem;
   .about img {
     /* height: 450px;
     width: 380px; */
+    width: 70%;
     margin-right: 5.5rem;
     /* box-shadow: none; */
   }
@@ -849,10 +872,14 @@ margin-bottom: 1rem;
   }
 }
 
-/****************** MEDIA 1400px ********************/
+/****************** MEDIA 1300px ********************/
 @media (min-width: 1300px) {
   #project-section .right-section #elctro-image{
     width: 80%;
+  }
+
+  .about img {
+    width: 60%;
   }
 }
 
@@ -896,6 +923,10 @@ margin-bottom: 1rem;
   .about{
     width: 75%;
     margin-bottom: 10rem;
+  }
+  .about img {
+    width: 65%;
+    padding: 2rem;
   }
   .about-border-top{
     border-top: 4px solid var(--p1);
