@@ -26,6 +26,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 a{
   text-decoration:none;
   color: var(--gray-1);
@@ -59,9 +60,21 @@ html {
   color: #262d38;
   font-size: 16px;
   scroll-behavior: smooth;
+
+  /* overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
 }
+/* html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+} */
+
+
 body {
   overflow-x: hidden;
+  
+  background-color: hsl(0, 0%, 97%);
 }
 
 .container{
@@ -75,17 +88,22 @@ body {
   width: 100%;
   height: 100%;
   z-index: -100;
+
+}
+.index-me{
+  z-index: 10000;
 }
 .show-line{
   height: 100%;
   display: none;
   position: relative;
+  /* box-shadow: gray 3px 3px 12px; */
 }
 .vertical-lines .show-line::before{
   content: "";
   display: block;
   height: 100%;
-  width: 2px;
+  width: 1px;
   background: var(--gray-5);
   animation: line-in 1s ease-in-out;
 }
@@ -97,6 +115,19 @@ body {
     height: 100%;
 	}
 }
+
+.line-transition.line::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--p1);
+  transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: line-in 1s ease-in-out;
+}
+
 /* .vertical-lines .line::after{
   content: "";
   position: absolute;
@@ -104,7 +135,7 @@ body {
   top: 0;
   height: 100%;
   width: 100%;
-  background: var(--gray-5);
+  background: red;
   transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1)
 } */
 
@@ -122,6 +153,8 @@ nav, #close{
   position: fixed;
   right: 0;
   z-index: 100;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
 }
 
 .st4{
@@ -233,7 +266,7 @@ nav, #close{
   margin-top: 5rem;
 }
 
-#cta, #view-project-btn{
+#cta, .view-project-btn{
   padding: 1rem 2rem;
   border: 3px solid var(--p1);
   background-color: transparent;
@@ -244,13 +277,13 @@ nav, #close{
   color: var(--p1);
 }
 
-#cta:hover, #view-project-btn:hover {
+#cta:hover, .view-project-btn:hover {
   cursor: pointer;
   background-color: var(--p1);
   color: white;
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
 }
-#cta::after, #view-project-btn::after{
+#cta::after, .view-project-btn::after{
   display: none;
 }
 .background-text{
@@ -344,6 +377,7 @@ nav, #close{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 8px;
 }
 
 .project-content.jia{
@@ -410,7 +444,7 @@ margin-bottom: 1rem;
     color: var(--gray-5);
   } */
 
-  #view-project-btn{
+  .view-project-btn{
     background-color: var(--p1);
     color: white;
   }
@@ -428,6 +462,29 @@ margin-bottom: 1rem;
   flex-direction: column;
   justify-content: space-between;
 }
+
+.contact-details a{
+  text-transform: none;
+}
+.contact-details a h3{
+  text-transform: none;
+  position: relative;
+}
+.contact-details a h3:after {    
+  content: "";
+  display: block;
+  height: 2.5px;
+  left: 0;
+  position: absolute;
+  background: var(--s2);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.contact-details a h3:hover:after { 
+  width: 10%; 
+  left: 0; 
+}
+
 .social{
   margin-top: 4rem;
 }
@@ -702,7 +759,8 @@ margin-bottom: 1rem;
     width: 25vw;
   }
   .line{
-    width: calc(12% + 5px);
+    /* width: calc(12% + 5px); */
+    width: calc(12% + 6.2px);
   }
 
   .container{
@@ -781,7 +839,7 @@ margin-bottom: 1rem;
     /* margin-left: 25rem; */
   }
 
-  #view-project-btn{
+  .view-project-btn{
     background-color: transparent;
     color: var(--p1);
   }
@@ -831,6 +889,10 @@ margin-bottom: 1rem;
 
 /****************** MEDIA 1500px ********************/
 @media (min-width: 1500px) {
+  .line{
+    width: calc(12% + 7.4px);
+  }
+
   .menu-display{
     width: 20vw;
   }
@@ -846,6 +908,25 @@ margin-bottom: 1rem;
   .about{
     width: 75%;
   }
+  .about-border-top{
+    border-top: 4px solid var(--p1);
+    position: absolute;
+    width: 90%;
+    right: 0;
+  }
+  .about-border-bottom{
+    border-bottom: 4px solid var(--p1);
+    position: absolute;
+    bottom:0;
+    width: 90%;
+  }
+  .about-border-left{
+    border-left: 4px solid var(--p1);
+    position: absolute;
+    top: 20%;
+    bottom: 10%;
+  }
+
   #about-svg{
     width: 300px;
     height: 300px;
@@ -871,6 +952,9 @@ margin-bottom: 1rem;
 }
 
 @media (min-width: 1700px) {
+  .line{
+    width: calc(12% + 8.4px);
+  }
   .container,
   #project-section.container{
     padding: 0 14.9rem;
@@ -899,5 +983,11 @@ margin-bottom: 1rem;
   #project-section .right-section #elctro-image{
     width: 30%;
     margin-left: 24rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .line{
+    width: calc(12% + 9px);
   }
 }

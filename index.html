@@ -8,7 +8,7 @@
 </head>
 <body id="body">
   <!-- NAV -->
-  <img id="logo" src="imgs/logo-02.png" alt="">
+  <a href="./index.html"><img id="logo" src="imgs/logo.png" alt="logo"></a>
   <nav>
     <div id="menu">
       <p>MENU</p>
@@ -58,7 +58,7 @@
   </div>
   <!-- HOME -->
   <section id="home-section" class="container">
-      <div class="background-svg">
+      <div class="background-svg home-svg">
         <svg x="0px" y="0px" viewBox="0 0 696 1080" style="enable-background:new 0 0 696 1080;" xml:space="preserve">
           <path id="p1" class="st0" d="M410.5,0.5C152,92-22.2,330.9,2.5,489.5c19.4,124.7,84.5,229.5,196,281c199.3,92.1,434.7,108.9,497,247
             c0,0-2.4,61.5,1,62l-1-1079H410.5z"/>
@@ -84,9 +84,9 @@
       </div>
       <div class="content">
         <div id="hero-title">
-          <h1>I'm <span id="name">Mohammed Akel</span></h1>
-          <h1>Web and mobile application developer.</h1>
-          <div>
+          <h1 class="hero-line-1">I'm <span id="name">Mohammed Akel</span></h1>
+          <h1 class="hero-line-2">Web and mobile application developer.</h1>
+          <div class="hero-cta">
             <a id="cta" href="#about-section">LEARN MORE</a>
           </div>
         </div>
@@ -95,7 +95,7 @@
 
   <!-- ABOUT -->
   <section id="about-section" class="container">
-    <div class="background-svg">
+    <div class="background-svg about-svg">
       <svg  id="about-svg" x="0px" y="0px" viewBox="0 0 298 258" style="enable-background:new 0 0 298 258;" xml:space="preserve">
         <g>
           <path id="about-svg-shape"/>
@@ -134,6 +134,9 @@
       <h1>ABOUT</h1>
     </div>
     <div class="about">
+      <div class="about-border-top"></div>
+      <div class="about-border-bottom"></div>
+      <div class="about-border-left"></div>
       <img src="imgs/me-01.png" alt="Myself">
       <div class="about-text">
         <p>
@@ -161,7 +164,7 @@
         <div class="project-description">
           <h1 id="project-title">JIA Option Map</h1>
           <!-- <p id="project-details">Web</p> -->
-          <a id="view-project-btn" class="cta" href="https://play.google.com/store/apps/details?id=com.leadglancestudios.electromanager">VIEW PROJECT</a>
+          <a id="jia" class="view-project-btn cta">VIEW PROJECT</a>
         </div>
       </div>
       <div class="right-section">
@@ -178,7 +181,8 @@
         <div class="project-description">
           <h1 id="project-title">Electromanager</h1>
           <!-- <p id="project-details">Mobile</p> -->
-          <a id="view-project-btn" class="cta" href="https://play.google.com/store/apps/details?id=com.leadglancestudios.electromanager">VIEW PROJECT</a>
+          <!-- <a class="view-project-btn cta" href="https://play.google.com/store/apps/details?id=com.leadglancestudios.electromanager">VIEW PROJECT</a> -->
+          <a id="electromanager" class="view-project-btn cta">VIEW PROJECT</a>
         </div>
       </div>
       <div class="right-section">
@@ -213,8 +217,12 @@
     </div>
     <div class="contact-content">
       <div class="contact-details">
-        <h3><span>Email:</span> akel.ms93@gmail.com</h3>
-        <h3><span>Phone:</span> (873) 288-1962</h3>
+        <div class="email">
+          <span>Email:</span> <a href="mailto:akel.ms93@gmail.com"><h3>akel.ms93@gmail.com</h3></a>
+        </div>
+        <div class="phone">
+          <span>Phone:</span><h3>(873) 288-1962</h3>
+        </div>
       </div>
       <div class="social">
         <h3>Let's Connect</h3>
@@ -234,6 +242,7 @@
       </div>
     </div>
   </section>
+  
 <script src="https://unpkg.com/scrollreveal"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script> -->
 <script src="main.js"></script>
