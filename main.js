@@ -31,6 +31,7 @@ let projects = [
 function init() {
   eventListeners()
 
+  // animate in lines
   let lines = document.querySelectorAll(".line")
   let time = 0
   lines.forEach(line => {
@@ -40,6 +41,7 @@ function init() {
   })
 }
 
+// Event listeners
 function eventListeners() {
   document.getElementById("menu").addEventListener('click', onClickMenu)
   document.getElementById("close").addEventListener('click', onClickClose)
@@ -54,29 +56,28 @@ function eventListeners() {
   projCta.forEach(item =>  item.addEventListener('click', onClickProj))
 }
 
+// handle menu
 function onHoverMenu(){
   document.getElementById("hamburger-line-1").classList.add("menu-hover")
 }
 function onLeaveMenu(){
   document.getElementById("hamburger-line-1").classList.remove("menu-hover")
 }
-
 function onClickMenu(){
   document.querySelector(".menu-display").classList.add("show")
 }
-
 function onClickClose(){
   document.querySelector(".menu-display").classList.remove("show")
 }
 
-
+// on view project
 async function onClickProj (){
   let lines = document.querySelectorAll(".line")
   let time = 0
 
   document.querySelector(".vertical-lines").classList.add("index-me")
   
-
+  // animate in transition lines
   lines.forEach((line) => {
     setTimeout(() => {
       line.classList.add("line-transition")
@@ -84,9 +85,9 @@ async function onClickProj (){
   })
 
   setTimeout(() => {
-      document.querySelector(".vertical-lines").classList.remove("index-me")
-      lines.forEach((line) => line.classList.remove("line-transition"))
-      window.location = `./${this.id}.html`;
+    window.location = `./${this.id}.html`;
+    document.querySelector(".vertical-lines").classList.remove("index-me")
+    lines.forEach((line) => line.classList.remove("line-transition"))
   }, 1700)
 
 }
@@ -99,8 +100,7 @@ var nav = [
   document.querySelector('#logo'),
   document.querySelector('#menu'),
 ];
-ScrollReveal().reveal(nav, { origin:'top', delay: 750,distance:'15%',duration: 1000, mobile: false });
-//ScrollReveal().reveal('.project-background-text', { origin:'bottom', delay: 300,opacity: 0,distance:'6%',duration: 1000, mobile: false });
+// ScrollReveal().reveal(nav, { origin:'top', delay: 750,distance:'15%',duration: 1000, mobile: false });
 ScrollReveal().reveal('.project-background-text', { origin:'bottom', delay: 300,opacity: 0,distance:'6%',duration: 1000, mobile: false });
 
 // section titles
@@ -114,19 +114,19 @@ ScrollReveal().reveal('.hero-cta', { origin:'bottom', delay: 1950, opacity: 0,di
 ScrollReveal().reveal('.home-svg', { origin:'right', opacity: 0, delay: 1200, duration: 2500, mobile: false });
 
 // About section animations
-ScrollReveal().reveal('.about-text', { origin:'bottom', opacity: 0, delay: 1550, distance:'2%',duration: 2500, mobile: false });
-ScrollReveal().reveal('.about img', { origin:'bottom', opacity: 0, delay: 1550, distance:'2%',duration: 2500, mobile: false });
-ScrollReveal().reveal('.about-svg', { origin:'right', opacity: 0, delay: 2000, duration: 2500, mobile: false })
+ScrollReveal().reveal('.about-text', { origin:'bottom', opacity: 0, delay: 900, distance:'2%',duration: 2500, mobile: false });
+ScrollReveal().reveal('.about img', { origin:'bottom', opacity: 0, delay: 950, distance:'2%',duration: 2500, mobile: false });
+ScrollReveal().reveal('.about-svg', { origin:'right', opacity: 0, delay: 1200, duration: 2500, mobile: false })
 // About borders
-ScrollReveal().reveal('.about-border-bottom', { origin:'right', delay: 700, scale: 0 , distance:'70%',duration: 500, mobile: false });
-ScrollReveal().reveal('.about-border-left', { origin:'bottom', delay: 1000, scale: 0 , distance:'70%',duration: 500, mobile: false });
-ScrollReveal().reveal('.about-border-top', { origin:'left', delay: 1300, scale: 0 , distance:'70%',duration: 500, mobile: false });
+ScrollReveal().reveal('.about-border-bottom', { origin:'right', delay: 500, scale: 0 , distance:'70%',duration: 500, mobile: false });
+ScrollReveal().reveal('.about-border-left', { origin:'bottom', delay: 600, scale: 0 , distance:'70%',duration: 500, mobile: false });
+ScrollReveal().reveal('.about-border-top', { origin:'left', delay: 650, scale: 0 , distance:'70%',duration: 500, mobile: false });
 
 // Projects section animations
-ScrollReveal().reveal('.project-content', { origin:'left', delay: 500,distance:'20%',duration: 900, mobile: false });
-ScrollReveal().reveal('#project-number', { origin:'bottom', delay: 1000, opacity: 0,distance:'4%',duration: 900, mobile: false });
-ScrollReveal().reveal('.project-description', { origin:'bottom', delay: 1300, opacity: 0,distance:'4%',duration: 1200, mobile: false });
-ScrollReveal().reveal('.right-section', { origin:'bottom', opacity: 0, delay: 1300, distance:'4%',duration: 1400, mobile: false });
+ScrollReveal().reveal('.project-content', { origin:'left', delay: 300,distance:'1%',duration: 900, mobile: false });
+ScrollReveal().reveal('#project-number', { origin:'bottom', delay: 700, opacity: 0,distance:'4%',duration: 900, mobile: false });
+ScrollReveal().reveal('.project-description', { origin:'bottom', delay: 1000, opacity: 0,distance:'4%',duration: 1200, mobile: false });
+ScrollReveal().reveal('.right-section', { origin:'bottom', opacity: 0, delay: 1000, distance:'4%',duration: 1400, mobile: false });
 
 // Contact section animations
 ScrollReveal().reveal('.contact-details', { origin:'bottom', delay: 700, opacity: 0,distance:'5%',duration: 1200, mobile: false });

@@ -110,7 +110,7 @@
 .details{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .details img{
@@ -123,6 +123,10 @@
 .details img:nth-of-type(2){
   border-radius: 8px;
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
+}
+.details h2{
+  font-size: var(--font-m);
+  margin-top: 1.5rem;
 }
 
 .responsive{
