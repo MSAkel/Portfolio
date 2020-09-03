@@ -1,32 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli:wght@700&family=Heebo:wght@500&display=swap');
-
-:root{
-  --p1: hsl(178, 55%, 25%);
-  --p2: hsl(178, 55%, 50%);
-  --p3: hsl(178, 55%, 70%);
-
-  --s1: hsl(4, 50%, 25%);
-  --s2: hsl(4, 50%, 33%);
-  --s3: hsl(4, 50%, 65%);
-
-  --t1: hsl(4, 45%, 55%);
-  --t2: hsl(4, 45%, 24%);
-  --t3: hsl(4, 45%, 90%);
-
-  --gray-1: hsl(0, 0%, 15%);
-  --gray-2: hsl(0, 0%, 35%);
-  --gray-3: hsl(0, 0%, 55%);
-  --gray-4: hsl(0, 0%, 67%);
-  --gray-5: hsl(0, 0%, 90%);
-
-  --font-xxl: 7.594rem;
-  --font-xl: 5.063rem;
-  --font-l: 3.375rem;
-  --font-m: 2.25rem;
-  --font-s: 1.5rem;
-  --font-xs: 1.185rem
-  
-}
+@import url("variables.css");
 
 .project{
   height: initial;
@@ -61,10 +33,7 @@
 }
 
 .header-img-container img{
-  /* width: 100vw; */
   padding: 5rem 2rem;
-  /* background-color: white; */
-  /* box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%); */
   z-index: 10;
 }
 
@@ -72,18 +41,18 @@
   display: flex;
   flex-direction: column;
   margin: 5rem 0;
-  /* height: 600px; */
 }
 
 .title-and-description h1{
   flex: 1;
-  font-size: var(--font-l);
+  font-size: var(--font-m);
   color: var(--p1);
 }
 .title-and-description p{
   flex: 1;
-  font-size: var(--font-s);
-  margin-top: 4rem;
+  /* font-size: var(--font-xs); */
+  /* margin-top: 4rem; */
+  margin-top: 1.5rem;
 }
 
 .services{
@@ -125,7 +94,7 @@
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
 }
 .details h2{
-  font-size: var(--font-m);
+  font-size: var(--font-xs);
   margin-top: 1.5rem;
 }
 
@@ -139,18 +108,20 @@
   margin-bottom: 1.5rem;
   font-size: var(--font-m);
 }
-.responsive .images-container{
+.images-container{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.responsive .images-container img {
+.images-container img {
   /* border: 1px solid var(--gray-5); */
+  height: auto;
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
 }
-.responsive .images-container img:nth-of-type(2) {
+.images-container img:nth-of-type(2) {
   margin: 4rem 0;
 }
 .next-project{
@@ -178,6 +149,12 @@ h1:hover {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 400px) and (max-height: 840px) {
+  .header-img-container{
+    margin-top: -14rem;
+  }
+}
+
 @media (min-width: 450px) {
   .page-top-colour{
     height: 35vh;
@@ -196,14 +173,9 @@ h1:hover {
     height: 28vh;
   }
 
-  .title-and-description{
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 0;
-  }
 
   .title-and-description h1{
-    font-size: var(--font-xl);
+    font-size: var(--font-l);
   }
 
   /* .title-and-description h1,
@@ -248,7 +220,7 @@ h1:hover {
     /* flex-direction: row; */
     align-items: flex-start;
   }
-  .responsive .images-container{
+  .images-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -257,8 +229,11 @@ h1:hover {
     /* margin-bottom: 6rem; */
     width: 100%;
   }
-  .responsive .images-container img:nth-of-type(2) {
+  .images-container img:nth-of-type(2) {
     margin: 4rem 2rem 0 2rem;
+  }
+  .images-container img {
+    width: 70%;
   }
 
   .next-project h1{
@@ -286,13 +261,40 @@ h1:hover {
   .next-project h2{
     font-size: var(--font-l);
   }
+  .images-container img {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .images-container img {
+    width: 30%;
+  }
 }
 
 @media (min-width: 1400px) {
+  .title-and-description{
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
 
+  .title-and-description h1{
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1500px) {
+  .title-and-description h1{
+    font-size: var(--font-xl);
+  }
+
+  .title-and-description p{
+    font-size: var(--font-xs);
+  }
+
   .next-project h1{
     font-size: var(--font-xxl);
     margin-left: 10.5rem;
@@ -309,13 +311,9 @@ h1:hover {
     /* width: 100vw; */
     padding: 2rem 10rem;
   }
-
-  .title-and-description h1{
-    font-size: var(--font-xxl);
-  }
-  .title-and-description p{
-    margin-top: 10rem;
-  }
+  /* .title-and-description p{
+    margin-top: 1.5rem;
+  } */
 
   .details{
     /* width: 75%;

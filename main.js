@@ -43,6 +43,8 @@ function init() {
   setTimeout(() => {
     document.querySelector(".vertical-lines").classList.remove("index-me")
   }, 750)
+
+
 }
 
 // Event listeners
@@ -57,7 +59,8 @@ function eventListeners() {
   menuItems.forEach(item => item.addEventListener('click', onClickClose))
 
   let projCta = document.querySelectorAll(".view-project-btn")
-  projCta.forEach(item =>  item.addEventListener('click', onClickProj))
+  projCta.forEach(item =>  item.addEventListener('click', handleNavigation))
+  document.querySelector(".logo").addEventListener('click', handleNavigation)
 }
 
 // handle menu
@@ -75,9 +78,11 @@ function onClickClose(){
 }
 
 // on view project
-async function onClickProj (){
+async function handleNavigation() {
   let lines = document.querySelectorAll(".line")
   let time = 0
+
+  lines.forEach(line => line.classList.remove("transition-out"))
 
   document.querySelector(".vertical-lines").classList.add("index-me")
   
@@ -90,8 +95,6 @@ async function onClickProj (){
 
   setTimeout(() => {
     window.location = `./${this.id}.html`;
-    // document.querySelector(".vertical-lines").classList.remove("index-me")
-    // lines.forEach((line) => line.classList.remove("line-transition"))
   }, 1700)
 
 }
@@ -111,11 +114,11 @@ ScrollReveal().reveal('.project-background-text', { origin:'bottom', delay: 300,
 ScrollReveal().reveal('.section-title', { origin:'left', opacity: 0, delay: 350, distance:'2%',duration: 1000, mobile: false });
 
 // Home section animations
-ScrollReveal().reveal('.background-text', { origin:'left', delay: 900,distance:'1%',duration: 1400, mobile: false });
-ScrollReveal().reveal('.hero-line-1', { origin:'bottom', delay: 1400, opacity: 0,distance:'15%',duration: 1400, mobile: false });
-ScrollReveal().reveal('.hero-line-2', { origin:'bottom', delay: 1700, opacity: 0,distance:'15%',duration: 1400, mobile: false });
-ScrollReveal().reveal('.hero-cta', { origin:'bottom', delay: 1950, opacity: 0,distance:'15%',duration: 1400, mobile: false });
-ScrollReveal().reveal('.home-svg', { origin:'right', opacity: 0, delay: 1200, duration: 2500, mobile: false });
+ScrollReveal().reveal('.background-text', { origin:'bottom', delay: 500, distance:'15%', duration: 1000, mobile: false });
+ScrollReveal().reveal('.hero-line-1', { origin:'bottom', delay: 750, distance:'35%', duration: 1000, mobile: false });
+ScrollReveal().reveal('.hero-line-2', { origin:'bottom', delay: 900, distance:'35%', duration: 1000, mobile: false });
+ScrollReveal().reveal('.hero-cta', { origin:'bottom', delay: 1050, distance:'15%', duration: 1000, mobile: false });
+// ScrollReveal().reveal('.home-svg', { origin:'right', opacity: 0, delay: 1200, duration: 1000, mobile: false });
 
 // About section animations
 ScrollReveal().reveal('.about-text', { origin:'bottom', opacity: 0, delay: 900, distance:'2%',duration: 2500, mobile: false });
@@ -134,7 +137,7 @@ ScrollReveal().reveal('.right-section', { origin:'bottom', opacity: 0, delay: 70
 
 // Contact section animations
 ScrollReveal().reveal('.contact-details', { origin:'bottom', delay: 650, opacity: 0,distance:'5%',duration: 1200, mobile: false });
-ScrollReveal().reveal('.social', { origin:'bottom', opacity: 0, delay: 800, distance:'5%',duration: 1400, mobile: false });
+ScrollReveal().reveal('.social', { origin:'bottom', opacity: 0, delay: 700, distance:'5%',duration: 1400, mobile: false });
 
 
 // Scroll reveal projects page

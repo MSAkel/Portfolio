@@ -1,0 +1,52 @@
+@import url("variables.css");
+
+
+.header-img-container.electro{
+  background-image: url("./imgs/electromanager/header-img.jpg");
+}
+
+.electro-settings{
+  display: flex;
+  flex-direction: column;
+}
+
+.electro-reports{
+  display: flex;
+  flex-direction: column;
+}
+.electro-reports div{
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 450px) {
+
+}
+
+@media (min-width: 768px) {
+  .electro-reports .images-container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .electro-reports .images-container img{
+    width: 40%;
+    margin: 2rem 2rem 6rem 0;
+  }
+  .electro-settings .images-container img{
+    width: 40%;
+  }
+  
+}
+
+@media (min-width: 1250px) {
+  .electro-reports .images-container img{
+    width: 40%;
+    margin: 2rem 2rem 6rem 0;
+  }
+  .electro-settings .images-container img{
+    width: 40%;
+  }
+}
+  

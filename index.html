@@ -8,23 +8,27 @@
 </head>
 <body id="body">
   <!-- NAV -->
-  <a href="./index.html"><img id="logo" src="imgs/logo.png" alt="logo"></a>
-  <nav>
-    <div id="menu">
-      <p>MENU</p>
-      <svg id="hamburger-menu" x="0px" y="0px" width="34px" viewBox="0 0 57 27" style="enable-background:new 0 0 57 27;" xml:space="preserve">
-        <g>
-          <line id="hamburger-line-0" class="st4" x1="5.5" y1="3.5" x2="52.5" y2="3.5"/>
-        </g>
-        <g>
-          <line id="hamburger-line-1" class="st4" x1="5.5" y1="14.5" x2="52.5" y2="14.5"/>
-        </g>
-        <g>
-          <line id="hamburger-line-2" class="st4" x1="5.5" y1="25.5" x2="52.5" y2="25.5"/>
-        </g>
-      </svg>
-    </div>
-  </nav>
+  <div class="navbar-container">
+    <img id="index" class="logo" src="imgs/logo-03.png" alt="logo">
+    <nav>
+      <div id="menu">
+        <p>MENU</p>
+        <svg id="hamburger-menu" x="0px" y="0px" width="34px" viewBox="0 0 57 27" style="enable-background:new 0 0 57 27;" xml:space="preserve">
+          <g>
+            <line id="hamburger-line-0" class="st4" x1="5.5" y1="3.5" x2="52.5" y2="3.5"/>
+          </g>
+          <g>
+            <line id="hamburger-line-1" class="st4" x1="5.5" y1="14.5" x2="52.5" y2="14.5"/>
+          </g>
+          <g>
+            <line id="hamburger-line-2" class="st4" x1="5.5" y1="25.5" x2="52.5" y2="25.5"/>
+          </g>
+        </svg>
+      </div>
+    </nav>
+  </div>
+
+
   <!-- NAV OPEN -->
   <section id="" class="menu-display">
     <div id="close">
@@ -53,8 +57,8 @@
       </h1>
     </div>
   </section>
-  <div class="vertical-lines">
-    <i class="line line-0"></i><i class="line line-1"></i><i class="line line-2"></i><i class="line line-3"></i><i class="line line-4"></i><i class="line line-5"></i><i class="line line-6"></i><i class="line line-7"></i>
+  <div class="vertical-lines index-me">
+    <i class="line line-0 transition-out"></i><i class="line line-1 transition-out"></i><i class="line line-2 transition-out"></i><i class="line line-3 transition-out"></i><i class="line line-4 transition-out"></i><i class="line line-5 transition-out"></i><i class="line line-6 transition-out"></i><i class="line line-7 transition-out"></i>
   </div>
   <!-- HOME -->
   <section id="home-section" class="container">
@@ -159,6 +163,10 @@
       <h1>WORK</h1>
     </div>
     <div class="project-content jia">
+      <div class="project-border-top"></div>
+      <div class="project-border-right"></div>
+      <div class="project-border-bottom"></div>
+      <div class="project-border-left"></div>
       <div class="left-section">
         <div class="project-number">
           <h1 id="project-number">01</h1>
@@ -176,6 +184,10 @@
     </div>
 
     <div class="project-content electro">
+      <div class="project-border-top"></div>
+      <div class="project-border-right"></div>
+      <div class="project-border-bottom"></div>
+      <div class="project-border-left"></div>
       <div class="left-section">
         <div class="project-number">
           <h1 id="project-number">02</h1>
@@ -189,7 +201,7 @@
       </div>
       <div class="right-section">
         <!-- <h1>Mobile</h1> -->
-        <img src="imgs/Iphone.png" id="elctro-image" alt="Electromanager app image">
+        <img src="imgs/electro-mobile.png" id="electro-image" alt="Electromanager app image">
       </div>
     </div>
   </section>
