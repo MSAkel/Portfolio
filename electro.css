@@ -1,52 +1,74 @@
 @import url("variables.css");
 
-
 .header-img-container.electro{
   background-image: url("./imgs/electromanager/header-img.jpg");
 }
 
+.electro-reports,
+.electro-reports div,
+.calibrator,
 .electro-settings{
   display: flex;
   flex-direction: column;
 }
 
-.electro-reports{
-  display: flex;
-  flex-direction: column;
+.electro-preview img,
+.electro-reports img,
+.details img{
+  margin: 2rem auto;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
 }
-.electro-reports div{
-  display: flex;
-  flex-direction: column;
-}
-
 
 @media (min-width: 450px) {
 
 }
 
 @media (min-width: 768px) {
-  .electro-reports .images-container{
-    flex-direction: row;
-    justify-content: space-between;
+  
+  .electro-preview img{
+    margin: 2rem 0;
+  }
+  .electro-preview img:nth-of-type(2){
+    margin: 2rem;
   }
 
-  .electro-reports .images-container img{
+  .electro-reports img,
+  .calibrator img,
+  .electro-settings img{
     width: 40%;
-    margin: 2rem 2rem 6rem 0;
-  }
-  .electro-settings .images-container img{
-    width: 40%;
+    /* margin: 2rem 2rem 6rem 0; */
   }
   
 }
 
 @media (min-width: 1250px) {
+  .electro-reports,
+  .calibrator,
+  .electro-settings {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .electro-preview img{
+    width: 20%;
+    /* margin: 2rem 2rem 6rem 0; */
+  }
+
   .electro-reports .images-container img{
-    width: 40%;
-    margin: 2rem 2rem 6rem 0;
+    /* width: 40%; */
+    /* margin: 2rem 2rem 6rem 0; */
   }
   .electro-settings .images-container img{
-    width: 40%;
+    /* width: 40%; */
   }
 }
+
+@media (min-width: 1400px) {
+  .electro-preview {
+    margin: 5rem auto;
+  }
+}
+  
   

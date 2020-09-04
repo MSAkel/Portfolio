@@ -26,7 +26,6 @@
   width: 100vw;
   height: 50vh;
   z-index: 10;
-  background-image: url("./imgs/jiea-header-01.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -68,62 +67,22 @@
   font-size: var(--font-xs);
 }
 
-.cheo{
-  margin-bottom: 3rem;
-}
-.cheo img{
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
 .details{
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 
-.details img{
-  margin: 2rem auto;
-  /* background-color: white; */
- 
-  width: 100%;
- 
-}
-.details img:nth-of-type(2){
-  border-radius: 8px;
-  box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
-}
 .details h2{
-  font-size: var(--font-xs);
+  font-size: var(--font-m);
   margin-top: 1.5rem;
 }
 
-.responsive{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 6rem auto;
-}
-.responsive h2{
-  margin-bottom: 1.5rem;
-  font-size: var(--font-m);
-}
 .images-container{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.images-container img {
-  /* border: 1px solid var(--gray-5); */
-  height: auto;
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
-}
-.images-container img:nth-of-type(2) {
-  margin: 4rem 0;
-}
 .next-project{
   padding-top: 2rem;
 }
@@ -147,6 +106,13 @@ h1:hover {
 .next-project h2{
   font-size: var(--font-m);
   margin-bottom: 2rem;
+}
+
+.view-project-btn {
+  border: none;
+}
+.view-project-btn:hover {
+  box-shadow: none;
 }
 
 @media (max-width: 400px) and (max-height: 840px) {
@@ -197,29 +163,7 @@ h1:hover {
     font-size: var(--font-xs);
   }
 
-  .cheo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10rem 0;
-  }
 
-  
-  .cheo img {
-    flex: 2;
-  }
-  .cheo p {
-    flex: 2;
-    font-size: var(--font-xs);
-    /* margin-left: 0.4rem; */
-  }
-
-  .responsive {
-    display: flex;
-    /* flex-direction: row; */
-    align-items: flex-start;
-  }
   .images-container{
     display: flex;
     flex-direction: row;
@@ -228,12 +172,6 @@ h1:hover {
     /* margin: 2rem; */
     /* margin-bottom: 6rem; */
     width: 100%;
-  }
-  .images-container img:nth-of-type(2) {
-    margin: 4rem 2rem 0 2rem;
-  }
-  .images-container img {
-    width: 70%;
   }
 
   .next-project h1{
@@ -261,15 +199,7 @@ h1:hover {
   .next-project h2{
     font-size: var(--font-l);
   }
-  .images-container img {
-    width: 25%;
-  }
-}
 
-@media (min-width: 1200px) {
-  .images-container img {
-    width: 30%;
-  }
 }
 
 @media (min-width: 1400px) {
@@ -311,9 +241,6 @@ h1:hover {
     /* width: 100vw; */
     padding: 2rem 10rem;
   }
-  /* .title-and-description p{
-    margin-top: 1.5rem;
-  } */
 
   .details{
     /* width: 75%;
@@ -321,9 +248,5 @@ h1:hover {
     box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%); */
     border-radius: 12px;
     margin: 2rem auto;
-  }
-  .details .steps{
-    width: 80%;
-    padding: 2rem;
   }
 }

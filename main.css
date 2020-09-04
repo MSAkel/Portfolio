@@ -178,7 +178,10 @@ nav, #close{
   stroke-width: 4;
 }
 #close{
+  position: absolute;
   color: var(--gray-5);
+  margin: 3rem;
+  right: 0;
 }
 #menu, #close{
   display: flex;
@@ -203,12 +206,12 @@ nav, #close{
   right: 0;
   box-shadow: 6px 6px 24px;
   transition: all 1000ms;
-  transform: translateX(200%);
+  transform: translateY(-200%);
 }
 
 #hamburger-line-1{
   transition: all 1s;
-  transform: translateX(0%);
+  transform: translateY(0%);
 }
 #hamburger-line-1.menu-hover{
   transform: translateX(30%);
@@ -677,9 +680,9 @@ margin-bottom: 1rem;
     display: inline-block;
   }
   
-  .menu-display{
+  /* .menu-display{
     width: 40vw;
-  }
+  } */
 
   .container{
     padding: 0 9.2rem;
@@ -799,9 +802,9 @@ margin-bottom: 1rem;
 
 /****************** MEDIA 1250px ********************/
 @media (min-width: 1250px) {
-  .menu-display{
+  /* .menu-display{
     width: 25vw;
-  }
+  } */
   .line{
     /* width: calc(12% + 5px); */
     width: calc(12% + 6.2px);
@@ -899,7 +902,6 @@ margin-bottom: 1rem;
   .project-border-right{
     border-right: 2px solid var(--p1);
     position: absolute;
-    top: 10%;
     bottom: 0;
     right: 0;
     height: 0;
@@ -915,7 +917,7 @@ margin-bottom: 1rem;
   .project-border-left{
     border-left: 2px solid var(--p1);
     position: absolute;
-    top: 0%;
+    top: 0;
     bottom: 10%;
     height: 0;
     transition: height 0.3s ease 0s, left 0.3s ease 0s;
@@ -978,9 +980,9 @@ margin-bottom: 1rem;
     width: calc(12% + 7.4px);
   }
 
-  .menu-display{
+  /* .menu-display{
     width: 20vw;
-  }
+  } */
   .container,
   #project-section.container{
     padding: 0 12rem;
@@ -1070,5 +1072,17 @@ margin-bottom: 1rem;
 @media (min-width: 1800px) {
   .line{
     width: calc(12% + 9px);
+  }
+
+  .container,
+  #project-section.container{
+    padding: 0 14rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  .container,
+  #project-section.container{
+    padding: 0 15rem;
   }
 }

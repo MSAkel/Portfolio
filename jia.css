@@ -1,0 +1,96 @@
+@import url("variables.css");
+
+.header-img-container{
+  background-image: url("./imgs/jiea-header-01.png");
+}
+
+.cheo{
+  margin-bottom: 3rem;
+}
+.cheo img{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.details img{
+  margin: 2rem auto;
+  width: 100%;
+}
+.details img:nth-of-type(2){
+  border-radius: 8px;
+  box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
+}
+
+.responsive{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem auto;
+}
+.responsive h2{
+  margin-bottom: 1.5rem;
+  font-size: var(--font-m);
+}
+
+.responsive .images-container img {
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
+}
+
+.responsive .images-container img:nth-of-type(2) {
+  margin: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .cheo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10rem 0;
+  }
+  .cheo img {
+    flex: 2;
+  }
+  .cheo p {
+    flex: 2;
+    font-size: var(--font-xs);
+    /* margin-left: 0.4rem; */
+  }
+
+  .responsive {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .responsive .images-container img:nth-of-type(2) {
+    /* margin: 4rem 2rem 0 2rem; */
+    margin: 0 2rem 0 2rem;
+  }
+
+  .responsive .images-container img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .responsive .images-container img {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .images-container img {
+    width: 25%;
+  }
+}
+
+
+@media (min-width: 1700px) {
+  .details .steps{
+    width: 80%;
+    padding: 2rem;
+  }
+}

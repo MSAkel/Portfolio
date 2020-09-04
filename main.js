@@ -74,6 +74,8 @@ function onClickMenu(){
   document.querySelector(".menu-display").classList.add("show")
 }
 function onClickClose(){
+  const page = window.location.pathname.split("/").pop()
+  if(page !== 'index.html') return
   document.querySelector(".menu-display").classList.remove("show")
 }
 
@@ -136,8 +138,8 @@ ScrollReveal().reveal('.project-description', { origin:'bottom', delay: 700, opa
 ScrollReveal().reveal('.right-section', { origin:'bottom', opacity: 0, delay: 700, distance:'4%',duration: 1400, mobile: false });
 
 // Contact section animations
-ScrollReveal().reveal('.contact-details', { origin:'bottom', delay: 650, opacity: 0,distance:'5%',duration: 1200, mobile: false });
-ScrollReveal().reveal('.social', { origin:'bottom', opacity: 0, delay: 700, distance:'5%',duration: 1400, mobile: false });
+ScrollReveal().reveal('.contact-details', { origin:'bottom', delay: 650, opacity: 0,distance:'25%',duration: 1000, mobile: false });
+ScrollReveal().reveal('.social', { origin:'bottom', opacity: 0, delay: 700, distance:'25%',duration: 1000, mobile: false });
 
 
 // Scroll reveal projects page
