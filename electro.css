@@ -4,18 +4,49 @@
   background-image: url("./imgs/electromanager/header-img.jpg");
 }
 
+h1{
+  font-size: var(--font-l);
+}
+h2{
+  font-size: var(--font-m);
+  margin-bottom: 1rem;
+}
+p{
+  font-size: var(--font-xs);
+  margin-bottom: 1rem;
+}
+
+/* .details{
+  box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
+  background-color: hsla(178, 55%, 70%, 0.1);
+  border-radius: 8px;
+  width: 75%;
+} */
+
 .electro-reports,
-.electro-reports div,
 .calibrator,
 .electro-settings{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+
+
 }
+
+.electro-reports h2,
+.calibrator h2,
+.electro-settings h2{
+  width: 110%;
+  padding-right: 2rem;
+  color: var(--p1)
+}
+
 
 .electro-preview img,
 .electro-reports img,
 .details img{
-  margin: 2rem auto;
+  margin: 0 auto 2rem;
   width: 100%;
   border-radius: 6px;
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
@@ -28,40 +59,52 @@
 @media (min-width: 768px) {
   
   .electro-preview img{
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
   }
   .electro-preview img:nth-of-type(2){
     margin: 2rem;
   }
 
-  .electro-reports img,
-  .calibrator img,
-  .electro-settings img{
-    width: 40%;
-    /* margin: 2rem 2rem 6rem 0; */
+  .details img{
+    width: 50%;
   }
-  
+  /* .container h2{
+    font-size: var(--font-xs);
+  }
+  .container h1{
+    font-size: var(--font-l);
+  }   */
 }
 
 @media (min-width: 1250px) {
+  h1{
+    font-size: var(--font-xl);
+  }
+  h2{
+    font-size: var(--font-l);
+  }
+
   .electro-reports,
   .calibrator,
   .electro-settings {
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+
+  .feature-text{
+    width: 90%;
   }
 
   .electro-preview img{
     width: 20%;
-    /* margin: 2rem 2rem 6rem 0; */
   }
 
-  .electro-reports .images-container img{
-    /* width: 40%; */
-    /* margin: 2rem 2rem 6rem 0; */
-  }
-  .electro-settings .images-container img{
-    /* width: 40%; */
+  .electro-reports img,
+  .details img{
+    width: 40%;
   }
 }
 
@@ -70,5 +113,3 @@
     margin: 5rem auto;
   }
 }
-  
-  

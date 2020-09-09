@@ -75,7 +75,8 @@ body {
 }
 .show-line{
   height: 100%;
-  display: none;
+  /* display: none; */
+  display: block;
   position: relative;
   /* box-shadow: gray 3px 3px 12px; */
 }
@@ -337,6 +338,18 @@ nav, #close{
   width: 100%;
   margin-bottom: 2rem;
   z-index: 10;
+}
+
+.awards-container{
+  margin-top: 2rem;
+}
+
+.awards-container h3{
+  color: var(--s2);
+}
+
+.award-section{
+  margin-top: 1rem;
 }
 
 #about-svg{
@@ -740,19 +753,10 @@ margin-bottom: 1rem;
   }
 
  /****************** ABOUT ********************/
-  .about{
-    flex-direction: row;
-  }
-  .about img {
-    width: 70%;
-    margin-right: 5.5rem;
-  }
 
-  #about-svg{
-    width: 250px;
-    height: 250px;
-    top: -15px;
-    right: 0;
+  .about img {
+    /* width: 70%; */
+    /* margin-right: 5.5rem; */
   }
 
   /****************** PROJECTS ********************/
@@ -778,8 +782,23 @@ margin-bottom: 1rem;
 /****************** MEDIA 1140px ********************/
 @media (min-width: 1140px) { 
   .about{
-    width: 90%;
+    flex-direction: row;
+     /* width: 90%; */
   }
+  
+  .about img {
+    width: 80%;
+    margin: 2rem;
+  }
+  .about .about-text{
+    /* width: 100%; */
+    margin-top: 4rem;
+  }
+  .about .me-img-container{
+    width: 100%;
+  }
+
+
   .about-border-top{
     border-top: 4px solid var(--p1);
     position: absolute;
@@ -797,6 +816,14 @@ margin-bottom: 1rem;
     position: absolute;
     top: 20%;
     bottom: 10%;
+  }
+
+  #about-svg{
+    width: 250px;
+    height: 250px;
+    /* top: -15px; */
+    top: 500px;
+    right: 15px;
   }
 }
 
@@ -825,6 +852,10 @@ margin-bottom: 1rem;
   }
   #home-section .background-svg{
     width: 600px;
+  }
+
+  .about img {
+    width: 70%;
   }
 
   /****************** PROJECTS ********************/
@@ -951,7 +982,10 @@ margin-bottom: 1rem;
   }
 
   .about img {
-    width: 60%;
+    /* width: 60%; */
+  }
+  .about .me-img-container{
+    width: 70%;
   }
 }
 
@@ -988,34 +1022,31 @@ margin-bottom: 1rem;
     padding: 0 12rem;
   }
   #home-section .background-text{
-    font-size: 190px;
+    font-size: 150px;
     /* margin-top: 1.5rem; */
     margin-left: -1.5rem;
   }
 
    /****************** ABOUT ********************/
   .about{
-    width: 75%;
+    /* width: 75%; */
     margin-bottom: 10rem;
   }
   .about img{
-    width: 65%;
-    padding: 2rem;
+    /* width: 65%; */
+    /* padding: 2rem; */
     margin-right:0;
   }
   .about .me-img-container{
-  
-  }
-  .about .about-text{
-
+    width: 50%;
   }
 
-  #about-svg{
+  /* #about-svg{
     width: 300px;
     height: 300px;
     top: 20%;
     right: 10%;
-  }
+  } */
   /****************** PROJECTS ********************/
   #project-section .right-section img{
     width: 700px;
