@@ -146,6 +146,6 @@ ScrollReveal().reveal('.social', { origin:'bottom', opacity: 0, delay: 700, dist
 ScrollReveal().reveal('.page-top-colour', { origin:'top', delay: 500,distance:'100%',duration: 1400, mobile: false });
 ScrollReveal().reveal('.header-img-container', { origin:'top', delay: 1500,distance:'1%',duration: 1400, mobile: false });
 
-ScrollReveal().reveal('.title-and-description h1', { origin:'left', delay: 2000, distance:'2%',duration: 900, mobile: false });
-ScrollReveal().reveal('.title-and-description p', { origin:'left', delay: 2500, distance:'2%',duration: 900, mobile: false });
+ScrollReveal().reveal('.title-and-description .title-and-services', { origin:'bottom', delay: 2000, distance:'2%',duration: 900, mobile: false });
+ScrollReveal().reveal('.title-and-description .brief', { origin:'bottom', delay: 2500, distance:'2%',duration: 900, mobile: false });
 // ScrollReveal().reveal('#project-number', { origin:'left', delay: 300, opacity: 0,distance:'2%',duration: 900, mobile: false });

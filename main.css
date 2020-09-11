@@ -82,7 +82,7 @@ body {
 }
 .vertical-lines .show-line::before{
   content: "";
-  display: block;
+  /* display: block; */
   height: 100%;
   width: 1px;
   background: var(--gray-5);
@@ -165,6 +165,11 @@ nav, #close{
   /* z-index: 100; */
   /* filter: invert(1);
   mix-blend-mode: difference; */
+}
+
+#close p{
+  margin-bottom: 0;
+  z-index: 10000;
 }
 
 .st4{
@@ -329,9 +334,9 @@ nav, #close{
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  font-size: 1.185rem;
+  font-size: var(--font-xs);
   line-height: 1.65rem;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 .about img {
   height: auto;
@@ -349,7 +354,33 @@ nav, #close{
 }
 
 .award-section{
-  margin-top: 1rem;
+  margin-bottom: 0.74rem;
+  display:table;
+}
+
+.award-section a p{
+  position: relative;
+  display:table;
+  transition: all 0.4s ease 0s
+}
+
+
+.award-section a p:hover{
+  color: var(--gray-2)
+}
+.award-section a p:after {    
+  content: "";
+  display: block;
+  height: 2.5px;
+  left: 0;
+  position: absolute;
+  background: var(--s2);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.award-section a p:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 
 #about-svg{
@@ -396,12 +427,17 @@ nav, #close{
   /* padding: 3rem 1rem; */
   margin: 2rem auto;
   padding: 3rem 0;
-  background-color: hsla(0, 0%, 95%, 0.5);
+  background-color: hsla(0, 0%, 95%, 1);
   box-shadow: 2px 1px 14px var(--gray-5);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 8px;
+}
+
+
+.project-content:hover{
+  box-shadow: 3px 4px 12px var(--gray-4);
 }
 
 .project-content.jia{
@@ -578,16 +614,9 @@ margin-bottom: 1rem;
   .container{
     position: relative; 
   }
-
-  /* #project-section.container{
-    position: initial;
-    height: initial;
-  } */
-
   #about-svg{
     display: block;
   }
-
   .about img {
     width: 60%;
   }
@@ -599,9 +628,6 @@ margin-bottom: 1rem;
 
 /****************** MEDIA 768px ********************/
 @media (min-width: 768px) {
-  nav, #close{
-    /* margin: 2rem 5rem; */
-  }
   .container{
     /* height: 100vh; */
     padding: 0 6rem;
@@ -751,10 +777,6 @@ margin-bottom: 1rem;
     padding: 0 10.5rem;
   }
 
- /****************** ABOUT ********************/
-
-
-
   /****************** PROJECTS ********************/
   #project-section {
     margin-top: 0;
@@ -763,7 +785,6 @@ margin-bottom: 1rem;
   .section-title{
     text-align: left;
   }
-
 
   /****************** CONTACT ********************/
   #contact-section .background-svg{
@@ -779,21 +800,14 @@ margin-bottom: 1rem;
 @media (min-width: 1140px) { 
   .about{
     flex-direction: row;
-     /* width: 90%; */
   }
-  
   .about img {
     width: 80%;
     margin: 2rem;
   }
   .about .about-text{
-    /* width: 100%; */
     margin-top: 4rem;
   }
-  .about .me-img-container{
-    width: 100%;
-  }
-
 
   .about-border-top{
     border-top: 4px solid var(--p1);
@@ -859,12 +873,10 @@ margin-bottom: 1rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* padding: 5rem 0; */
     padding: 0;
     margin-bottom: 7rem;
-    /* height: 450px; */
-    /* box-shadow: 2px 3px 24px var(--gray-5); */
   }
+ 
 
   .project-content.jia,
   .project-content.electro{
@@ -963,9 +975,9 @@ margin-bottom: 1rem;
 
 /****************** MEDIA 1300px ********************/
 @media (min-width: 1300px) {
-  .about .me-img-container{
+  /* .about .me-img-container{
     width: 70%;
-  }
+  } */
 }
 
 
@@ -1007,19 +1019,23 @@ margin-bottom: 1rem;
     margin-bottom: 10rem;
   }
   .about img{
-    /* width: 65%; */
+    width: 85%;
     /* padding: 2rem; */
     margin-right:0;
   }
-  .about .me-img-container{
-    width: 50%;
+  .me-img-container{
+    flex:1
   }
-
-  /****************** PROJECTS ********************/
-
+  .about .about-text{
+    flex: 2
+  }
 }
 
 @media (min-width: 1600px) {
+  .about-text{
+    margin-right: 5rem;
+  }
+
   .container,
   #project-section.container{
     padding: 0 13rem;
@@ -1034,6 +1050,14 @@ margin-bottom: 1rem;
   #project-section.container{
     padding: 0 13.3rem;
   }
+
+  .about img{
+    width: 80%;
+  }
+  .about .about-text{
+    margin-top: 5rem;
+  }
+
 
   .project-number{
     font-size: 120px;
@@ -1068,6 +1092,11 @@ margin-bottom: 1rem;
     width: calc(12% + 9px);
   }
 
+  .about-text{
+    margin-right: 10rem;
+  }
+
+
   .container,
   #project-section.container{
     padding: 0 14rem;
@@ -1075,6 +1104,11 @@ margin-bottom: 1rem;
 }
 
 @media (min-width: 1900px) {
+  .about-text{
+    margin-right: 13rem;
+  }
+
+
   .container,
   #project-section.container{
     padding: 0 15rem;
