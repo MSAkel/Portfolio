@@ -1,12 +1,32 @@
 @import url("variables.css");
 
+h1{
+  font-size: var(--font-l);
+}
+h2{
+  font-size: var(--font-m);
+  margin-bottom: 1rem;
+}
+h3{
+  font-size: var(--font-s);
+  margin-bottom: 1rem;
+}
+p{
+  font-size: var(--font-xs);
+  margin-bottom: 1rem;
+}
+
+#menu p{
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
 .project{
   height: initial;
 }
 
 .page-top-colour,
 .page-bottom-colour{
-  /* position: relative; */
   right: 0;
   bottom: 0;
   height: 40vh;
@@ -42,16 +62,21 @@
   margin: 5rem 0;
 }
 
-.title-and-description h1{
+.title-and-description .title-and-services{
   flex: 1;
-  /* font-size: var(--font-m); */
-  color: var(--p1);
 }
-.title-and-description p{
+.title-and-description .title-and-services h1{
+  color: var(--p1);
+  margin-bottom: 0.5rem;
+}
+.title-and-description .brief{
   flex: 1;
-  /* font-size: var(--font-xs); */
-  /* margin-top: 4rem; */
   margin-top: 1.5rem;
+}
+.title-and-description .brief-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .services{
@@ -129,27 +154,7 @@ h1:hover {
     height: 28vh;
   }
 
-/* 
-  .title-and-description h1{
-    font-size: var(--font-l);
-  } */
-
-  /* .title-and-description h1,
-  .title-and-description p,
-  .services .services-list,
-  .cheo p{
-    border-left: 4px solid var(--s3);
-    padding-left: 0.5rem;
-  }
-  .title-and-description p{
-    margin-left: -0.15rem;
-  } */
-
   .services .year{
-    /* border-right: 4px solid var(--s3);
-    padding-right: 0.5rem;
-    margin-right: 0.1rem;
-    height: 2rem; */
     font-size: var(--font-xs);
   }
 
@@ -159,14 +164,11 @@ h1:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    /* margin: 2rem; */
-    /* margin-bottom: 6rem; */
     width: 100%;
   }
 
   .next-project h1{
     font-size: var(--font-l);
-    /* margin-left: 5rem; */
   }
   .next-project h2{
     font-size: var(--font-m);
@@ -192,11 +194,20 @@ h1:hover {
 
 }
 
+@media (min-width: 1250px) {
+  h1{
+    font-size: var(--font-xl);
+  }
+  h2{
+    font-size: var(--font-l);
+  }
+}
+
 @media (min-width: 1400px) {
   .title-and-description{
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 0;
+    margin-bottom: 10rem;
   }
 
   .title-and-description h1{
@@ -207,11 +218,7 @@ h1:hover {
 }
 
 @media (min-width: 1500px) {
-  /* .title-and-description h1{
-    font-size: var(--font-xl);
-  } */
-
-  .title-and-description p{
+  .title-and-description .brief p{
     font-size: var(--font-xs);
   }
 
@@ -228,7 +235,6 @@ h1:hover {
   }
 
   .header-img-container img{
-    /* width: 100vw; */
     padding: 2rem 10rem;
   }
 }

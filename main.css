@@ -393,8 +393,9 @@ nav, #close{
   padding: 0 2rem;
 }
 .project-content{
-  padding: 3rem 1rem;
+  /* padding: 3rem 1rem; */
   margin: 2rem auto;
+  padding: 3rem 0;
   background-color: hsla(0, 0%, 95%, 0.5);
   box-shadow: 2px 1px 14px var(--gray-5);
   background-position: center;
@@ -418,7 +419,7 @@ nav, #close{
     rgba(255, 255, 255, 0.8), 
     rgba(238, 236, 236, 0.8)
   ),
-  url("imgs/splash.png");
+  url("imgs/electro-logo-512.png");
 }
 
 .project-number{
@@ -451,7 +452,7 @@ margin-bottom: 1rem;
 }
 
 #project-section img{
-  width: 100%;
+  /* width: 100%; */
   display: none;
 }
 
@@ -578,10 +579,10 @@ margin-bottom: 1rem;
     position: relative; 
   }
 
-  #project-section.container{
+  /* #project-section.container{
     position: initial;
     height: initial;
-  }
+  } */
 
   #about-svg{
     display: block;
@@ -654,9 +655,7 @@ margin-bottom: 1rem;
   #project-section.container{
     padding: 0 6rem;
   }
-  .project-content{
-    padding: 9rem 2rem;
-  }
+
   .project-number{
     font-size: 100px;
     margin-top: -4.5rem;
@@ -754,10 +753,7 @@ margin-bottom: 1rem;
 
  /****************** ABOUT ********************/
 
-  .about img {
-    /* width: 70%; */
-    /* margin-right: 5.5rem; */
-  }
+
 
   /****************** PROJECTS ********************/
   #project-section {
@@ -829,16 +825,11 @@ margin-bottom: 1rem;
 
 /****************** MEDIA 1250px ********************/
 @media (min-width: 1250px) {
-  /* .menu-display{
-    width: 25vw;
-  } */
   .line{
-    /* width: calc(12% + 5px); */
     width: calc(12% + 6.2px);
   }
 
   .container{
-    /* height: 100vh; */
     padding: 0 10rem;
   }
 
@@ -868,8 +859,10 @@ margin-bottom: 1rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5rem 0;
+    /* padding: 5rem 0; */
+    padding: 0;
     margin-bottom: 7rem;
+    /* height: 450px; */
     /* box-shadow: 2px 3px 24px var(--gray-5); */
   }
 
@@ -880,7 +873,7 @@ margin-bottom: 1rem;
   
   .project-number{
     font-size: 100px;
-    margin-top: -4.5rem;
+    /* margin-top: -4.5rem; */
   }
   .project-description h1{
     font-size: 54px;
@@ -894,27 +887,20 @@ margin-bottom: 1rem;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: start;
-    margin-left:1rem;
+    margin-left: 2rem;
   }
 
-  #project-section .right-section{
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-  }
+
   #project-section img{
     display: block;
-  }
-  #project-section .right-section img{
-    width: 500px;
+    height: 100%;
+    width: 600px;
   }
 
-  #project-section .right-section #jia-image{
-    margin-left: -4rem;
-  }
-  #project-section .right-section #electro-image{
+  .right-section-new img{
+    height: 100%;
     width: 100%;
-    /* margin-left: 25rem; */
+    object-fit: cover;
   }
 
   .view-project-btn{
@@ -977,13 +963,6 @@ margin-bottom: 1rem;
 
 /****************** MEDIA 1300px ********************/
 @media (min-width: 1300px) {
-  #project-section .right-section #electro-image{
-    width: 80%;
-  }
-
-  .about img {
-    /* width: 60%; */
-  }
   .about .me-img-container{
     width: 70%;
   }
@@ -995,11 +974,6 @@ margin-bottom: 1rem;
   .container,
   #project-section.container{
     padding: 0 11rem;
-  }
-
-  #project-section .right-section #electro-image{
-    width: 60%;
-    margin-left: 5rem;
   }
 
   .contact-details h3,
@@ -1041,27 +1015,14 @@ margin-bottom: 1rem;
     width: 50%;
   }
 
-  /* #about-svg{
-    width: 300px;
-    height: 300px;
-    top: 20%;
-    right: 10%;
-  } */
   /****************** PROJECTS ********************/
-  #project-section .right-section img{
-    width: 700px;
-  }
+
 }
 
 @media (min-width: 1600px) {
   .container,
   #project-section.container{
     padding: 0 13rem;
-  }
-
-  #project-section .right-section #electro-image{
-    width: 45%;
-    margin-left: 15rem;
   }
 }
 
@@ -1075,7 +1036,7 @@ margin-bottom: 1rem;
   }
 
   .project-number{
-    font-size: 140px;
+    font-size: 120px;
   }
   .project-description h1{
     font-size: 64px;
@@ -1094,10 +1055,12 @@ margin-bottom: 1rem;
     /* margin-bottom: 3.5rem; */
   }
 
-  #project-section .right-section #electro-image{
-    width: 30%;
-    margin-left: 24rem;
+  #project-section img{
+    display: block;
+    height: 100%;
+    width: 750px;
   }
+
 }
 
 @media (min-width: 1800px) {
