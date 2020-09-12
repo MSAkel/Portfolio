@@ -31,6 +31,11 @@ let projects = [
 function init() {
   eventListeners()
 
+  window.onkeydown = function(e) {
+    if (e.keyCode == 8 && e.target == document.body)
+      e.preventDefault();
+  }
+
   // animate in lines
   let lines = document.querySelectorAll(".line")
   let time = 0
