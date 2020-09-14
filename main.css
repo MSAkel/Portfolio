@@ -243,10 +243,7 @@ nav, #close{
 .menu-display a{
   color: var(--gray-5);
 }
-.st0{
-  fill: var(--s3);
-  opacity: 0.9;
-}
+
 .st1{
   fill: var(--s1);
   opacity: 0.3;
@@ -320,12 +317,22 @@ nav, #close{
   color: var(--p1);
   z-index: -100;
 }
+
+.blob{
+  fill: var(--s3);
+  /* opacity: 0.9; */
+  transition: all 1000ms ease-in-out;
+}
 #home-section .background-svg{
   position: absolute;
   right: 0;
   width: 400px;
-  z-index: -100;
-  opacity: 0.3;
+  z-index: 100;
+  /* opacity: 0.3; */
+}
+
+.blob:hover{
+  fill: var(--p3);
 }
 
 /****************** ABOUT ********************/

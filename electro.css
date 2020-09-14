@@ -16,8 +16,8 @@
 .electro-reports h2,
 .calibrator h2,
 .electro-settings h2{
-  width: 110%;
-  padding-right: 2rem;
+  /* width: 110%; */
+  /* padding-right: 2rem; */
   color: var(--p1)
 }
 
@@ -45,23 +45,28 @@
   .electro-reports,
   .calibrator,
   .electro-settings {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
+    /* justify-content: space-around; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-bottom: 1rem;
   }
 
   .feature-text{
-    width: 90%;
+    width: 50%;
   }
 
-  .electro-preview img{
+  /* .electro-preview img{
     width: 20%;
-  }
+  } */
 
+  .electro-preview img,
   .electro-reports img,
   .details img{
-    width: 40%;
+    /* width: 40%; */
+    width: 20%;
   }
 }
 
