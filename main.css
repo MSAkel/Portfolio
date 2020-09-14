@@ -523,6 +523,10 @@ margin-bottom: 1rem;
   color: white;
 }
 
+.new .right-section-new .text{
+  display: none;
+}
+
 /****************** CONTACT ********************/
 #contact-section{
   /* margin-top: 9rem; */
@@ -910,6 +914,10 @@ margin-bottom: 1rem;
   .project-content.melp{
     background-image: none;
   }
+
+  #project-section .section-title{
+    margin-bottom: 5rem;
+  }
   
   .project-number{
     font-size: 100px;
@@ -934,13 +942,15 @@ margin-bottom: 1rem;
   #project-section img{
     display: block;
     height: 100%;
-    width: 600px;
+    /* width: 600px; */
+    width: 100%;
   }
 
   .right-section-new img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
   }
 
   .view-project-btn{
@@ -980,14 +990,72 @@ margin-bottom: 1rem;
     transition: height 0.3s ease 0s, left 0.3s ease 0s;
   }
 
-  .project-content:hover > .project-border-top,
+  /* .project-content:hover > .project-border-top,
   .project-content:hover > .project-border-bottom{
     width: 90%;
   }
   .project-content:hover > .project-border-right,
   .project-content:hover > .project-border-left{
     height: 90%;
+  } */
+
+  .project-content.new{
+    background-color: #f7f7f7;
+    box-shadow: none;
+    padding: 4rem 0 2rem;
+    background: linear-gradient(to left, #f2f2f2 50%, #f7f7f7 50%);
   }
+
+.new .project-border-bottom{
+  width: 90%;
+}
+
+.new .project-border-top{
+  width: 100%;
+}
+
+.new .project-border-right,
+.new .project-border-left{
+  height: 90%;
+}
+
+.new .project-number{
+  position: absolute;
+  top: 10px;
+  font-size: calc(0.8rem + 3vw);
+  background-color: hsl(0, 0%, 97%);
+}
+.new .project-title{
+  /* display: inline-block; */
+  position: relative;
+  padding-bottom: 1rem;
+}
+.project-title::after{
+  content: "";
+  display: block;
+  height: 3px;
+  /* left: 50%; */
+  bottom: 0;
+  position: absolute;
+  background: var(--s3);
+  /* transition: width 0.3s ease 0s, left 0.3s ease 0s; */
+  width: 30%; 
+}
+
+.new .right-section-new .text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: var(--p1);
+}
+/* .new .project-border-top::before{
+  content: "01";
+  position: absolute;
+  display: inline;
+  margin-right: 1em;
+} */
+
   
   /****************** CONTACT ********************/
   .contact-content h3{

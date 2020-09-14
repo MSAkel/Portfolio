@@ -138,8 +138,8 @@ ScrollReveal().reveal('.about-border-top', { origin:'left', delay: 650, scale: 0
 
 // Projects section animations
 ScrollReveal().reveal('.project-content', { origin:'left', delay: 300,distance:'1%',duration: 900, mobile: false });
-ScrollReveal().reveal('#project-number', { origin:'bottom', delay: 600, opacity: 0,distance:'4%',duration: 900, mobile: false });
-ScrollReveal().reveal('.project-description', { origin:'bottom', delay: 700, opacity: 0,distance:'4%',duration: 1200, mobile: false });
+ScrollReveal().reveal('#project-number', { origin:'bottom', delay: 300, opacity: 0,distance:'10%',duration: 700, mobile: false });
+ScrollReveal().reveal('.project-description', { origin:'bottom', delay: 350, opacity: 0,distance:'10%',duration: 700, mobile: false });
 ScrollReveal().reveal('.right-section', { origin:'bottom', opacity: 0, delay: 700, distance:'4%',duration: 1400, mobile: false });
 
 // Contact section animations
