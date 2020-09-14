@@ -208,7 +208,7 @@ h1:hover {
   .title-and-description{
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 
   .title-and-description h1{
