@@ -904,7 +904,7 @@ margin-bottom: 1rem;
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    margin-bottom: 7rem;
+    margin-bottom: 10rem;
   }
  
 
@@ -942,7 +942,6 @@ margin-bottom: 1rem;
   #project-section img{
     display: block;
     height: 100%;
-    /* width: 600px; */
     width: 100%;
   }
 
@@ -951,6 +950,8 @@ margin-bottom: 1rem;
     width: 100%;
     object-fit: cover;
     box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
+    border: 4px solid #FFF;
+    border-right: none;
   }
 
   .view-project-btn{
@@ -1002,8 +1003,8 @@ margin-bottom: 1rem;
   .project-content.new{
     background-color: #f7f7f7;
     box-shadow: none;
-    padding: 4rem 0 2rem;
-    background: linear-gradient(to left, #f2f2f2 50%, #f7f7f7 50%);
+    padding: 7rem 0 5rem;
+    /* background: linear-gradient(to left, #f2f2f2 45%, #f7f7f7 55%); */
   }
 
 .new .project-border-bottom{
