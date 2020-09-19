@@ -1,9 +1,5 @@
 @import url("variables.css");
 
-.header-img-container.electro{
-  background-image: url("./imgs/electromanager/electro-header-01.png");
-}
-
 .electro-reports,
 .calibrator,
 .electro-settings{
@@ -16,16 +12,14 @@
 .electro-reports h2,
 .calibrator h2,
 .electro-settings h2{
-  /* width: 110%; */
-  /* padding-right: 2rem; */
   color: var(--p1)
 }
 
 .electro-preview img,
 .electro-reports img,
 .details img{
-  margin: 0 auto 2rem;
-  width: 100%;
+  margin: 1rem auto 2rem;
+  width: 90%;
   border-radius: 6px;
   box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
 }
@@ -39,33 +33,27 @@
   .details img{
     width: 50%;
   }
-}
 
-@media (min-width: 1250px) {
   .electro-reports,
   .calibrator,
   .electro-settings {
-    /* flex-direction: row; */
-    /* align-items: flex-start; */
-    /* justify-content: space-around; */
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-bottom: 1rem;
   }
+}
+
+@media (min-width: 1250px) {
+
 
   .feature-text{
     width: 50%;
   }
 
-  /* .electro-preview img{
-    width: 20%;
-  } */
-
   .electro-preview img,
   .electro-reports img,
   .details img{
-    /* width: 40%; */
     width: 20%;
   }
 }

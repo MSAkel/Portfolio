@@ -9,11 +9,16 @@ h2{
 }
 h3{
   font-size: var(--font-s);
-  margin-bottom: 1rem;
+  color: var(--p1);
 }
 p{
   font-size: var(--font-xs);
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+}
+
+hr{
+  height: 1px;
+  color: #f7f7f7;
 }
 
 #menu p{
@@ -25,72 +30,51 @@ p{
   height: initial;
 }
 
-.page-top-colour,
-.page-bottom-colour{
-  right: 0;
-  bottom: 0;
-  height: 40vh;
-  background-color: hsla(4, 50%, 65%, 0.2);
-}
-.page-bottom-colour{
-  height: 25vh;
+.divider{
+  margin: 2rem auto;
 }
 
-.header-img-container{
-  position: relative;
+.header{
   display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  margin-top: -16rem;
-  background-color: white;
-  box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
-  width: 80vw;
-  height: 50vh;
-  z-index: 10;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  flex-direction: column;
+  padding: 7rem 0 0;
+  background: linear-gradient(to top, #f7f7f7 65%, #1d635f88 35%);
 }
 
 .header-img-container img{
-  padding: 5rem 2rem;
-  z-index: 10;
+  height: auto;
+  width: 100vw;
 }
 
 .title-and-description{
   display: flex;
   flex-direction: column;
-  margin: 5rem 0;
+  margin-top: 2rem;
 }
 
-.title-and-description .title-and-services{
-  flex: 1;
-}
-.title-and-description .title-and-services h1{
+.title-and-description h1{
   color: var(--p1);
-  margin-bottom: 0.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+  display:table;
 }
-.title-and-description .brief{
-  flex: 1;
-  margin-top: 1.5rem;
+.title-and-description h1::after{
+  content: "";
+  display: block;
+  height: 3px;
+  bottom: -5px;
+  position: absolute;
+  background: var(--s3);
+  width: 30%; 
 }
-.title-and-description .brief-title{
+
+.service-year{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
-.services{
-  display: flex;
-  justify-content: space-between;
-  margin: 6rem 0;
-}
-.services h2{
-  font-size: var(--font-m);
-  margin-bottom: 0.5rem;
-}
-.services li{
-  font-size: var(--font-xs);
+.services-list{
+  margin-bottom: 2rem;
 }
 
 .images-container{
@@ -100,35 +84,81 @@ p{
 }
 
 .next-project{
-  padding-top: 2rem;
-}
-.next-project h1{
-  font-size: var(--font-m);
-  margin-left: 3rem;
   position: relative;
-  overflow: hidden;
-  background: linear-gradient(to right, hsl(4, 50%, 25%), hsl(4, 50%, 25%) 50%, #262d38 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%; 
-  transition: background-position 500ms ease;
+  margin: 3rem 0;
 }
-h1:hover {
-  background-position: 0 100%;
-  cursor: pointer;
-}
-.next-project h2{
-  font-size: var(--font-m);
-  margin-bottom: 2rem;
+.next-proj-content{
+  padding: 1rem;
 }
 
-.view-project-btn {
-  border: none;
+.project-border-top{
+  border-top: 2px solid var(--p1);
+  width: 50%;
+  margin: 0;
+  right: 0;
+  padding: 0;
+  top: 0;
+  float: right;
 }
-.view-project-btn:hover {
-  box-shadow: none;
+
+.project-border-right{
+  border-right: 2px solid var(--p1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.project-border-bottom{
+  border-bottom: 2px solid var(--p1);
+  width: 50%;
+}
+
+.project-border-left{
+  border-left: 2px solid var(--p1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+
+.new .project-border-right,
+.new .project-border-left{
+  height: 100%;
+}
+
+
+.next-project img{
+  height: auto;
+  width: 100%;
+}
+
+.next-project h2:first-of-type{
+  color: var(--s3);
+}
+
+
+.next-project h2:last-of-type{
+  color: var(--p1);
+  text-align: end;
+  margin: 0;
+  margin-top: 1rem;
+  transition: all 300ms;
+}
+
+.next-project h2:last-of-type:hover{
+  color: hsl(177, 55%, 35%);
+}
+
+.next-project h2{
+  font-size: var(--font-m);
+}
+
+/* .view-project-btn {
+  border: none;
+} */
+.next-proj:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 400px) and (max-height: 840px) {
@@ -138,27 +168,13 @@ h1:hover {
 }
 
 @media (min-width: 450px) {
-  .page-top-colour{
-    height: 35vh;
-  }
-  .page-bottom-colour{
-    height: 28vh;
-  }
 
 }
 
 @media (min-width: 768px) {
-  .page-top-colour{
-    height: 35vh;
-  }
-  .page-bottom-colour{
-    height: 28vh;
-  }
-
   .services .year{
     font-size: var(--font-xs);
   }
-
 
   .images-container{
     display: flex;
@@ -177,22 +193,54 @@ h1:hover {
 }
 
 @media (min-width: 995px) {
-  .page-top-colour,
-  .page-bottom-colour{
-    height: 40vh;
-  }
 
 }
 
 @media (min-width: 1100px) {
   .next-project h1{
     font-size: var(--font-xl);
-    margin-left: 5rem;
   }
   .next-project h2{
     font-size: var(--font-l);
   }
 
+  .next-proj-content{
+    padding: 0 2rem;
+  }
+
+  .next-proj-content img{
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+    border: 4px solid #fff;
+    box-shadow: 4px 4px 4px #b4b4b4;
+  }
+
+  hr{
+    margin-top: 2rem;
+  }
+
+  .header{
+    flex-direction: row;
+    padding-bottom: 4rem;
+    background: linear-gradient(to left, #f7f7f7 55%, #1d635f44 45%);
+  }
+  .header-img-container img{
+    width: 50vw;
+    background-color: #fff;
+    border: 4px solid #fff;
+    box-shadow: 4px 4px 4px #b4b4b4;
+    border-left: none; 
+  }  
+
+  .title-and-description{
+    margin-top: 0;
+  }
+
+  .title-and-description.container{
+    padding-left: 4rem;
+  }
+  
 }
 
 @media (min-width: 1250px) {
@@ -205,17 +253,7 @@ h1:hover {
 }
 
 @media (min-width: 1400px) {
-  .title-and-description{
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5rem;
-  }
 
-  .title-and-description h1{
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 0;
-  }
 }
 
 @media (min-width: 1500px) {
@@ -225,17 +263,16 @@ h1:hover {
 
   .next-project h1{
     font-size: var(--font-xxl);
-    margin-left: 10.5rem;
   }
 }
 
 
 @media (min-width: 1700px) {
-  .header-img-container{
-    margin-top: -17rem;
+  .next-project h2:first-of-type{
+    margin-left: 0.5rem;
   }
-
-  .header-img-container img{
-    padding: 2rem 10rem;
+  
+  .next-project h2:last-of-type{
+    margin-right: 0.5rem;
   }
 }

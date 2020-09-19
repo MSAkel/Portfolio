@@ -63,9 +63,13 @@ function eventListeners() {
   let menuItems = document.querySelectorAll(".menu-item")
   menuItems.forEach(item => item.addEventListener('click', onClickClose))
 
+  document.querySelector(".logo").addEventListener('click', handleNavigation)
+
   let projCta = document.querySelectorAll(".view-project-btn")
   projCta.forEach(item =>  item.addEventListener('click', handleNavigation))
-  document.querySelector(".logo").addEventListener('click', handleNavigation)
+
+  let nextProj = document.querySelectorAll(".next-proj")
+  nextProj.forEach(item =>  item.addEventListener('click', handleNavigation))
 }
 
 // handle menu

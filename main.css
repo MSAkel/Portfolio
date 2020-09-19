@@ -124,19 +124,7 @@ body {
 	}
 }
 
-/* .vertical-lines .line::after{
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: red;
-  transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1)
-} */
-
 /****************** NAV ********************/
-
 .navbar-container{
   display: flex;
   align-items: center;
@@ -149,22 +137,11 @@ body {
 }
 
 .logo{
-  width: 60px;
-  /* position: fixed; */
-  /* left: 5%; */
-  /* margin: 2rem 2rem; */
-  /* margin-top: 1rem; */
-  /* z-index: 2000; */
+  width: 54px;
   cursor: pointer;
 }
 nav, #close{
-  /* margin: 2rem 2rem; */
   text-align: right;
-  /* position: fixed; */
-  /* right: 0; */
-  /* z-index: 100; */
-  /* filter: invert(1);
-  mix-blend-mode: difference; */
 }
 
 #close p{
@@ -188,6 +165,7 @@ nav, #close{
   color: var(--gray-5);
   margin: 3rem;
   right: 0;
+  z-index: 1000000;
 }
 #menu, #close{
   display: flex;
@@ -489,11 +467,6 @@ nav, #close{
   font-weight: 900;
   letter-spacing: 0rem;
   color: var(--s3);
-  /* text-shadow:
-  -1px -1px 0 var(--p1),  
-   1px -1px 0 var(--p1),  
-   -1px 1px 0 var(--p1),  
-    1px 1px 0 var(--p1); */
 }
 .project-description{
 margin-bottom: 1rem;
@@ -951,7 +924,8 @@ margin-bottom: 1rem;
     object-fit: cover;
     box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
     border: 4px solid #FFF;
-    border-right: none;
+    /* border-right: none; */
+    margin-right: 2rem;
   }
 
   .view-project-btn{
@@ -964,41 +938,32 @@ margin-bottom: 1rem;
     position: absolute;
     right: 0;
     top: 0;
-    width: 0;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    /* width: 0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s; */
   }
   .project-border-right{
     border-right: 2px solid var(--p1);
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 0;
-    transition: height 0.3s ease 0s, left 0.3s ease 0s;
+    /* height: 0;
+    transition: height 0.3s ease 0s, left 0.3s ease 0s; */
   }
   .project-border-bottom{
     border-bottom: 2px solid var(--p1);
     position: absolute;
     bottom:0;
-    width: 0;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    /* width: 0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s; */
   }
   .project-border-left{
     border-left: 2px solid var(--p1);
     position: absolute;
     top: 0;
     bottom: 10%;
-    height: 0;
-    transition: height 0.3s ease 0s, left 0.3s ease 0s;
+
   }
 
-  /* .project-content:hover > .project-border-top,
-  .project-content:hover > .project-border-bottom{
-    width: 90%;
-  }
-  .project-content:hover > .project-border-right,
-  .project-content:hover > .project-border-left{
-    height: 90%;
-  } */
 
   .project-content.new{
     background-color: #f7f7f7;
@@ -1050,14 +1015,7 @@ margin-bottom: 1rem;
   padding: 1rem 2rem;
   color: var(--p1);
 }
-/* .new .project-border-top::before{
-  content: "01";
-  position: absolute;
-  display: inline;
-  margin-right: 1em;
-} */
 
-  
   /****************** CONTACT ********************/
   .contact-content h3{
     margin-bottom: 2rem;
@@ -1072,9 +1030,7 @@ margin-bottom: 1rem;
 
 /****************** MEDIA 1300px ********************/
 @media (min-width: 1300px) {
-  /* .about .me-img-container{
-    width: 70%;
-  } */
+
 }
 
 
@@ -1097,27 +1053,21 @@ margin-bottom: 1rem;
     width: calc(12% + 7.4px);
   }
 
-  /* .menu-display{
-    width: 20vw;
-  } */
   .container,
   #project-section.container{
     padding: 0 12rem;
   }
   #home-section .background-text{
     font-size: 150px;
-    /* margin-top: 1.5rem; */
     margin-left: -1.5rem;
   }
 
    /****************** ABOUT ********************/
   .about{
-    /* width: 75%; */
     margin-bottom: 10rem;
   }
   .about img{
     width: 85%;
-    /* padding: 2rem; */
     margin-right:0;
   }
   .me-img-container{
@@ -1193,7 +1143,6 @@ margin-bottom: 1rem;
     margin-right: 10rem;
   }
 
-
   .container,
   #project-section.container{
     padding: 0 14rem;
@@ -1204,7 +1153,6 @@ margin-bottom: 1rem;
   .about-text{
     margin-right: 13rem;
   }
-
 
   .container,
   #project-section.container{
