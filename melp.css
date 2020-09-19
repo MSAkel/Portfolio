@@ -34,9 +34,6 @@
   .electro-reports,
   .calibrator,
   .electro-settings {
-    /* flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around; */
     justify-content: center;
     align-items: center;
     text-align: center;

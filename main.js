@@ -55,7 +55,8 @@ function init() {
 // Event listeners
 function eventListeners() {
   document.getElementById("menu").addEventListener('click', onClickMenu)
-  document.getElementById("close").addEventListener('click', onClickClose)
+  document.getElementById("close").addEventListener('click', () => 
+  document.querySelector(".menu-display").classList.remove("show"))
 
   document.getElementById("menu").addEventListener('mouseover', onHoverMenu)
   document.getElementById("menu").addEventListener('mouseout', onLeaveMenu)
