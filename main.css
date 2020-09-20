@@ -12,6 +12,11 @@
 a{
   text-decoration:none;
   color: var(--gray-1);
+}
+.menu-display a,
+.awards-container a,
+.email a,
+.social-links a{
   text-transform: uppercase;
   letter-spacing: 0.15em;
   position: relative;
@@ -43,18 +48,24 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 
-  /* overflow-y: scroll;
+  overflow-y: scroll;
   scrollbar-width: none;
-  -ms-overflow-style: none; */
+  -ms-overflow-style: none;
 }
-/* html::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 0;
   height: 0;
-} */
+}
 
 body {
   overflow-x: hidden;
   background-color: hsl(0, 0%, 97%);
+}
+
+.fp-section,
+.fp-slide,
+.fp-tableCell{
+    height: auto !important;
 }
 
 .container{
@@ -236,19 +247,116 @@ nav, #close{
   line-height: 0.9;
   margin-bottom: 2rem;
 }
-/****************** HOME ********************/
-#home-section{
-  /* margin-bottom: 5rem; */
-  height: 100vh;
+
+#fp-nav {
+  margin: 0;
+  left: 40px;
+  overflow: hidden;
+  position: fixed;
+  width: 60px;
+  top: 50%;
+  opacity: 1;
+  overflow: hidden;
 }
+/* #fp-nav ul {
+  margin: 0;
+  padding: 0;
+} */
+
+#fp-nav ul li {
+  height: 4px;
+  margin: 0 0 40px;
+  display: block;
+  width: 14px;
+
+  /* border-bottom:3px solid #262d38; */
+}
+
+#fp-nav ul li a {
+  display: block;
+  height: 100%;
+  width: 20px;
+  background-color: var(--s1);
+  transition: all 300ms;
+}
+#fp-nav ul li a:after {
+  display: none;
+}
+#fp-nav ul li .active{
+  height: 100%;
+  width: 40px;
+  background-color: var(--p1);
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  font-size: 0;
+
+  /* width: 40px; */
+    /* background: red; */
+    /* width: 80%; */
+}
+
+.scroll {
+  position: fixed;
+  font-size: 1.4rem;
+  bottom: 80px;
+  left: 50%;
+  line-height: 1;
+  letter-spacing: 0.15rem;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  color: var(--p1);
+  z-index: 100;
+  transform: translateY(500%);
+  transition: all 300ms;
+}
+
+.fp-viewing-top .scroll {
+  transform: translateY(0%);
+}
+
+.scroll::after {
+  content: "";
+  width: 3px;
+  height: 60px;
+  background: var(--p1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -70px;
+  animation: scroll-line 4s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+	0% {
+    height: 95%;
+	}
+	50% {
+    height: 60%;
+  }
+  100% {
+    height: 95%;
+	}
+}
+
+
+/****************** HOME ********************/
+#home{
+  /* margin-bottom: 5rem; */
+  height: 100vh !important;
+  padding-top: 0 !important;
+}
+
 #hero-title h1 {
   /* font-size: 42px; */
   font-size: 32px;
 }
 
-#home-section .content{
-  padding: 6rem 0 0;
-  height: 100%;
+#home .content{
+  padding: 10rem 0 0;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,12 +391,11 @@ nav, #close{
   display: none;
 }
 .background-text{
-  position: absolute;
+  /* position: absolute; */
   /* top: 32%; */
-  top: 32%;
-  transform: translateY(-50%);
-  opacity: 0.8;
-  font-size: 60px;
+  /* transform: translateY(-50%); */
+  /* opacity: 0.8; */
+  font-size: calc(2rem + 4vw);
   letter-spacing: 0.9rem;
   /* margin-top: 9rem; */
   /* margin-left: -1.5rem; */
@@ -299,9 +406,9 @@ nav, #close{
 .blob{
   fill: var(--s3);
   /* opacity: 0.9; */
-  transition: all 1000ms ease-in-out;
+  /* transition: all 1000ms ease-in-out; */
 }
-#home-section .background-svg{
+#home .background-svg{
   position: absolute;
   right: 0;
   width: 400px;
@@ -309,9 +416,9 @@ nav, #close{
   opacity: 0.4;
 }
 
-.blob:hover{
+/* .blob:hover{
   fill: var(--p3);
-}
+} */
 
 /****************** ABOUT ********************/
 .about{
@@ -402,10 +509,14 @@ nav, #close{
 }
 
 /****************** PROJECTS ********************/
-#project-section {
-  margin-top: 11rem;
+.project-section {
+  /* margin-top: 11rem; */
+  padding-top: 0 !important;
 }
-#project-section.container{
+/* .project-section.first{
+  margin-top: 15rem;
+} */
+.project-section.container{
   padding: 0 2rem;
 }
 .project-content{
@@ -486,7 +597,7 @@ margin-bottom: 1rem;
   text-align: center;
 }
 
-#project-section img{
+.project-section img{
   /* width: 100%; */
   display: none;
 }
@@ -501,7 +612,7 @@ margin-bottom: 1rem;
 }
 
 /****************** CONTACT ********************/
-#contact-section{
+.contact{
   /* margin-top: 9rem; */
   height: 100vh;
   display: flex;
@@ -555,7 +666,7 @@ margin-bottom: 1rem;
   padding-right: 1rem;
 
 }
-#contact-section .background-svg{
+.contact .background-svg{
   position: absolute;
   right: 0;
   top: 40%;
@@ -594,7 +705,7 @@ margin-bottom: 1rem;
 }
 
 @media (max-width: 450px) {
-  #contact-section .section-title span{
+  .contact .section-title span{
     display: block;
     /* margin-left: 3rem; */
     line-height: 7rem;
@@ -603,7 +714,7 @@ margin-bottom: 1rem;
 /****************** MEDIA 553px ********************/
 @media (min-width: 553px) {
   .background-text{
-    font-size: 80px;
+    /* font-size: 80px; */
     letter-spacing: 0.9rem;
     /* margin-top: 11rem; */
   }
@@ -641,13 +752,13 @@ margin-bottom: 1rem;
   }
 
   /****************** HOME ********************/
-  #home-section{
+  #home{
     height: 100vh;
   }
-  #home-section .content{
+  #home .content{
     height: 100%;
   }
-  #home-section .background-svg{
+  #home .background-svg{
     width: 500px;
   }
   #hero-title{
@@ -655,11 +766,11 @@ margin-bottom: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    height: 100%;
+    /* height: 100%; */
   }
-  #home-section .background-text{
+  #home .background-text{
     display: block;
-    font-size: 110px;
+    /* font-size: 110px; */
     letter-spacing: 1.5rem;
     /* margin-top: 11rem; */
   }
@@ -681,7 +792,7 @@ margin-bottom: 1rem;
   }
   
   /****************** PROJECTS ********************/
-  #project-section.container{
+  .project-section.container{
     padding: 0 6rem;
   }
 
@@ -694,7 +805,7 @@ margin-bottom: 1rem;
   }
 
   /****************** CONTACT ********************/
-  #contact-section .background-svg{
+  .contact .background-svg{
     display: block;
   }
 
@@ -729,15 +840,15 @@ margin-bottom: 1rem;
     padding: 0 9.2rem;
   }
 
-  #home-section .background-text{
-    font-size: 100px;
+  #home .background-text{
+    /* font-size: 100px; */
     letter-spacing: 2rem;
     margin-top: 9rem;
   }
 
-  #home-section .content{
+  #home .content{
     /* margin-top: 5rem; */
-    padding-top: 15rem;
+    /* padding-top: 15rem; */
   }
 
  /****************** ABOUT ********************/
@@ -753,7 +864,7 @@ margin-bottom: 1rem;
   }
 
   /****************** PROJECTS ********************/
-  #project-section.container{
+  .project-section.container{
     padding: 0 9.2rem;
   }
   #project-number {
@@ -764,7 +875,7 @@ margin-bottom: 1rem;
   }
 
   /****************** CONTACT ********************/
-  #contact-section .section-title h1:last-of-type{
+  .contact .section-title h1:last-of-type{
     margin-left: 11rem;
   }
 
@@ -776,12 +887,12 @@ margin-bottom: 1rem;
 /****************** MEDIA 995px ********************/
 @media (min-width: 995px) {
   .container,
-  #project-section.container{
+  .project-section.container{
     padding: 0 10.5rem;
   }
 
   /****************** PROJECTS ********************/
-  #project-section {
+  .project-section {
     margin-top: 0;
   }
 
@@ -790,7 +901,7 @@ margin-bottom: 1rem;
   }
 
   /****************** CONTACT ********************/
-  #contact-section .background-svg{
+  .contact .background-svg{
     top: 37%;
     width: 500px;
   }
@@ -846,6 +957,12 @@ margin-bottom: 1rem;
     width: calc(12% + 6.2px);
   }
 
+  .fp-section,
+  .fp-slide,
+  .fp-tableCell{
+      height: 100vh !important;
+  }
+
   .container{
     padding: 0 10rem;
   }
@@ -853,12 +970,17 @@ margin-bottom: 1rem;
   #hero-title h1 {
     font-size: 42px;
   }
-  #home-section .background-text{
-    font-size: 170px;
+  #home .background-text{
+    /* font-size: 170px; */
     margin-top: 3rem;
     margin-left: -1.25rem;
   }
-  #home-section .background-svg{
+
+  #home .content{
+    padding: 0;
+  }
+
+  #home .background-svg{
     width: 600px;
   }
 
@@ -867,7 +989,12 @@ margin-bottom: 1rem;
   }
 
   /****************** PROJECTS ********************/
-  #project-section.container{
+  .project-section {
+    padding-top: 7rem !important;
+    /* position: relative; */
+  }
+
+  .project-section.container{
     padding: 0 10rem;
   }
 
@@ -877,7 +1004,8 @@ margin-bottom: 1rem;
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    margin-bottom: 10rem;
+    position: relative;
+    /* margin-bottom: 10rem; */
   }
  
 
@@ -888,7 +1016,7 @@ margin-bottom: 1rem;
     background-image: none;
   }
 
-  #project-section .section-title{
+  .project-section .section-title{
     margin-bottom: 5rem;
   }
   
@@ -912,7 +1040,7 @@ margin-bottom: 1rem;
   }
 
 
-  #project-section img{
+  .project-section img{
     display: block;
     height: 100%;
     width: 100%;
@@ -1022,7 +1150,7 @@ margin-bottom: 1rem;
     font-size: 32px;
   }
 
-  #contact-section .background-svg{
+  .contact .background-svg{
     top:10%;
     width: 600px;
   }
@@ -1037,7 +1165,7 @@ margin-bottom: 1rem;
 /****************** MEDIA 1400px ********************/
 @media (min-width: 1400px) {
   .container,
-  #project-section.container{
+  .project-section.container{
     padding: 0 11rem;
   }
 
@@ -1054,11 +1182,11 @@ margin-bottom: 1rem;
   }
 
   .container,
-  #project-section.container{
+  .project-section.container{
     padding: 0 12rem;
   }
-  #home-section .background-text{
-    font-size: 150px;
+  #home .background-text{
+    /* font-size: 150px; */
     margin-left: -1.5rem;
   }
 
@@ -1084,7 +1212,7 @@ margin-bottom: 1rem;
   }
 
   .container,
-  #project-section.container{
+  .project-section.container{
     padding: 0 13rem;
   }
 }
@@ -1094,7 +1222,7 @@ margin-bottom: 1rem;
     width: calc(12% + 8.4px);
   }
   .container,
-  #project-section.container{
+  .project-section.container{
     padding: 0 13.3rem;
   }
 
@@ -1126,7 +1254,7 @@ margin-bottom: 1rem;
     /* margin-bottom: 3.5rem; */
   }
 
-  #project-section img{
+  .project-section img{
     display: block;
     height: 100%;
     width: 750px;
@@ -1144,7 +1272,7 @@ margin-bottom: 1rem;
   }
 
   .container,
-  #project-section.container{
+  .project-section.container{
     padding: 0 14rem;
   }
 }
@@ -1155,7 +1283,7 @@ margin-bottom: 1rem;
   }
 
   .container,
-  #project-section.container{
+  .project-section.container{
     padding: 0 15rem;
   }
 }

@@ -29,6 +29,32 @@ let projects = [
 ]
 
 function init() {
+  const page = window.location.pathname.split("/").pop()
+  if(page === 'index.html'){
+  new fullpage('#fullpage', {
+    licenseKey: 'A63A687B-BDE74646-81146E13-901F41D1',
+    autoScrolling: true,
+    scrollBar:false,
+    responsiveWidth: 1250,
+    // verticalCentered: true,
+    paddingTop: '7rem',
+    navigation: true,
+    // navigationPosition: 'left',
+    anchors: ['top','jia','electro','seed','melp', 'about', 'contact'],
+    // anchors: ['','','','','', '', ''],
+    // navigationTooltips:['Hello','JIA','Electro','SEED','Melp','About','Contact'],
+    // showActiveTooltip: false,
+    afterRender: function(){
+      scrollReveal()
+    }
+
+    // scrollHorizontally: true,
+
+  });
+  }
+  //methods
+  // fullpage_api.setAllowScrolling(false);
+
   eventListeners()
 
   window.onkeydown = function(e) {
@@ -106,15 +132,17 @@ async function handleNavigation() {
   })
 
   setTimeout(() => {
-    window.location = `./${this.id}.html`;
+    window.location = `./${this.getAttribute('data-link')}.html`;
   }, 1700)
 
 }
 
 
 //****** SCROLL REVEAL ANIMATIONS *******/ 
+function scrollReveal(){
 
 // Logo and menu
+/** 
 var nav = [
   document.querySelector('#logo'),
   document.querySelector('#menu'),
@@ -151,11 +179,12 @@ ScrollReveal().reveal('.right-section', { origin:'bottom', opacity: 0, delay: 70
 ScrollReveal().reveal('.contact-details', { origin:'bottom', delay: 650, opacity: 0,distance:'25%',duration: 1000, mobile: false });
 ScrollReveal().reveal('.social', { origin:'bottom', opacity: 0, delay: 700, distance:'25%',duration: 1000, mobile: false });
 
-
+*/
 // Scroll reveal projects page
-ScrollReveal().reveal('.page-top-colour', { origin:'top', delay: 500,distance:'100%',duration: 1400, mobile: false });
-ScrollReveal().reveal('.header-img-container', { origin:'top', delay: 1500,distance:'1%',duration: 1400, mobile: false });
+// ScrollReveal().reveal('.page-top-colour', { origin:'top', delay: 500,distance:'100%',duration: 1400, mobile: false });
+// ScrollReveal().reveal('.header-img-container', { origin:'top', delay: 1500,distance:'1%',duration: 1400, mobile: false });
 
-ScrollReveal().reveal('.title-and-description .title-and-services', { origin:'bottom', delay: 2000, distance:'2%',duration: 900, mobile: false });
-ScrollReveal().reveal('.title-and-description .brief', { origin:'bottom', delay: 2500, distance:'2%',duration: 900, mobile: false });
+// ScrollReveal().reveal('.title-and-description .title-and-services', { origin:'bottom', delay: 2000, distance:'2%',duration: 900, mobile: false });
+// ScrollReveal().reveal('.title-and-description .brief', { origin:'bottom', delay: 2500, distance:'2%',duration: 900, mobile: false });
 // ScrollReveal().reveal('#project-number', { origin:'left', delay: 300, opacity: 0,distance:'2%',duration: 900, mobile: false });
+}
