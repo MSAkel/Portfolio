@@ -36,24 +36,14 @@ function init() {
     autoScrolling: true,
     scrollBar:false,
     responsiveWidth: 1250,
-    // verticalCentered: true,
     paddingTop: '7rem',
     navigation: true,
-    // navigationPosition: 'left',
     anchors: ['top','jia','electro','seed','melp', 'about', 'contact'],
-    // anchors: ['','','','','', '', ''],
-    // navigationTooltips:['Hello','JIA','Electro','SEED','Melp','About','Contact'],
-    // showActiveTooltip: false,
-    afterRender: function(){
-      scrollReveal()
-    }
-
-    // scrollHorizontally: true,
-
   });
+  } else {
+    scrollReveal()
   }
-  //methods
-  // fullpage_api.setAllowScrolling(false);
+
 
   eventListeners()
 
@@ -137,54 +127,13 @@ async function handleNavigation() {
 
 }
 
-
 //****** SCROLL REVEAL ANIMATIONS *******/ 
 function scrollReveal(){
-
-// Logo and menu
-/** 
-var nav = [
-  document.querySelector('#logo'),
-  document.querySelector('#menu'),
-];
-// ScrollReveal().reveal(nav, { origin:'top', delay: 750,distance:'15%',duration: 1000, mobile: false });
-ScrollReveal().reveal('.project-background-text', { origin:'bottom', delay: 300,opacity: 0,distance:'6%',duration: 1000, mobile: false });
-
-// section titles
-ScrollReveal().reveal('.section-title', { origin:'left', opacity: 0, delay: 350, distance:'2%',duration: 1000, mobile: false });
-
-// Home section animations
-ScrollReveal().reveal('.background-text', { origin:'bottom', delay: 500, distance:'15%', duration: 1000, mobile: false });
-ScrollReveal().reveal('.hero-line-1', { origin:'bottom', delay: 750, distance:'35%', duration: 1000, mobile: false });
-ScrollReveal().reveal('.hero-line-2', { origin:'bottom', delay: 900, distance:'35%', duration: 1000, mobile: false });
-ScrollReveal().reveal('.hero-cta', { origin:'bottom', delay: 1050, distance:'15%', duration: 1000, mobile: false });
-// ScrollReveal().reveal('.home-svg', { origin:'right', opacity: 0, delay: 1200, duration: 1000, mobile: false });
-
-// About section animations
-ScrollReveal().reveal('.about-text', { origin:'bottom', opacity: 0, delay: 900, distance:'2%',duration: 2500, mobile: false });
-ScrollReveal().reveal('.about img', { origin:'bottom', opacity: 0, delay: 950, distance:'2%',duration: 2500, mobile: false });
-ScrollReveal().reveal('.about-svg', { origin:'right', opacity: 0, delay: 1200, duration: 2500, mobile: false })
-// About borders
-ScrollReveal().reveal('.about-border-bottom', { origin:'right', delay: 500, scale: 0 , distance:'70%',duration: 500, mobile: false });
-ScrollReveal().reveal('.about-border-left', { origin:'bottom', delay: 600, scale: 0 , distance:'70%',duration: 500, mobile: false });
-ScrollReveal().reveal('.about-border-top', { origin:'left', delay: 650, scale: 0 , distance:'70%',duration: 500, mobile: false });
-
-// Projects section animations
-ScrollReveal().reveal('.project-content', { origin:'left', delay: 300,distance:'1%',duration: 900, mobile: false });
-ScrollReveal().reveal('#project-number', { origin:'bottom', delay: 300, opacity: 0,distance:'10%',duration: 700, mobile: false });
-ScrollReveal().reveal('.project-description', { origin:'bottom', delay: 350, opacity: 0,distance:'10%',duration: 700, mobile: false });
-ScrollReveal().reveal('.right-section', { origin:'bottom', opacity: 0, delay: 700, distance:'4%',duration: 1400, mobile: false });
-
-// Contact section animations
-ScrollReveal().reveal('.contact-details', { origin:'bottom', delay: 650, opacity: 0,distance:'25%',duration: 1000, mobile: false });
-ScrollReveal().reveal('.social', { origin:'bottom', opacity: 0, delay: 700, distance:'25%',duration: 1000, mobile: false });
-
-*/
 // Scroll reveal projects page
-// ScrollReveal().reveal('.page-top-colour', { origin:'top', delay: 500,distance:'100%',duration: 1400, mobile: false });
-// ScrollReveal().reveal('.header-img-container', { origin:'top', delay: 1500,distance:'1%',duration: 1400, mobile: false });
+ScrollReveal().reveal('.header', { origin:'left', delay: 600,distance:'20%',duration: 1000, mobile: false });
+ScrollReveal().reveal('.header-img-container', { origin:'left', delay: 1300,distance:'1%',duration: 1200, mobile: false });
 
-// ScrollReveal().reveal('.title-and-description .title-and-services', { origin:'bottom', delay: 2000, distance:'2%',duration: 900, mobile: false });
-// ScrollReveal().reveal('.title-and-description .brief', { origin:'bottom', delay: 2500, distance:'2%',duration: 900, mobile: false });
-// ScrollReveal().reveal('#project-number', { origin:'left', delay: 300, opacity: 0,distance:'2%',duration: 900, mobile: false });
+ScrollReveal().reveal('.title-and-description .title-and-services', { origin:'bottom', delay: 1200, distance:'2%',duration: 1100, mobile: false });
+ScrollReveal().reveal('.title-and-description .brief', { origin:'bottom', delay: 1400, distance:'2%',duration: 1100, mobile: false });
+ScrollReveal().reveal('#project-number', { origin:'left', delay: 300, opacity: 0,distance:'2%',duration: 900, mobile: false });
 }
