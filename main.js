@@ -29,7 +29,11 @@ let projects = [
 ]
 
 function init() {
-  const page = window.location.pathname.split("/").pop()
+  let page = window.location.pathname.split("/").pop()
+  if(!page) {
+    //location.pathname = 'index.html'
+    page = 'index.html'
+  }
   if(page === 'index.html'){
   new fullpage('#fullpage', {
     licenseKey: 'A63A687B-BDE74646-81146E13-901F41D1',
@@ -41,7 +45,7 @@ function init() {
     anchors: ['top','jia','electro','seed','melp', 'about', 'contact'],
   });
   } else {
-    scrollReveal()
+    //scrollReveal()
   }
 
 

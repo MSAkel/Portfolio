@@ -1091,23 +1091,44 @@ margin-bottom: 1rem;
     margin-left: 2rem;
   }
 
- 
+  .right-section{
+    margin-right: 2rem;
+  }
+
+  .bg{
+    background-color: var(--p1);
+    width: 0;
+    transition: all 500ms 400ms;
+   
+  }
+  .fp-viewing-jia .bg{
+    width: 100%;
+  }
+
+  .proj-img-container{
+
+    background: url("./imgs/jia/steps-proj.png")  no-repeat;
+    background-size: cover;
+    /* margin-right: 2rem; */
+    width: 0%;
+    transition: all 500ms 900ms;
+  }
+  .fp-viewing-jia .proj-img-container{
+    width: 100%;
+  }
+
   .right-section img{
     display: block;
     height: 100%;
     width: 100%;
-    /* visibility: hidden; */
+    visibility: hidden;
     object-fit: cover;
     box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
     border: 4px solid #FFF;
     /* border-right: none; */
-    margin-right: 2rem;
-    /* transition: all 500ms 400ms; */
+    /* margin-right: 2rem; */
+    /* transition: all 500ms 900ms; */
   }
-
-  /* .fp-viewing-jia  .right-section img{
-    width: 100%;
-  } */
 
   .view-project-btn{
     background-color: transparent;
