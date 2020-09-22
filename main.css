@@ -664,7 +664,8 @@ margin-bottom: 1rem;
   margin-top: 2rem;
 }
 .social h3 {
-  color: var(--s3)
+  color: var(--s3);
+  margin-bottom: 0.5rem;
 }
 .social-links{
   margin-bottom: 2rem;
@@ -1016,6 +1017,13 @@ margin-bottom: 1rem;
     width: 70%;
   }
 
+  .me-img-container{
+    flex:1
+  }
+  .about .about-text{
+    flex: 2
+  }
+
   .about .about-border-top{
     width: 0;
     transition: width 500ms ease-out 400ms;
@@ -1095,39 +1103,67 @@ margin-bottom: 1rem;
     margin-right: 2rem;
   }
 
-  .bg{
+  .bg-jia,
+  .bg-electro,
+  .bg-seed,
+  .bg-melp{
     background-color: var(--p1);
     width: 0;
     transition: all 500ms 400ms;
    
   }
-  .fp-viewing-jia .bg{
+
+  .fp-viewing-jia .bg-jia,
+  .fp-viewing-electro .bg-electro,
+  .fp-viewing-seed .bg-seed,
+  .fp-viewing-melp .bg-melp{
     width: 100%;
   }
 
-  .proj-img-container{
-
+  .jia-img-container{
     background: url("./imgs/jia/steps-proj.png")  no-repeat;
     background-size: cover;
-    /* margin-right: 2rem; */
     width: 0%;
-    transition: all 500ms 900ms;
+    transition: all 300ms 900ms;
   }
-  .fp-viewing-jia .proj-img-container{
+
+  .electro-img-container{
+    background: url("./imgs/electromanager/electro-icon.png")  no-repeat;
+    background-size: cover;
+    width: 0%;
+    transition: all 300ms 900ms;
+  }
+
+  .seed-img-container{
+    background: url("./imgs/seed/seed-name-01.png")  no-repeat;
+    background-size: cover;
+    width: 0%;
+    transition: all 300ms 900ms;
+  }
+
+  .melp-img-container{
+    background: url("./imgs/melp/melp-logo.png")  no-repeat;
+    background-size: cover;
+    width: 0%;
+    transition: all 300ms 900ms;
+  }
+
+  .fp-viewing-jia .jia-img-container,
+  .fp-viewing-electro .electro-img-container,
+  .fp-viewing-seed .seed-img-container,
+  .fp-viewing-melp .melp-img-container{
     width: 100%;
   }
 
   .right-section img{
     display: block;
     height: 100%;
-    width: 100%;
-    /* visibility: hidden; */
+    /* width: 100%; */
+    width: 390px;
+    visibility: hidden;
     object-fit: cover;
     box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
     border: 4px solid #FFF;
-    /* border-right: none; */
-    /* margin-right: 2rem; */
-    /* transition: all 500ms 900ms; */
   }
 
   .view-project-btn{
@@ -1147,7 +1183,8 @@ margin-bottom: 1rem;
     padding-bottom: 0.4rem;
     font-size: 54px;
     margin: -4.5rem 0 3.5rem;
-    width: 30rem;
+    /* width: 30rem; */
+    /* display: inline-block; */
   }
   .project-title::after{
     content: "";
@@ -1247,7 +1284,6 @@ margin-bottom: 1rem;
   }
 
   .contact-content h3{
-    /* margin-bottom: 1rem; */
     font-size: 32px;
   }
 
@@ -1291,7 +1327,9 @@ margin-bottom: 1rem;
 
 /****************** MEDIA 1300px ********************/
 @media (min-width: 1300px) {
-
+  .right-section img{
+    width: 430px;
+  }
 }
 
 
@@ -1302,9 +1340,13 @@ margin-bottom: 1rem;
     padding: 0 11rem;
   }
 
-  .contact-details h3,
+  .contact-content h3,
   .contact-details span{
     font-size: 42px;
+  }
+
+  .right-section img{
+    width: 510px;
   }
 }
 
@@ -1323,6 +1365,10 @@ margin-bottom: 1rem;
     margin-left: -0.5rem;
   }
 
+  .right-section img{
+    width: 560px;
+  }
+
    /****************** ABOUT ********************/
   .about{
     margin-bottom: 10rem;
@@ -1334,9 +1380,9 @@ margin-bottom: 1rem;
   .me-img-container{
     flex:1
   }
-  .about .about-text{
+  /* .about .about-text{
     flex: 2
-  }
+  } */
 }
 
 @media (min-width: 1600px) {
@@ -1348,6 +1394,11 @@ margin-bottom: 1rem;
   .project-section.container{
     padding: 0 13rem;
   }
+
+  .right-section img{
+    width: 650px;
+  }
+
 }
 
 @media (min-width: 1700px) {
@@ -1367,9 +1418,9 @@ margin-bottom: 1rem;
   }
 
 
-  .project-number{
+  /* .project-number{
     font-size: 120px;
-  }
+  } */
   .project-description h1{
     font-size: 64px;
     margin: -4.5rem 0 3.5rem 0;
@@ -1387,9 +1438,7 @@ margin-bottom: 1rem;
     /* margin-bottom: 3.5rem; */
   }
 
-  .project-section img{
-    display: block;
-    height: 100%;
+  .right-section img{
     width: 750px;
   }
 

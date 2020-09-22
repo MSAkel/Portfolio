@@ -45,7 +45,7 @@ function init() {
     anchors: ['top','jia','electro','seed','melp', 'about', 'contact'],
   });
   } else {
-    //scrollReveal()
+    scrollReveal()
   }
 
 
