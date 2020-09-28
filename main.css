@@ -366,9 +366,14 @@ nav, #close{
 #name{
   /* color: var(--p1); */
   color: var(--s3);
+  display: block;
 }
 #hero-title div{
   margin-top: 5rem;
+}
+
+#testest{
+  visibility: visible;
 }
 
 #cta, .view-project-btn{
@@ -718,6 +723,10 @@ margin-bottom: 1rem;
   .social-links li{
     margin-right: 2.5rem;
   }
+
+  #name{
+    display: inline;
+  }
 }
 
 @media (max-width: 450px) {
@@ -726,6 +735,8 @@ margin-bottom: 1rem;
     /* margin-left: 3rem; */
     line-height: 7rem;
   }
+
+
 }
 /****************** MEDIA 553px ********************/
 @media (min-width: 553px) {
@@ -1121,7 +1132,7 @@ margin-bottom: 1rem;
   }
 
   .jia-img-container{
-    background: url("./imgs/jia/steps-proj.png")  no-repeat;
+    background: url("./imgs/jia/jia-header.png")  no-repeat;
     background-size: cover;
     width: 0%;
     transition: all 300ms 900ms;
@@ -1159,7 +1170,7 @@ margin-bottom: 1rem;
     display: block;
     height: 100%;
     /* width: 100%; */
-    width: 390px;
+    width: 430px;
     visibility: hidden;
     object-fit: cover;
     box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
@@ -1327,9 +1338,9 @@ margin-bottom: 1rem;
 
 /****************** MEDIA 1300px ********************/
 @media (min-width: 1300px) {
-  .right-section img{
+  /* .right-section img{
     width: 430px;
-  }
+  } */
 }
 
 

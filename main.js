@@ -1,39 +1,10 @@
 document.addEventListener("DOMContentLoaded", init)
 
-let currentProj = 0
-let minProject = 0
-let maxProject = 2
-
-let projects = [
-  {
-    "number": "01",
-    "title": "Electromanager",
-    "details": "Mobile",
-    "image": "imgs/perspective-electro.png",
-    "url": "https://play.google.com/store/apps/details?id=com.leadglancestudios.electromanager"
-  },
-  {
-    "number": "02",
-    "title": "Melp",
-    "details": "Mobile",
-    "image": "imgs/perspective-electro.png",
-    "url": "https://github.com/stac0092/react-native-final"
-  },
-  {
-    "number": "03",
-    "title": "Pizza Shop",
-    "details": "Web",
-    "image": "imgs/perspective-electro.png",
-    "url": "https://github.com/stac0092/react-native-final"
-  }
-]
 
 function init() {
   let page = window.location.pathname.split("/").pop()
-  if(!page) {
-    //location.pathname = 'index.html'
-    page = 'index.html'
-  }
+  if(!page) page = 'index.html'
+
   if(page === 'index.html'){
   new fullpage('#fullpage', {
     licenseKey: 'A63A687B-BDE74646-81146E13-901F41D1',
@@ -42,12 +13,11 @@ function init() {
     responsiveWidth: 1250,
     paddingTop: '7rem',
     navigation: true,
-    anchors: ['top','jia','electro','seed','melp', 'about', 'contact'],
+    anchors: ['top','jia','electro','melp', 'about', 'contact'],
   });
   } else {
     scrollReveal()
   }
-
 
   eventListeners()
 
@@ -68,8 +38,6 @@ function init() {
   setTimeout(() => {
     document.querySelector(".vertical-lines").classList.remove("index-me")
   }, 750)
-
-
 }
 
 // Event listeners
@@ -128,12 +96,10 @@ async function handleNavigation() {
   setTimeout(() => {
     window.location = `./${this.getAttribute('data-link')}.html`;
   }, 1700)
-
 }
 
 //****** SCROLL REVEAL ANIMATIONS *******/ 
 function scrollReveal(){
-// Scroll reveal projects page
 ScrollReveal().reveal('.header', { origin:'left', delay: 600,distance:'20%',duration: 1000, mobile: false });
 ScrollReveal().reveal('.header-img-container', { origin:'left', delay: 1300,distance:'1%',duration: 1200, mobile: false });
 
