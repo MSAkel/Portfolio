@@ -1132,28 +1132,21 @@ margin-bottom: 1rem;
   }
 
   .jia-img-container{
-    background: url("./imgs/jia/jia-header.png")  no-repeat;
+    background: url("./imgs/jia/jia-header.jpg")  no-repeat;
     background-size: cover;
     width: 0%;
     transition: all 300ms 900ms;
   }
 
   .electro-img-container{
-    background: url("./imgs/electromanager/electro-icon.png")  no-repeat;
-    background-size: cover;
-    width: 0%;
-    transition: all 300ms 900ms;
-  }
-
-  .seed-img-container{
-    background: url("./imgs/seed/seed-name-01.png")  no-repeat;
+    background: url("./imgs/electromanager/electro-icon.jpg")  no-repeat;
     background-size: cover;
     width: 0%;
     transition: all 300ms 900ms;
   }
 
   .melp-img-container{
-    background: url("./imgs/melp/melp-logo.png")  no-repeat;
+    background: url("./imgs/melp/melp-logo.jpg")  no-repeat;
     background-size: cover;
     width: 0%;
     transition: all 300ms 900ms;
