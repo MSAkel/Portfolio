@@ -13,7 +13,7 @@ function init() {
     responsiveWidth: 1250,
     paddingTop: '7rem',
     navigation: true,
-    anchors: ['top','jia','electro','melp', 'about', 'contact'],
+    anchors: ['top', 'covboard', 'jia', 'melp', 'electro', 'about', 'contact'],
   });
   } else {
     scrollReveal()
