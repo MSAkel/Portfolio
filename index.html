@@ -1,88 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <link rel="icon" type="image/png" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" href="favicon-16x16.png">
-  <title>Mohammed Akel</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148955226-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" />
+    <title>Mohamad Akel</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-148955226-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'UA-148955226-1');
-  </script>
-</head>
-<body id="body">
-  <!-- NAV -->
-  <div class="navbar-container">
-    <img id="index" data-link="index" class="logo" src="./imgs/logo.png" alt="logo">
-    <nav>
-      <div id="menu">
-        <p>MENU</p>
-        <svg id="hamburger-menu" x="0px" y="0px" width="34px" viewBox="0 0 57 27" style="enable-background:new 0 0 57 27;" xml:space="preserve">
+      gtag("config", "UA-148955226-1");
+    </script>
+  </head>
+  <body id="body">
+    <!-- NAV -->
+    <div class="navbar-container">
+      <img
+        id="index"
+        data-link="index"
+        class="logo"
+        src="./imgs/logo.png"
+        alt="logo"
+      />
+      <nav>
+        <div id="menu">
+          <p>MENU</p>
+          <svg
+            id="hamburger-menu"
+            x="0px"
+            y="0px"
+            width="34px"
+            viewBox="0 0 57 27"
+            style="enable-background: new 0 0 57 27"
+            xml:space="preserve"
+          >
+            <g>
+              <line
+                id="hamburger-line-0"
+                class="st4"
+                x1="5.5"
+                y1="3.5"
+                x2="52.5"
+                y2="3.5"
+              />
+            </g>
+            <g>
+              <line
+                id="hamburger-line-1"
+                class="st4"
+                x1="5.5"
+                y1="14.5"
+                x2="52.5"
+                y2="14.5"
+              />
+            </g>
+            <g>
+              <line
+                id="hamburger-line-2"
+                class="st4"
+                x1="5.5"
+                y1="25.5"
+                x2="52.5"
+                y2="25.5"
+              />
+            </g>
+          </svg>
+        </div>
+      </nav>
+    </div>
+
+    <!-- NAV OPEN -->
+    <section class="menu-display">
+      <div id="close">
+        <p>CLOSE</p>
+        <svg
+          x="0px"
+          y="0px"
+          width="34px"
+          viewBox="0 0 57 37"
+          style="enable-background: new 0 0 57 37"
+          xml:space="preserve"
+        >
           <g>
-            <line id="hamburger-line-0" class="st4" x1="5.5" y1="3.5" x2="52.5" y2="3.5"/>
+            <line class="close-icon" x1="12.4" y1="1.9" x2="45.6" y2="35.1" />
           </g>
           <g>
-            <line id="hamburger-line-1" class="st4" x1="5.5" y1="14.5" x2="52.5" y2="14.5"/>
-          </g>
-          <g>
-            <line id="hamburger-line-2" class="st4" x1="5.5" y1="25.5" x2="52.5" y2="25.5"/>
+            <line class="close-icon" x1="10.4" y1="35.1" x2="43.6" y2="1.9" />
           </g>
         </svg>
       </div>
-    </nav>
-  </div>
+      <div class="menu-list">
+        <h1>
+          <a href="#top" class="menu-item">HOME</a>
+        </h1>
+        <h1>
+          <a href="#jia" class="menu-item">WORK</a>
+        </h1>
+        <h1>
+          <a href="#about" class="menu-item">ABOUT</a>
+        </h1>
+        <h1>
+          <a href="#contact" class="menu-item">CONTACT</a>
+        </h1>
+      </div>
+    </section>
 
-
-  <!-- NAV OPEN -->
-  <section class="menu-display">
-    <div id="close">
-      <p>CLOSE</p>
-      <svg x="0px" y="0px" width="34px" viewBox="0 0 57 37" style="enable-background:new 0 0 57 37;" xml:space="preserve">
-        <g>
-          <line class="close-icon" x1="12.4" y1="1.9" x2="45.6" y2="35.1"/>
-        </g>
-        <g>
-          <line class="close-icon" x1="10.4" y1="35.1" x2="43.6" y2="1.9"/>
-        </g>
-      </svg>
+    <div class="vertical-lines index-me">
+      <i class="line line-0 transition-out"></i
+      ><i class="line line-1 transition-out"></i
+      ><i class="line line-2 transition-out"></i
+      ><i class="line line-3 transition-out"></i
+      ><i class="line line-4 transition-out"></i
+      ><i class="line line-5 transition-out"></i
+      ><i class="line line-6 transition-out"></i
+      ><i class="line line-7 transition-out"></i>
     </div>
-    <div class="menu-list">
-      <h1>
-        <a href="#top" class="menu-item">HOME</a>
-      </h1>
-      <h1>
-        <a href="#jia" class="menu-item">WORK</a>
-      </h1>
-      <h1>
-        <a href="#about" class="menu-item">ABOUT</a>
-      </h1>
-      <h1>
-        <a href="#contact" class="menu-item">CONTACT</a>
-      </h1>
-    </div>
-  </section>
 
-  <div class="vertical-lines index-me">
-    <i class="line line-0 transition-out"></i><i class="line line-1 transition-out"></i><i class="line line-2 transition-out"></i><i class="line line-3 transition-out"></i><i class="line line-4 transition-out"></i><i class="line line-5 transition-out"></i><i class="line line-6 transition-out"></i><i class="line line-7 transition-out"></i>
-  </div>
+    <p class="scroll">Scroll</p>
 
-  <p class="scroll">Scroll</p>
-
-  <div id="fullpage">
-    <!-- HOME -->
-    <section id="home" class="container section" data-anchor="top">
-      <div class="background-svg home-svg">
-        <svg x="0px" y="0px" viewBox="0 0 696 1080" style="enable-background:new 0 0 696 1080;" xml:space="preserve">
-          <path id="p1" class="blob" d="M410.5,0.5C152,92-22.2,330.9,2.5,489.5c19.4,124.7,84.5,229.5,196,281c199.3,92.1,434.7,108.9,497,247
-            c0,0-2.4,61.5,1,62l-1-1079H410.5z"/>
-            <animate xlink:href="#p1"
+    <div id="fullpage">
+      <!-- HOME -->
+      <section id="home" class="container section" data-anchor="top">
+        <div class="background-svg home-svg">
+          <svg
+            x="0px"
+            y="0px"
+            viewBox="0 0 696 1080"
+            style="enable-background: new 0 0 696 1080"
+            xml:space="preserve"
+          >
+            <path
+              id="p1"
+              class="blob"
+              d="M410.5,0.5C152,92-22.2,330.9,2.5,489.5c19.4,124.7,84.5,229.5,196,281c199.3,92.1,434.7,108.9,497,247
+            c0,0-2.4,61.5,1,62l-1-1079H410.5z"
+            />
+            <animate
+              xlink:href="#p1"
               attributeName="d"
               attributeType="XML"
               keyTimes="0;0.5;1"
@@ -95,161 +159,235 @@
                 c0,0-2.4,61.5,1,62l-1-1079H410.5z"
               dur="6s"
               repeatCount="indefinite"
-              fill="freeze" 
+              fill="freeze"
             />
-        </svg>
-      </div>
-      <div class="content">
-        <div class="background-text">
-          <h1>HELLO</h1>
+          </svg>
         </div>
-        <div id="hero-title">
-          <h1 class="hero-line-1">I'm <span id="name">Mohammed Akel</span></h1>
-          <h1 class="hero-line-2">Web and mobile application developer.</h1>
-        </div>
-      </div>
-    </section>
-
-    <!-- COVBOARD -->
-    <section class="project-section container section first" data-anchor="covboard">
-      <div class="project-content covboard">
-        <div class="project-border-top"></div>
-        <div class="project-border-right"></div>
-        <div class="project-border-bottom"></div>
-        <div class="project-border-left"></div>
-        <div class="left-section">
-          <div class="project-number">
-            <h1 id="project-number">01</h1>
+        <div class="content">
+          <div class="background-text">
+            <h1>HELLO</h1>
           </div>
-          <div class="project-description">
-            <h1 class="project-title">CovBoard</h1>
-            <a data-link="covboard" class="view-project-btn cta">VIEW PROJECT</a>
+          <div id="hero-title">
+            <h1 class="hero-line-1">I'm <span id="name">Mohamad Akel</span></h1>
+            <h1 class="hero-line-2">Web and mobile application developer.</h1>
           </div>
         </div>
-
-        <div class="right-section">
-          <div class="bg-covboard">
-            <div class="covboard-img-container">
-              <img src="imgs/covboard/covboard-logo.png" id="covboard-image" alt="covboard app">
+      </section>
+      <!-- 
+      <section
+        class="project-section container section first"
+        data-anchor="treehouse"
+      >
+        <div class="project-content treehouse">
+          <div class="project-border-top"></div>
+          <div class="project-border-right"></div>
+          <div class="project-border-bottom"></div>
+          <div class="project-border-left"></div>
+          <div class="left-section">
+            <div class="project-number">
+              <h1 id="project-number">01</h1>
+            </div>
+            <div class="project-description">
+              <h1 class="project-title">Treehouse</h1>
+              <a data-link="treehouse" class="view-project-btn cta"
+                >VIEW PROJECT</a
+              >
             </div>
           </div>
 
-          <div class="text">
-            <h2>2020</h2>
-            <h2>Website</h2>
+          <div class="right-section">
+            <div class="bg-treehouse">
+              <div class="treehouse-img-container">
+                <img
+                  src="imgs/treehouse/treehouse.png"
+                  id="treehouse-image"
+                  alt="treehouse app"
+                />
+              </div>
+            </div>
+
+            <div class="text">
+              <h2>2021-2024</h2>
+              <h2>Web App</h2>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section> -->
 
-    <!-- JIA -->
-    <section class="project-section container section first" data-anchor="jia">
-      <div class="project-content jia">
-        <div class="project-border-top"></div>
-        <div class="project-border-right"></div>
-        <div class="project-border-bottom"></div>
-        <div class="project-border-left"></div>
-        <div class="left-section">
-          <div class="project-number">
-            <h1 id="project-number">02</h1>
-          </div>
-          <div class="project-description">
-            <h1 class="project-title">JIA Option Map</h1>
-            <a data-link="jia" class="view-project-btn cta">VIEW PROJECT</a>
-          </div>
-        </div>
-
-        <div class="right-section">
-          <div class="bg-jia">
-            <div class="jia-img-container">
-              <img src="imgs/jia/jia-header.jpg" id="jia-image" alt="jia app">
+      <!-- COVBOARD -->
+      <section
+        class="project-section container section first"
+        data-anchor="covboard"
+      >
+        <div class="project-content covboard">
+          <div class="project-border-top"></div>
+          <div class="project-border-right"></div>
+          <div class="project-border-bottom"></div>
+          <div class="project-border-left"></div>
+          <div class="left-section">
+            <div class="project-number">
+              <h1 id="project-number">01</h1>
+            </div>
+            <div class="project-description">
+              <h1 class="project-title">CovBoard</h1>
+              <a data-link="covboard" class="view-project-btn cta"
+                >VIEW PROJECT</a
+              >
             </div>
           </div>
 
-          <div class="text">
-            <h2>2019</h2>
-            <h2>Website</h2>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="right-section">
+            <div class="bg-covboard">
+              <div class="covboard-img-container">
+                <img
+                  src="imgs/covboard/covboard-logo.png"
+                  id="covboard-image"
+                  alt="covboard app"
+                />
+              </div>
+            </div>
 
-    <!-- MELP -->
-    <section class="project-section container section" data-anchor="melp">
-      <div class="project-content melp">
-        <div class="project-border-top"></div>
-        <div class="project-border-right"></div>
-        <div class="project-border-bottom"></div>
-        <div class="project-border-left"></div>
-        <div class="left-section">
-          <div class="project-number">
-            <h1 id="project-number">03</h1>
-          </div>
-          <div class="project-description">
-            <h1 class="project-title">Melp</h1>
-            <a data-link="melp" class="view-project-btn cta">VIEW PROJECT</a>
-          </div>
-        </div>
-
-        <div class="right-section">
-          <div class="bg-melp">
-            <div class="melp-img-container">
-              <img src="imgs/melp/melp-logo.jpg" id="melp-image" alt="Melp icon">
+            <div class="text">
+              <h2>2020</h2>
+              <h2>Web App</h2>
             </div>
           </div>
-    
-          <div class="text">
-            <h2>2019</h2>
-            <h2>Mobile</h2>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ELECTROMANAGER -->
-    <section class="project-section container section" data-anchor="electro">
-      <div class="project-content electro">
-        <div class="project-border-top"></div>
-        <div class="project-border-right"></div>
-        <div class="project-border-bottom"></div>
-        <div class="project-border-left"></div>
-        <div class="left-section">
-          <div class="project-number">
-            <h1 id="project-number">04</h1>
-          </div>
-          <div class="project-description">
-            <h1 class="project-title">Electromanager</h1>
-            <a data-link="electromanager" class="view-project-btn cta">VIEW PROJECT</a>
-          </div>
-        </div>
-
-        <div class="right-section">
-          <div class="bg-electro">
-            <div class="electro-img-container">
-              <img src="imgs/electromanager/electro-icon.jpg" id="electro-image" alt="Electromanager icon">
+      <!-- JIA -->
+      <section
+        class="project-section container section first"
+        data-anchor="jia"
+      >
+        <div class="project-content jia">
+          <div class="project-border-top"></div>
+          <div class="project-border-right"></div>
+          <div class="project-border-bottom"></div>
+          <div class="project-border-left"></div>
+          <div class="left-section">
+            <div class="project-number">
+              <h1 id="project-number">02</h1>
+            </div>
+            <div class="project-description">
+              <h1 class="project-title">JIA Option Map</h1>
+              <a data-link="jia" class="view-project-btn cta">VIEW PROJECT</a>
             </div>
           </div>
 
-          <div class="text">
-            <h2>2017</h2>
-            <h2>Mobile</h2>
+          <div class="right-section">
+            <div class="bg-jia">
+              <div class="jia-img-container">
+                <img
+                  src="imgs/jia/jia-header.jpg"
+                  id="jia-image"
+                  alt="jia app"
+                />
+              </div>
+            </div>
+
+            <div class="text">
+              <h2>2019</h2>
+              <h2>Web App</h2>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ABOUT -->
-    <section class="container section" data-anchor="about">
-      <div class="background-svg about-svg">
-        <svg  id="about-svg" x="0px" y="0px" viewBox="0 0 298 258" style="enable-background:new 0 0 298 258;" xml:space="preserve">
-          <g>
-            <path id="about-svg-shape"/>
-          </g>
-          <animate xlink:href="#about-svg-shape"
-          attributeName="d"
-          attributeType="XML"
-          keyTimes="0;0.5;1"
-          values="
+      <!-- MELP -->
+      <section class="project-section container section" data-anchor="melp">
+        <div class="project-content melp">
+          <div class="project-border-top"></div>
+          <div class="project-border-right"></div>
+          <div class="project-border-bottom"></div>
+          <div class="project-border-left"></div>
+          <div class="left-section">
+            <div class="project-number">
+              <h1 id="project-number">03</h1>
+            </div>
+            <div class="project-description">
+              <h1 class="project-title">Melp</h1>
+              <a data-link="melp" class="view-project-btn cta">VIEW PROJECT</a>
+            </div>
+          </div>
+
+          <div class="right-section">
+            <div class="bg-melp">
+              <div class="melp-img-container">
+                <img
+                  src="imgs/melp/melp-logo.jpg"
+                  id="melp-image"
+                  alt="Melp icon"
+                />
+              </div>
+            </div>
+
+            <div class="text">
+              <h2>2019</h2>
+              <h2>Mobile</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ELECTROMANAGER -->
+      <section class="project-section container section" data-anchor="electro">
+        <div class="project-content electro">
+          <div class="project-border-top"></div>
+          <div class="project-border-right"></div>
+          <div class="project-border-bottom"></div>
+          <div class="project-border-left"></div>
+          <div class="left-section">
+            <div class="project-number">
+              <h1 id="project-number">04</h1>
+            </div>
+            <div class="project-description">
+              <h1 class="project-title">Electromanager</h1>
+              <a data-link="electromanager" class="view-project-btn cta"
+                >VIEW PROJECT</a
+              >
+            </div>
+          </div>
+
+          <div class="right-section">
+            <div class="bg-electro">
+              <div class="electro-img-container">
+                <img
+                  src="imgs/electromanager/electro-icon.jpg"
+                  id="electro-image"
+                  alt="Electromanager icon"
+                />
+              </div>
+            </div>
+
+            <div class="text">
+              <h2>2017</h2>
+              <h2>Mobile</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="container section" data-anchor="about">
+        <div class="background-svg about-svg">
+          <svg
+            id="about-svg"
+            x="0px"
+            y="0px"
+            viewBox="0 0 298 258"
+            style="enable-background: new 0 0 298 258"
+            xml:space="preserve"
+          >
+            <g>
+              <path id="about-svg-shape" />
+            </g>
+            <animate
+              xlink:href="#about-svg-shape"
+              attributeName="d"
+              attributeType="XML"
+              keyTimes="0;0.5;1"
+              values="
           M212.7,0H84.3c-6.2,0-11.9,3.3-15,8.7L5.1,119.8c-3.1,5.4-3.1,12,0,17.3l64.2,111.2c3.1,5.4,8.8,8.7,15,8.7
               h128.4c6.2,0,11.9-3.3,15-8.7l64.2-111.2c3.1-5.4,3.1-12,0-17.3L227.7,8.7C224.6,3.3,218.9,0,212.7,0z;
           M150.2,0h-3.5C101.9,0,60.5,23.9,38.1,62.7l-1.7,3c-22.4,38.8-22.4,86.7,0,125.5l1.7,3
@@ -257,111 +395,139 @@
             C236.5,23.9,195.1,0,150.2,0z;
           M212.7,0H84.3c-6.2,0-11.9,3.3-15,8.7L5.1,119.8c-3.1,5.4-3.1,12,0,17.3l64.2,111.2c3.1,5.4,8.8,8.7,15,8.7
             h128.4c6.2,0,11.9-3.3,15-8.7l64.2-111.2c3.1-5.4,3.1-12,0-17.3L227.7,8.7C224.6,3.3,218.9,0,212.7,0z"
-          dur="6s"
-          repeatCount="indefinite"
-          fill="freeze" 
-          />
-          <filter id="drop-shadow" height="130%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
-            <feOffset dx="2" dy="4" result="offsetblur"/> <!-- how much to offset -->
-            <feComponentTransfer>
-              <feFuncA type="linear" slope="0.4"/> <!-- slope is the opacity of the shadow -->
-            </feComponentTransfer>
-            <feMerge> 
-              <feMergeNode/> <!-- this contains the offset blurred image -->
-              <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
-            </feMerge>
-          </filter>
-        </svg>
-      </div>
-      
-      <div class="section-title">
-        <h1>ABOUT</h1>
-      </div>
-      <div class="about">
-        <div class="about-border-top"></div>
-        <div class="about-border-bottom"></div>
-        <div class="about-border-left"></div>
-        <div class="me-img-container">
-          <img src="imgs/me.png" alt="Myself">
+              dur="6s"
+              repeatCount="indefinite"
+              fill="freeze"
+            />
+            <filter id="drop-shadow" height="130%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+              <!-- stdDeviation is how much to blur -->
+              <feOffset dx="2" dy="4" result="offsetblur" />
+              <!-- how much to offset -->
+              <feComponentTransfer>
+                <feFuncA type="linear" slope="0.4" />
+                <!-- slope is the opacity of the shadow -->
+              </feComponentTransfer>
+              <feMerge>
+                <feMergeNode />
+                <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic" />
+                <!-- this contains the element that the filter is applied to -->
+              </feMerge>
+            </filter>
+          </svg>
         </div>
-        <div class="about-text">
-          <p>
-            Passionate web and mobile application developer.
-          </p>
-          <br>
-          <p>
-            Recent "Mobile Application Design & Development" graduate from Algonquin College in Ottawa, I am building upon the skills I gained from my Bachelor’s degree in Software Engineering. Both programs have prepared me to design and develop device specific native and cross-platform mobile and web applications.
-          </p>
 
-          <div class="awards-container">
-            <h3>Awards</h3>
-            <div class="award-section">
-              <h5>Hacking Health Ottawa- 2019</h5>
-              <a href="https://hacking-health.org/"><p>People's Choice Award</p></a>
-            </div>
-            <div class="award-section">
-              <h5>Algonquin College - 2019</h5>
-              <a href="https://www.algonquincollege.com/bog/student-change-maker-award/"><p>Student Changemaker Award</p></a>
-            </div>
-          </div>
+        <div class="section-title">
+          <h1>ABOUT</h1>
         </div>
-      </div>
-    </section>
+        <div class="about">
+          <div class="about-border-top"></div>
+          <div class="about-border-bottom"></div>
+          <div class="about-border-left"></div>
+          <div class="me-img-container">
+            <img src="imgs/me.png" alt="Myself" />
+          </div>
+          <div class="about-text">
+            <p>Passionate web and mobile application developer.</p>
+            <br />
+            <p>
+              Recent "Mobile Application Design & Development" graduate from
+              Algonquin College in Ottawa, I am building upon the skills I
+              gained from my Bachelor’s degree in Software Engineering. Both
+              programs have prepared me to design and develop device specific
+              native and cross-platform mobile and web applications.
+            </p>
 
-    <!-- CONTACT -->
-    <section class="contact container section" data-anchor="contact">
-      <div class="background-svg">
-        <svg viewBox="0 0 101.4 119" style="enable-background:new 0 0 101.4 119;" xml:space="preserve">
-          <filter id="dropshadow" height="130%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
-            <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
-            <feComponentTransfer>
-              <feFuncA type="linear" slope="0.5"/> <!-- slope is the opacity of the shadow -->
-            </feComponentTransfer>
-            <feMerge> 
-              <feMergeNode/> <!-- this contains the offset blurred image -->
-              <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
-            </feMerge>
-          </filter>
-          <polygon id="contact-shape-large" points="25.4,44.5 101.6,88.5 101.6,0.5 "/>
-          <polygon id="contact-shape-small" points="42.8,78.6 101.9,112.8 101.9,44.5 "/>
-        </svg>
-      </div>
-      <div class="section-title">
-        <h1>GET <span>IN</span></h1>
-        <h1>TOUCH</h1>
-      </div>
-      <div class="contact-content">
-        <div class="contact-details">
-          <div class="email">
-            <span>Email:</span> <a href="mailto:akel.ms93@gmail.com"><h3>akel.ms93@gmail.com</h3></a>
-          </div>
-          <div class="phone">
-            <span>Phone:</span><h3>(873) 288-1962</h3>
+            <div class="awards-container">
+              <h3>Awards</h3>
+              <div class="award-section">
+                <h5>Hacking Health Ottawa- 2019</h5>
+                <a href="https://hacking-health.org/"
+                  ><p>People's Choice Award</p></a
+                >
+              </div>
+              <div class="award-section">
+                <h5>Algonquin College - 2019</h5>
+                <a
+                  href="https://www.algonquincollege.com/bog/student-change-maker-award/"
+                  ><p>Student Changemaker Award</p></a
+                >
+              </div>
+            </div>
           </div>
         </div>
-        <div class="social">
-          <h3>Let's Connect</h3>
-          <div>
-            <ul class="social-links">
-              <li>
-                <a href="https://www.linkedin.com/in/mohamad-akel-348259124/">LinkedIn</a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/aklitoo/">Instagram</a>
-              </li>
-              <li>
-                <a href="https://twitter.com/M_Akel93">Twitter</a>
-              </li>
-            </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact container section" data-anchor="contact">
+        <div class="background-svg">
+          <svg
+            viewBox="0 0 101.4 119"
+            style="enable-background: new 0 0 101.4 119"
+            xml:space="preserve"
+          >
+            <filter id="dropshadow" height="130%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+              <!-- stdDeviation is how much to blur -->
+              <feOffset dx="2" dy="2" result="offsetblur" />
+              <!-- how much to offset -->
+              <feComponentTransfer>
+                <feFuncA type="linear" slope="0.5" />
+                <!-- slope is the opacity of the shadow -->
+              </feComponentTransfer>
+              <feMerge>
+                <feMergeNode />
+                <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic" />
+                <!-- this contains the element that the filter is applied to -->
+              </feMerge>
+            </filter>
+            <polygon
+              id="contact-shape-large"
+              points="25.4,44.5 101.6,88.5 101.6,0.5 "
+            />
+            <polygon
+              id="contact-shape-small"
+              points="42.8,78.6 101.9,112.8 101.9,44.5 "
+            />
+          </svg>
+        </div>
+        <div class="section-title">
+          <h1>GET <span>IN</span></h1>
+          <h1>TOUCH</h1>
+        </div>
+        <div class="contact-content">
+          <div class="contact-details">
+            <div class="email">
+              <span>Email:</span>
+              <a href="mailto:akel.ms93@gmail.com"
+                ><h3>akel.ms93@gmail.com</h3></a
+              >
+            </div>
+            <div class="phone">
+              <span>Phone:</span>
+              <h3>+1 (613) 809 7235</h3>
+            </div>
+          </div>
+          <div class="social">
+            <h3>Let's Connect</h3>
+            <div>
+              <ul class="social-links">
+                <li>
+                  <a href="https://www.linkedin.com/in/makel/">LinkedIn</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/M_Akel93">Twitter</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
- 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
-<script src="main.js"></script>
-</body>
+      </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
