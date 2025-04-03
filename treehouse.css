@@ -1,0 +1,79 @@
+@import url("variables.css");
+
+.services-list {
+  margin-bottom: 1rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  & h2 {
+    margin-top: 5rem;
+    color: var(--p1);
+  }
+  & img {
+    margin: 0.5rem auto;
+    width: 100%;
+  }
+}
+
+.responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem auto;
+  & h2 {
+    margin-bottom: 1.5rem;
+    color: var(--p1);
+  }
+}
+
+.responsive .images-container img {
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px 0 hsl(220, 15%, 88%), 0 3px 9px 0 hsl(220, 15%, 94%);
+}
+
+/* .responsive .images-container img:nth-of-type(2) {
+  margin: 4rem 0;
+} */
+
+@media (min-width: 768px) {
+  .responsive {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .responsive .images-container img:nth-of-type(2) {
+    margin: 0 2rem 0 2rem;
+  }
+
+  .responsive .images-container img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .responsive .images-container img {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .images-container img {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .details .steps {
+    width: 80%;
+    padding: 2rem;
+  }
+
+  .details {
+    border-radius: 12px;
+    margin: 2rem auto;
+  }
+}

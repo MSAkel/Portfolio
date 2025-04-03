@@ -18,7 +18,7 @@ function init() {
       navigation: true,
       anchors: [
         "top",
-        // "treehouse",
+        "treehouse",
         "covboard",
         "jia",
         "melp",
@@ -86,10 +86,7 @@ function onClickMenu() {
   document.querySelector(".menu-display").classList.add("show");
 }
 function onClickClose() {
-  //const page = window.location.pathname.split("/").pop()
   const page = window.location.pathname;
-  console.log(page);
-  //if(page !== '/') return
   if (page === "/index.html" || page === "/")
     document.querySelector(".menu-display").classList.remove("show");
 }
