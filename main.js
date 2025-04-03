@@ -16,6 +16,16 @@ function init() {
       responsiveWidth: 1250,
       paddingTop: "7rem",
       navigation: true,
+      navigationTooltips: [
+        "Home",
+        "Treehouse",
+        "Covboard",
+        "Jia",
+        "Melp",
+        "Electromanager",
+        "About",
+        "Contact",
+      ],
       anchors: [
         "top",
         "treehouse",
