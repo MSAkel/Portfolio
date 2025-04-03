@@ -56,7 +56,7 @@ html::-webkit-scrollbar {
 
 body {
   overflow-x: hidden;
-  background-color: #f5f8ff;
+  background-color: #f7f7f7;
 }
 
 .fp-section,
@@ -389,12 +389,12 @@ nav,
   right: 0;
   width: 400px;
   z-index: -10000;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 #home-svg {
   fill: var(--s3);
-  animation: blob-shape 8s ease-in-out infinite;
+  animation: blob-shape 6s ease-in-out infinite;
 }
 @keyframes blob-shape {
   0% {
@@ -1157,7 +1157,7 @@ nav,
   }
 
   .project-content {
-    background-color: #f5f8ff;
+    background-color: #f7f7f7;
     box-shadow: none;
     padding: 7rem 0 5rem;
   }
@@ -1314,13 +1314,6 @@ nav,
   }
 }
 
-/****************** MEDIA 1300px ********************/
-@media (min-width: 1300px) {
-  /* .right-section img{
-    width: 430px;
-  } */
-}
-
 /****************** MEDIA 1400px ********************/
 @media (min-width: 1400px) {
   .container,
@@ -1349,7 +1342,6 @@ nav,
     padding: 0 12rem;
   }
   #home .background-text {
-    /* font-size: 150px; */
     margin-left: -0.5rem;
   }
 
@@ -1368,9 +1360,6 @@ nav,
   .me-img-container {
     flex: 1;
   }
-  /* .about .about-text{
-    flex: 2
-  } */
 }
 
 @media (min-width: 1600px) {
@@ -1406,19 +1395,7 @@ nav,
 
   .project-description h1 {
     font-size: 64px;
-    /* margin: -4.5rem 0 3.5rem 0; */
   }
-
-  /* Rotated text, might come in handy for a fancy style somehow */
-  /* .project-description p {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: rotate(-90deg);
-    font-size: 150px;
-    color: var(--gray-5);
-    opacity: 0.4;
-  } */
 
   .right-section img {
     width: 750px;
