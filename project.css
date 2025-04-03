@@ -37,7 +37,7 @@ hr {
   display: flex;
   flex-direction: column;
   padding: 7rem 0 0;
-  background: linear-gradient(to top, #f7f7f7 65%, #e7f0fd 35%);
+  background: linear-gradient(to top, #f5f8ff 65%, #e7f0fd 35%);
 }
 
 .header-img-container img {
@@ -217,7 +217,7 @@ hr {
   .header {
     flex-direction: row;
     padding-bottom: 4rem;
-    background: linear-gradient(to left, #f7f7f7 55%, #e7f0fd 45%);
+    background: linear-gradient(to left, #f5f8ff 55%, #e7f0fd 45%);
   }
   .header-img-container img {
     width: 50vw;
