@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", init);
+window.addEventListener("pageshow", function (event) {
+  // Always run init on pageshow to handle bfcache/history navigation
+  init();
+});
 
 function init() {
   let page = window.location.pathname.split("/").pop();
