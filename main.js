@@ -1,46 +1,68 @@
 document.addEventListener("DOMContentLoaded", init);
-window.addEventListener("pageshow", function (event) {
-  // Always run init on pageshow to handle bfcache/history navigation
-  init();
-});
 
 function init() {
   let page = window.location.pathname.split("/").pop();
   if (!page) page = "index.html";
 
+  // --- RESET LINES STATE ---
+  const verticalLines = document.querySelector(".vertical-lines");
+  if (verticalLines) {
+    verticalLines.classList.add("index-me");
+  }
+  let lines = document.querySelectorAll(".line");
+  lines.forEach((line) => {
+    line.classList.remove("show-line", "line-transition");
+  });
+
+  // --- ANIMATE LINES IN ---
+  let time = 0;
+  lines.forEach((line) => {
+    setTimeout(() => {
+      line.classList.add("show-line");
+    }, (time += 350));
+  });
+
+  setTimeout(() => {
+    if (verticalLines) {
+      verticalLines.classList.remove("index-me");
+    }
+  }, 750);
+
   if (page === "index.html") {
-    new fullpage("#fullpage", {
-      /**
-       * "If you are wondering how you can hide the licenseKey on your fullPage.js initialisation, the short answer is: you can't."
-       * "However, you won't have to worry anyway! If they steal it from you they will be the one subject to the possible legal consequences and not you."
-       */
-      licenseKey: "A63A687B-BDE74646-81146E13-901F41D1",
-      autoScrolling: true,
-      scrollBar: false,
-      responsiveWidth: 1250,
-      paddingTop: "7rem",
-      navigation: true,
-      navigationTooltips: [
-        "Home",
-        "Treehouse",
-        "Covboard",
-        "Jia",
-        "Melp",
-        "Electromanager",
-        "About",
-        "Contact",
-      ],
-      anchors: [
-        "top",
-        "treehouse",
-        "covboard",
-        "jia",
-        "melp",
-        "electro",
-        "about",
-        "contact",
-      ],
-    });
+    if (!window.fullpage_api) {
+      new fullpage("#fullpage", {
+        /**
+         * "If you are wondering how you can hide the licenseKey on your fullPage.js initialisation, the short answer is: you can't."
+         * "However, you won't have to worry anyway! If they steal it from you they will be the one subject to the possible legal consequences and not you."
+         */
+        licenseKey: "A63A687B-BDE74646-81146E13-901F41D1",
+        autoScrolling: true,
+        scrollBar: false,
+        responsiveWidth: 1250,
+        paddingTop: "7rem",
+        navigation: true,
+        navigationTooltips: [
+          "Home",
+          "Treehouse",
+          "Covboard",
+          "Jia",
+          "Melp",
+          "Electromanager",
+          "About",
+          "Contact",
+        ],
+        anchors: [
+          "top",
+          "treehouse",
+          "covboard",
+          "jia",
+          "melp",
+          "electro",
+          "about",
+          "contact",
+        ],
+      });
+    }
   } else {
     scrollReveal();
   }
@@ -50,19 +72,6 @@ function init() {
   window.onkeydown = function (e) {
     if (e.keyCode == 8 && e.target == document.body) e.preventDefault();
   };
-
-  // animate in lines
-  let lines = document.querySelectorAll(".line");
-  let time = 0;
-  lines.forEach((line) => {
-    setTimeout(() => {
-      line.classList.add("show-line");
-    }, (time += 350));
-  });
-
-  setTimeout(() => {
-    document.querySelector(".vertical-lines").classList.remove("index-me");
-  }, 750);
 }
 
 // Event listeners
